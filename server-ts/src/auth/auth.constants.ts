@@ -1,0 +1,3 @@
+export const authConstants = {
+    jwtSecret: '7R4DCS6phffXreQmZQ4Y7akbrNupqmAVgNBqx4w8WJFfSVUeBhW5qLSeDM9Lb6mYgc76Ayz54pfWBEwdt69xuggmfKHqdEhjjWJU4RrLgsM6U9xb7MRQhH5tV3suntecEVEc3GETNDfm7MVZccWmbWGGFAMAYyfZvzvPbZCzZtpHKmSD74fFkfMRcpJ5TffTTke4dXJnQqLmm5UKb5TBREDFsDCt4LTjxVzXWeAV4upJZRfNqp3xGxGvMQTMsQQz'
+}

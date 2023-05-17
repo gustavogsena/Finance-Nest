@@ -1,0 +1,2962 @@
+[
+    {
+        "stock": "MXRF11",
+        "name": "FII MAXI RENCI",
+        "close": 10.63,
+        "change": 0,
+        "volume": 577466,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": "Miscellaneous"
+    },
+    {
+        "stock": "VGIA11",
+        "name": "FIAGRO VGIA CI ER",
+        "close": 9.34,
+        "change": -1.68421053,
+        "volume": 547492,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/banco-do-brasil--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "VGIR11",
+        "name": "FII VALREIIICI ER",
+        "close": 9.33,
+        "change": -1.47835269,
+        "volume": 368573,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii-valreiiici--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "RZAG11",
+        "name": "FIAGRO RIZA CI",
+        "close": 9.13,
+        "change": -0.21857923,
+        "volume": 285077,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/banco-do-brasil--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "VGHF11",
+        "name": "FII VALOR HECI",
+        "close": 9.13,
+        "change": -0.32751092,
+        "volume": 232225,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii-valreiiici--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "BTCI11",
+        "name": "FII BTG CRI CI ER",
+        "close": 9.12,
+        "change": -0.10952903,
+        "volume": 228681,
+        "market_cap": null,
+        "logo": "https://brapi.dev/favicon.svg",
+        "sector": null
+    },
+    {
+        "stock": "XPCA11",
+        "name": "FIAGRO XP CACI",
+        "close": 9.8,
+        "change": -1.01010101,
+        "volume": 191199,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/banco-do-brasil--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "RURA11",
+        "name": "FIAGRO RURA CI",
+        "close": 10.07,
+        "change": 0,
+        "volume": 160397,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/banco-do-brasil--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "MCHF11",
+        "name": "FII MAUA HF CI ER",
+        "close": 8.77,
+        "change": 0.45819015,
+        "volume": 134334,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "KNCR11",
+        "name": "FII KINEA RICI",
+        "close": 95.1,
+        "change": -0.28311103,
+        "volume": 119504,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": "Miscellaneous"
+    },
+    {
+        "stock": "KNIP11",
+        "name": "FII KINEA IPCI",
+        "close": 91.8,
+        "change": 0.48161011,
+        "volume": 104210,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": "Miscellaneous"
+    },
+    {
+        "stock": "HCTR11",
+        "name": "FII HECTARE CI ER",
+        "close": 53.36,
+        "change": 4.15772009,
+        "volume": 102486,
+        "market_cap": 1171240000,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": "Miscellaneous"
+    },
+    {
+        "stock": "GSFI11",
+        "name": "FII GENERAL CI",
+        "close": 5.51,
+        "change": 0.18181818,
+        "volume": 92864,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "CPTS11",
+        "name": "FII CAPI SECCI ER",
+        "close": 78.18,
+        "change": -0.63548551,
+        "volume": 91624,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "FGAA11",
+        "name": "FIAGRO FGA CI ER",
+        "close": 9.48,
+        "change": -0.42017853,
+        "volume": 85970,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/banco-do-brasil--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "VSLH11",
+        "name": "FII VERS CRICI ER",
+        "close": 4.68,
+        "change": 1.07991361,
+        "volume": 85054,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "WHGR11",
+        "name": "FII WHG REALCI",
+        "close": 8.37,
+        "change": -0.11933174,
+        "volume": 81031,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii-whg-realci-er--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "DEVA11",
+        "name": "FII DEVANT CI ER",
+        "close": 59.34,
+        "change": 4.74845173,
+        "volume": 76808,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "XPSF11",
+        "name": "FII XP SELECCI",
+        "close": 7.27,
+        "change": 1.11265647,
+        "volume": 76528,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "TORD11",
+        "name": "FII TORDE EICI",
+        "close": 3.49,
+        "change": -0.28571429,
+        "volume": 75942,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii-urca-renci-er--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "BRCO11",
+        "name": "FII BRESCO CI ER",
+        "close": 105.56,
+        "change": 3.54095145,
+        "volume": 74879,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "VIUR11",
+        "name": "FII VINCI IUCI",
+        "close": 7.3,
+        "change": 0.13717421,
+        "volume": 63347,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii-vinci-iuci-er--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "GALG11",
+        "name": "FII GUARDIANCI",
+        "close": 8.81,
+        "change": 1.26436782,
+        "volume": 61882,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "IRDM11",
+        "name": "FII IRIDIUM CI ER",
+        "close": 86.31,
+        "change": 0.51239896,
+        "volume": 59156,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": "Miscellaneous"
+    },
+    {
+        "stock": "CYCR11",
+        "name": "FII CYRELA CI",
+        "close": 8.44,
+        "change": -0.23640662,
+        "volume": 56698,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "BTLG11",
+        "name": "FII BTLG CI",
+        "close": 97.7,
+        "change": 1.21205948,
+        "volume": 54520,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": "Miscellaneous"
+    },
+    {
+        "stock": "KISU11",
+        "name": "FII KILIMA CI",
+        "close": 7.92,
+        "change": 0.38022814,
+        "volume": 51757,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "RZAK11",
+        "name": "FII RIZA AKNCI",
+        "close": 93,
+        "change": 0.26954178,
+        "volume": 50630,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "KNSC11",
+        "name": "FII KINEA SCCI",
+        "close": 88.2,
+        "change": 0.06807465,
+        "volume": 39656,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": "Miscellaneous"
+    },
+    {
+        "stock": "AAZQ11",
+        "name": "FIAGRO AAZQ CI",
+        "close": 9.71,
+        "change": 1.25130344,
+        "volume": 39193,
+        "market_cap": null,
+        "logo": "https://brapi.dev/favicon.svg",
+        "sector": null
+    },
+    {
+        "stock": "RBRR11",
+        "name": "FII RBRHGRADCI ER",
+        "close": 88.61,
+        "change": -0.29256554,
+        "volume": 38864,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": "Miscellaneous"
+    },
+    {
+        "stock": "BCFF11",
+        "name": "FII BC FFII CI ER",
+        "close": 65.63,
+        "change": -1.64843841,
+        "volume": 37786,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "KNHY11",
+        "name": "FII KINEA HYCI",
+        "close": 98.6,
+        "change": 0.33581257,
+        "volume": 34234,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": "Miscellaneous"
+    },
+    {
+        "stock": "BIME11",
+        "name": "FII BRIO ME CI ER",
+        "close": 6.88,
+        "change": -1.29124821,
+        "volume": 33925,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "RECR11",
+        "name": "FII REC RECECI ER",
+        "close": 84.01,
+        "change": 0.43036221,
+        "volume": 32941,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "VCRI11",
+        "name": "FII VINCI CRCI",
+        "close": 8.1,
+        "change": 0.24752475,
+        "volume": 32824,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii-vinci-iuci-er--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "DCRA11",
+        "name": "FIAGRO DEVANCI ER",
+        "close": 8.8,
+        "change": 0.22779043,
+        "volume": 32309,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/banco-do-brasil--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "KNRI11",
+        "name": "FII KINEA CI",
+        "close": 153.6,
+        "change": 1.25247198,
+        "volume": 32236,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": "Miscellaneous"
+    },
+    {
+        "stock": "TRXF11",
+        "name": "FII TRX REALCI",
+        "close": 103.78,
+        "change": 0.07714561,
+        "volume": 32014,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii-trxe-corci--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "MCCI11",
+        "name": "FII MAUA CI ER",
+        "close": 86.2,
+        "change": -0.65690564,
+        "volume": 31727,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "JSRE11",
+        "name": "FII JS REAL CI",
+        "close": 73.45,
+        "change": 1.52038981,
+        "volume": 31661,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": "Miscellaneous"
+    },
+    {
+        "stock": "MORE11",
+        "name": "FII MORE RE CI",
+        "close": 65.6,
+        "change": -0.62112102,
+        "volume": 31131,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "ARRI11",
+        "name": "FII ATRIO CI",
+        "close": 8.42,
+        "change": -0.23696682,
+        "volume": 30013,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "HGRU11",
+        "name": "FII CSHG URBCI",
+        "close": 124.25,
+        "change": 0.23394643,
+        "volume": 29760,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "CVBI11",
+        "name": "FII VBI CRI CI ER",
+        "close": 88.67,
+        "change": 0.71558268,
+        "volume": 29646,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "HSML11",
+        "name": "FII HSI MALLCI",
+        "close": 85.42,
+        "change": 0.61248291,
+        "volume": 28878,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "XPML11",
+        "name": "FII XP MALLSCI",
+        "close": 103.73,
+        "change": 1.89587426,
+        "volume": 28486,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": "Miscellaneous"
+    },
+    {
+        "stock": "BRCR11",
+        "name": "FII BC FUND CI ER",
+        "close": 57.56,
+        "change": 0.12175682,
+        "volume": 27894,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": "Miscellaneous"
+    },
+    {
+        "stock": "BLMR11",
+        "name": "FII BLUE FOFCI ER",
+        "close": 6.64,
+        "change": 0,
+        "volume": 27390,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "GAME11",
+        "name": "FII GUARD MUCI ER",
+        "close": 8.42,
+        "change": -0.70754717,
+        "volume": 26847,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "HGLG11",
+        "name": "FII CSHG LOGCI",
+        "close": 164.53,
+        "change": -0.16383495,
+        "volume": 26781,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": "Miscellaneous"
+    },
+    {
+        "stock": "MGFF11",
+        "name": "FII MOGNO CI ER",
+        "close": 59.59,
+        "change": -1.09543568,
+        "volume": 26515,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "HGCR11",
+        "name": "FII CSHG CRICI",
+        "close": 103.41,
+        "change": 0.25206011,
+        "volume": 26483,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "RBRF11",
+        "name": "FII RBRALPHACI ER",
+        "close": 70.7,
+        "change": 0.09911228,
+        "volume": 26224,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "VISC11",
+        "name": "FII VINCI SCCI",
+        "close": 113.99,
+        "change": 2.69369369,
+        "volume": 25665,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/vinci--big.svg",
+        "sector": "Miscellaneous"
+    },
+    {
+        "stock": "XPCI11",
+        "name": "FII XP CRED CI",
+        "close": 81.2,
+        "change": -1.80191313,
+        "volume": 25450,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "RZTR11",
+        "name": "FII RIZA TX CI",
+        "close": 86.32,
+        "change": -1.69684322,
+        "volume": 25047,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "XPLG11",
+        "name": "FII XP LOG CI",
+        "close": 103.6,
+        "change": 0.90581475,
+        "volume": 24883,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": "Miscellaneous"
+    },
+    {
+        "stock": "KNCA11",
+        "name": "FIAGRO KINEACI",
+        "close": 104.34,
+        "change": -0.181766,
+        "volume": 24408,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/banco-do-brasil--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "LIFE11",
+        "name": "FII LIFE CI",
+        "close": 9.5,
+        "change": -0.10515247,
+        "volume": 24198,
+        "market_cap": null,
+        "logo": "https://brapi.dev/favicon.svg",
+        "sector": null
+    },
+    {
+        "stock": "VINO11",
+        "name": "FII VINCI OFCI",
+        "close": 42.3,
+        "change": 0.73826622,
+        "volume": 23173,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii-vinci-iuci-er--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "HRDF11",
+        "name": "FII HREALTY CI",
+        "close": 0.89,
+        "change": 0,
+        "volume": 22927,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "VRTA11",
+        "name": "FII FATOR VECI",
+        "close": 87.15,
+        "change": 1.16076376,
+        "volume": 21431,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii-fator-veci-er--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "URPR11",
+        "name": "FII URCA RENCI",
+        "close": 91,
+        "change": 0.66371459,
+        "volume": 20899,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii-urca-renci-er--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "MALL11",
+        "name": "FII MALLS BPCI",
+        "close": 103.53,
+        "change": 0.02898551,
+        "volume": 20877,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": "Miscellaneous"
+    },
+    {
+        "stock": "PVBI11",
+        "name": "FII VBI PRI CI",
+        "close": 94.9,
+        "change": 2.47273402,
+        "volume": 20822,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "FIVN11",
+        "name": "FII VIDANOVACI",
+        "close": 3.11,
+        "change": 0.64724919,
+        "volume": 20602,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "SARE11",
+        "name": "FII SANT RENCI",
+        "close": 59.6,
+        "change": 1.48135536,
+        "volume": 20563,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "VILG11",
+        "name": "FII VINCI LGCI",
+        "close": 96.76,
+        "change": 0.65536567,
+        "volume": 20383,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/vinci--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "TGAR11",
+        "name": "FII TG ATIVOCI",
+        "close": 116.89,
+        "change": 0.53324159,
+        "volume": 20034,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii-tg-ativoci-er--big.svg",
+        "sector": "Miscellaneous"
+    },
+    {
+        "stock": "KFOF11",
+        "name": "FII KINEAFOFCI",
+        "close": 84.33,
+        "change": 0.03558363,
+        "volume": 19776,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "HGRE11",
+        "name": "FII HG REAL CI",
+        "close": 126.62,
+        "change": -0.93882022,
+        "volume": 19419,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": "Miscellaneous"
+    },
+    {
+        "stock": "LVBI11",
+        "name": "FII VBI LOG CI",
+        "close": 105.4,
+        "change": -1.05144574,
+        "volume": 18816,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "CPTR11",
+        "name": "FIAGRO CPTR CI ER",
+        "close": 95.55,
+        "change": -1.39319089,
+        "volume": 18321,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/banco-do-brasil--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "VCJR11",
+        "name": "FII VECTIS CI",
+        "close": 90.67,
+        "change": 0.75564175,
+        "volume": 18278,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii-vect-renci-er--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "VGIP11",
+        "name": "FII VALORAIPCI ER",
+        "close": 86.11,
+        "change": 0.47841659,
+        "volume": 17446,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii-valreiiici--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "ALZR11",
+        "name": "FII ALIANZA CI ES",
+        "close": 111.69,
+        "change": 0.10755579,
+        "volume": 16954,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "VIFI11",
+        "name": "FII VINCI IFCI",
+        "close": 7.29,
+        "change": -1.48648649,
+        "volume": 16828,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii-vinci-iuci-er--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "NCRA11",
+        "name": "FIAGRO NCH CI",
+        "close": 10.37,
+        "change": 0,
+        "volume": 15950,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/banco-do-brasil--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "BBPO11",
+        "name": "FII BB PRGIICI",
+        "close": 88.89,
+        "change": 0.21420858,
+        "volume": 15671,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": "Miscellaneous"
+    },
+    {
+        "stock": "CARE11",
+        "name": "FII DEA CARECI",
+        "close": 2.07,
+        "change": -2.81690141,
+        "volume": 14904,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "HABT11",
+        "name": "FII HABIT IICI",
+        "close": 88.2,
+        "change": 1.10041497,
+        "volume": 14572,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "RBRY11",
+        "name": "FII RBR PCRICI ER",
+        "close": 95.3,
+        "change": -0.2929504,
+        "volume": 14447,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": "Miscellaneous"
+    },
+    {
+        "stock": "BROF11",
+        "name": "FII BROF CI",
+        "close": 58.3,
+        "change": -1.05227091,
+        "volume": 14246,
+        "market_cap": null,
+        "logo": "https://brapi.dev/favicon.svg",
+        "sector": "Miscellaneous"
+    },
+    {
+        "stock": "BTAG11",
+        "name": "FIAGRO BTAG CI",
+        "close": 87.4,
+        "change": -1.24293785,
+        "volume": 14192,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/banco-do-brasil--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "HSLG11",
+        "name": "FII HSI LOG CI",
+        "close": 83.97,
+        "change": -0.02380998,
+        "volume": 13771,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "HFOF11",
+        "name": "FII HTOPFOF3CI",
+        "close": 71.09,
+        "change": 0.22557451,
+        "volume": 13552,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "RBRP11",
+        "name": "FII RBR PROPCI ER",
+        "close": 49.95,
+        "change": 0.66505644,
+        "volume": 12501,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "PORD11",
+        "name": "FII POLO CRICI",
+        "close": 85.99,
+        "change": 0.69086415,
+        "volume": 12292,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "XPPR11",
+        "name": "FII XP PROP CI",
+        "close": 23.12,
+        "change": 0.08658009,
+        "volume": 12052,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "AIEC11",
+        "name": "FII AUTONOMYCI",
+        "close": 59.68,
+        "change": -0.20066723,
+        "volume": 11696,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "BCIA11",
+        "name": "FII BCIA CI",
+        "close": 87.08,
+        "change": 0.68216212,
+        "volume": 11668,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "JSAF11",
+        "name": "FII JS A FINCI",
+        "close": 84.52,
+        "change": 0.28476626,
+        "volume": 11587,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "RECT11",
+        "name": "FII REC RENDCI ER",
+        "close": 51.33,
+        "change": 0.13656263,
+        "volume": 11368,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "GRWA11",
+        "name": "FIAGRO GRWA CI ER",
+        "close": 10.05,
+        "change": 0.09960159,
+        "volume": 10960,
+        "market_cap": null,
+        "logo": "https://brapi.dev/favicon.svg",
+        "sector": null
+    },
+    {
+        "stock": "BARI11",
+        "name": "FII BARIGUI CI",
+        "close": 77.93,
+        "change": -0.35800921,
+        "volume": 10208,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "OUJP11",
+        "name": "FII OURI JPPCI",
+        "close": 95.74,
+        "change": -1.754743,
+        "volume": 10073,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": "Miscellaneous"
+    },
+    {
+        "stock": "RZAT11",
+        "name": "FII ARCTIUM CI",
+        "close": 92.69,
+        "change": 0.76095447,
+        "volume": 9642,
+        "market_cap": null,
+        "logo": "https://brapi.dev/favicon.svg",
+        "sector": null
+    },
+    {
+        "stock": "PLCR11",
+        "name": "FII PLURAL RCI",
+        "close": 83.59,
+        "change": -0.1552807,
+        "volume": 9567,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "OIAG11",
+        "name": "FIAGRO INNOVCI ER",
+        "close": 9.47,
+        "change": 0.74468085,
+        "volume": 9461,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/banco-do-brasil--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "TEPP11",
+        "name": "FII TEL PROPCI",
+        "close": 78.52,
+        "change": 5.96491514,
+        "volume": 8914,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii-tel-propci-er--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "SNAG11",
+        "name": "FIAGRO SUNO CI",
+        "close": 101.09,
+        "change": 0,
+        "volume": 8806,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/banco-do-brasil--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "BCRI11",
+        "name": "FII BEES CRICI",
+        "close": 71.83,
+        "change": 1.51215089,
+        "volume": 8748,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "PATL11",
+        "name": "FII PATR LOGCI",
+        "close": 65.48,
+        "change": 1.00261913,
+        "volume": 8478,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "GCRI11",
+        "name": "FII GLPG CRICI",
+        "close": 90.4,
+        "change": 0.21062078,
+        "volume": 8416,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "GTWR11",
+        "name": "FII G TOWERSCI",
+        "close": 80.76,
+        "change": 0.98786919,
+        "volume": 8394,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "BPFF11",
+        "name": "FII ABSOLUTOCI",
+        "close": 62.53,
+        "change": -0.69874701,
+        "volume": 7702,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "SNCI11",
+        "name": "FII SUNO CRICI",
+        "close": 98,
+        "change": 0.02040927,
+        "volume": 7592,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii-sunofofici--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "HGBS11",
+        "name": "FII HEDGEBS CI",
+        "close": 205.63,
+        "change": 1.25067704,
+        "volume": 7524,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": "Miscellaneous"
+    },
+    {
+        "stock": "CRFF11",
+        "name": "FII CX RBRA2CI ER",
+        "close": 69.75,
+        "change": -8.09065632,
+        "volume": 6988,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "HGFF11",
+        "name": "FII CSHG FOFCI",
+        "close": 75.32,
+        "change": 0.02655644,
+        "volume": 6963,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "CPFF11",
+        "name": "FII CAP REITCI",
+        "close": 62.05,
+        "change": -0.56090062,
+        "volume": 6906,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "RBVA11",
+        "name": "FII RIOB VA CI",
+        "close": 95.03,
+        "change": 0.03157895,
+        "volume": 6613,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": "Miscellaneous"
+    },
+    {
+        "stock": "BTRA11",
+        "name": "FII BTG TAGRCI",
+        "close": 79.59,
+        "change": -0.69869243,
+        "volume": 6562,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": "Miscellaneous"
+    },
+    {
+        "stock": "GGRC11",
+        "name": "FII GGRCOVEPCI ER",
+        "close": 114.4,
+        "change": -0.27024671,
+        "volume": 6530,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": "Miscellaneous"
+    },
+    {
+        "stock": "BTAL11",
+        "name": "FII BTG AGROCI",
+        "close": 92.97,
+        "change": -0.03225806,
+        "volume": 6494,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "SDIL11",
+        "name": "FII SDI LOG CI",
+        "close": 93.96,
+        "change": 0.00000106,
+        "volume": 6325,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "QAGR11",
+        "name": "FII QUASAR ACI ER",
+        "close": 43.86,
+        "change": 2,
+        "volume": 6213,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "VSHO11",
+        "name": "FII VOT SHOPCI",
+        "close": 69,
+        "change": -0.71942446,
+        "volume": 6111,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii-vot-log-ci-er--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "AFHI11",
+        "name": "FII AFHI CRICI",
+        "close": 94.67,
+        "change": -0.12659669,
+        "volume": 5991,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "KNRE11",
+        "name": "FII KII REALCI",
+        "close": 0.64,
+        "change": 0,
+        "volume": 5616,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "RBHG11",
+        "name": "FII RBCRI IVCI",
+        "close": 81.7,
+        "change": 0.08575647,
+        "volume": 5560,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "VCRA11",
+        "name": "FIAGRO VCRA CI",
+        "close": 100.54,
+        "change": 0.2492771,
+        "volume": 5469,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii-vect-renci-er--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "MANA11",
+        "name": "FII MANATI CI",
+        "close": 9.57,
+        "change": -0.62305296,
+        "volume": 5093,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "JASC11",
+        "name": "FII JASC RENCI ER",
+        "close": 100,
+        "change": 0,
+        "volume": 5000,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "HSAF11",
+        "name": "FII HSI CRI CI",
+        "close": 81.19,
+        "change": 0.32126529,
+        "volume": 4945,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "BLMG11",
+        "name": "FII BLUE LOGCI ER",
+        "close": 65.95,
+        "change": -0.07575758,
+        "volume": 4909,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "HGPO11",
+        "name": "FII CSHGPRIMCI",
+        "close": 249.5,
+        "change": 0.08022463,
+        "volume": 4845,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": "Miscellaneous"
+    },
+    {
+        "stock": "EQIR11",
+        "name": "FII EQI RECECI",
+        "close": 8.91,
+        "change": 0.90600227,
+        "volume": 4755,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "SNFF11",
+        "name": "FII SUNOFOFICI",
+        "close": 86.69,
+        "change": 1.43927102,
+        "volume": 4749,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii-sunofofici--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "AGRX11",
+        "name": "FIAGRO AGRX CI ER",
+        "close": 10.89,
+        "change": 0,
+        "volume": 4592,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/banco-do-brasil--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "NCHB11",
+        "name": "FII NCH BR CI ER",
+        "close": 82.29,
+        "change": -0.00000122,
+        "volume": 4591,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "XPCM11",
+        "name": "FII XP MACAECI",
+        "close": 13.07,
+        "change": -0.90978014,
+        "volume": 4390,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": "Miscellaneous"
+    },
+    {
+        "stock": "EGYR11",
+        "name": "FII ENERGY CI",
+        "close": 0.98,
+        "change": 2.08333333,
+        "volume": 4385,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "CXCO11",
+        "name": "FII CEF CORPCI",
+        "close": 69.04,
+        "change": 0.05797101,
+        "volume": 4267,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "RBFF11",
+        "name": "FII RIOB FF CI",
+        "close": 52.25,
+        "change": -0.53302685,
+        "volume": 4128,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "MGCR11",
+        "name": "FII MOGNO HGCI",
+        "close": 80.23,
+        "change": 0.21234325,
+        "volume": 4062,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "PATC11",
+        "name": "FII PATRIA CI",
+        "close": 74.99,
+        "change": 7.14388076,
+        "volume": 3785,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "CACR11",
+        "name": "CARTESIA FIICI",
+        "close": 103.98,
+        "change": -0.18239416,
+        "volume": 3719,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/cartesia-fiici--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "JPPA11",
+        "name": "FII JPPA CRICI",
+        "close": 94.78,
+        "change": 0.00000106,
+        "volume": 3585,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "XPIN11",
+        "name": "FII XP INDL CI",
+        "close": 76.7,
+        "change": 0.27454831,
+        "volume": 3555,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "APTO11",
+        "name": "FII NAVI RSDCI",
+        "close": 8.66,
+        "change": -0.91533181,
+        "volume": 3296,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "KIVO11",
+        "name": "FII KIVO CI",
+        "close": 86.3,
+        "change": 2.26330255,
+        "volume": 3240,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": "Miscellaneous"
+    },
+    {
+        "stock": "MFII11",
+        "name": "FII MERITO ICI",
+        "close": 89.15,
+        "change": -0.32424194,
+        "volume": 3151,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": "Miscellaneous"
+    },
+    {
+        "stock": "KCRE11",
+        "name": "FII KINEA CRCI",
+        "close": 93.3,
+        "change": 0.54962711,
+        "volume": 2857,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "RBRL11",
+        "name": "FII RBR LOG CI ER",
+        "close": 83.32,
+        "change": 3.94211058,
+        "volume": 2775,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": "Miscellaneous"
+    },
+    {
+        "stock": "MORC11",
+        "name": "FII MORE CRICI",
+        "close": 85.69,
+        "change": -0.00000233,
+        "volume": 2692,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "GCRA11",
+        "name": "FIAGRO GLPG CI ER",
+        "close": 92.5,
+        "change": 0.6747965,
+        "volume": 2690,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/banco-do-brasil--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "FCFL11",
+        "name": "FII CAMPUSFLCI",
+        "close": 110,
+        "change": -0.88304199,
+        "volume": 2625,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": "Miscellaneous"
+    },
+    {
+        "stock": "BPML11",
+        "name": "FII BTG SHOPCI",
+        "close": 52.99,
+        "change": -5.99609555,
+        "volume": 2592,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "SADI11",
+        "name": "FII SANT PAPCI ATZ",
+        "close": 81.28,
+        "change": 0.04923929,
+        "volume": 2537,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "FIGS11",
+        "name": "FII GEN SHOPCI",
+        "close": 52.92,
+        "change": 1.01164537,
+        "volume": 2513,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "RINV11",
+        "name": "FII REAL INVCI",
+        "close": 100.85,
+        "change": 0.29835903,
+        "volume": 2501,
+        "market_cap": null,
+        "logo": "https://brapi.dev/favicon.svg",
+        "sector": null
+    },
+    {
+        "stock": "LGCP11",
+        "name": "FII LGCP INTCI",
+        "close": 76.8,
+        "change": -0.22086657,
+        "volume": 2363,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "BRLA11",
+        "name": "FII BRLPROIICI",
+        "close": 150,
+        "change": -3.16332493,
+        "volume": 2320,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "BBGO11",
+        "name": "FIAGRO BBGO CI",
+        "close": 80.45,
+        "change": 0.07463739,
+        "volume": 2250,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/banco-do-brasil--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "EDGA11",
+        "name": "FII GALERIA CI",
+        "close": 18.7,
+        "change": -1.00581795,
+        "volume": 2241,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": "Miscellaneous"
+    },
+    {
+        "stock": "SEQR11",
+        "name": "FII SEQUOIA CI ER",
+        "close": 60,
+        "change": 0.16694156,
+        "volume": 2204,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "RNGO11",
+        "name": "FII RIONEGROCI",
+        "close": 50.18,
+        "change": -1.39516411,
+        "volume": 2187,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "RPRI11",
+        "name": "FII RBR PR CI",
+        "close": 93.86,
+        "change": -1.18959682,
+        "volume": 2160,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "RBRX11",
+        "name": "FII RBR MULTCI",
+        "close": 87.1,
+        "change": -0.43438842,
+        "volume": 2149,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "DVFF11",
+        "name": "FII DEVA FOFCI ER",
+        "close": 68.15,
+        "change": 0.19112468,
+        "volume": 2074,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": "Miscellaneous"
+    },
+    {
+        "stock": "SPTW11",
+        "name": "FII SP DOWNTCI",
+        "close": 38.95,
+        "change": 0.23159804,
+        "volume": 2046,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii-sp-downtci-er--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "RVBI11",
+        "name": "FII VBI REITCI ER",
+        "close": 77.15,
+        "change": 0.5080745,
+        "volume": 2041,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "RBRS11",
+        "name": "FII RIOB RR CI",
+        "close": 52.3,
+        "change": 2.36836954,
+        "volume": 2020,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "VCRR11",
+        "name": "FII VECT RENCI",
+        "close": 73.96,
+        "change": -1.18904212,
+        "volume": 1989,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii-vect-renci-er--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "RBED11",
+        "name": "FII RIOB ED CI",
+        "close": 120.12,
+        "change": 0.1,
+        "volume": 1938,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": "Miscellaneous"
+    },
+    {
+        "stock": "RELG11",
+        "name": "FII REC LOG CI",
+        "close": 50.57,
+        "change": 2.36841691,
+        "volume": 1913,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "HREC11",
+        "name": "FII HEDGERECCI",
+        "close": 76.4,
+        "change": -0.97213478,
+        "volume": 1886,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "RCRB11",
+        "name": "FII RIOB RC CI ER",
+        "close": 123.5,
+        "change": 2.91666667,
+        "volume": 1777,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": "Miscellaneous"
+    },
+    {
+        "stock": "FLCR11",
+        "name": "FII FL RECEBCI ER",
+        "close": 92.38,
+        "change": 0.24959088,
+        "volume": 1683,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "HTMX11",
+        "name": "FII HOTEL MXCI",
+        "close": 111,
+        "change": 2.41742019,
+        "volume": 1592,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "MGHT11",
+        "name": "FII MOGNO HTCI ER",
+        "close": 58.6,
+        "change": -0.77887063,
+        "volume": 1508,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "OUFF11",
+        "name": "FII OURI FOFCI",
+        "close": 64.5,
+        "change": 0.52991892,
+        "volume": 1488,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "FAED11",
+        "name": "FII ANH EDUCCI ER",
+        "close": 141.73,
+        "change": -0.14794984,
+        "volume": 1433,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": "Miscellaneous"
+    },
+    {
+        "stock": "VTLT11",
+        "name": "FII VOT LOG CI",
+        "close": 91.71,
+        "change": -3.0959415,
+        "volume": 1388,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii-vot-log-ci-er--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "HLOG11",
+        "name": "FII HEDGELOGCI",
+        "close": 82.25,
+        "change": 0.85836539,
+        "volume": 1352,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "BBRC11",
+        "name": "FII BB CORP CI",
+        "close": 94.1,
+        "change": -0.12736255,
+        "volume": 1333,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "CEOC11",
+        "name": "FII CEO CCP CI ER",
+        "close": 53.28,
+        "change": -0.41121495,
+        "volume": 1264,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "SPXS11",
+        "name": "FII SPX SYN CI ER",
+        "close": 82.25,
+        "change": 2.16121967,
+        "volume": 1250,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "BBFO11",
+        "name": "FII BB FOF CI",
+        "close": 67.45,
+        "change": 0.71673733,
+        "volume": 1243,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "OURE11",
+        "name": "FII OU RENDACI",
+        "close": 77.27,
+        "change": -0.55340671,
+        "volume": 1215,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "RFOF11",
+        "name": "FII RB CFOF CI",
+        "close": 69.89,
+        "change": -0.01430901,
+        "volume": 1214,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "EGAF11",
+        "name": "FIAGRO ECO CI ER",
+        "close": 100.11,
+        "change": -0.6056394,
+        "volume": 1159,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/banco-do-brasil--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "CXRI11",
+        "name": "FII CX RBRAVCI ER",
+        "close": 66.5,
+        "change": -0.74626866,
+        "volume": 1122,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "BNFS11",
+        "name": "FII BANRISULCI",
+        "close": 113.33,
+        "change": -0.11457782,
+        "volume": 1072,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "RDPD11",
+        "name": "FII BB PAPIICI",
+        "close": 23,
+        "change": 2.9082774,
+        "volume": 1062,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "HOFC11",
+        "name": "FII HOFFICEICI",
+        "close": 24.7,
+        "change": -0.72346868,
+        "volume": 891,
+        "market_cap": null,
+        "logo": "https://brapi.dev/favicon.svg",
+        "sector": null
+    },
+    {
+        "stock": "RBHY11",
+        "name": "FII RB YIELDCI",
+        "close": 91.8,
+        "change": 0.2183428,
+        "volume": 765,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "JGPX11",
+        "name": "FIAGRO JGP CI",
+        "close": 96.4,
+        "change": 0.01037556,
+        "volume": 752,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/banco-do-brasil--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "ITIP11",
+        "name": "FII INTER IPCI",
+        "close": 73.85,
+        "change": -0.18921206,
+        "volume": 691,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "CXAG11",
+        "name": "FII CAIXA AGCI",
+        "close": 76,
+        "change": -0.78328723,
+        "volume": 676,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "ABCP11",
+        "name": "FII ABC IMOBCI",
+        "close": 68.51,
+        "change": 0.01459854,
+        "volume": 672,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "GCFF11",
+        "name": "FII GALAPAGOCI",
+        "close": 67.06,
+        "change": -0.5192167,
+        "volume": 655,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "IRIM11",
+        "name": "FII IRIM CI ER",
+        "close": 87.25,
+        "change": -0.75077235,
+        "volume": 611,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "JFLL11",
+        "name": "FII JFL LIV CI",
+        "close": 68.8,
+        "change": 1.91082501,
+        "volume": 609,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "OULG11",
+        "name": "FII OURILOG CI",
+        "close": 38.38,
+        "change": -0.82687595,
+        "volume": 605,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "MAXR11",
+        "name": "FII MAX RET CI ER",
+        "close": 66.43,
+        "change": 1.31157542,
+        "volume": 587,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "LSAG11",
+        "name": "FIAGRO LESTECI",
+        "close": 106.39,
+        "change": -0.0093985,
+        "volume": 576,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/banco-do-brasil--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "RCFA11",
+        "name": "FII GP RCFA CI",
+        "close": 2.76,
+        "change": -0.71942446,
+        "volume": 575,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "LUGG11",
+        "name": "FII LUGGO CI",
+        "close": 74.9,
+        "change": 0.3214519,
+        "volume": 551,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "TMPS11",
+        "name": "FII ITAU TEMCI",
+        "close": 95,
+        "change": -4.04040404,
+        "volume": 523,
+        "market_cap": null,
+        "logo": "https://brapi.dev/favicon.svg",
+        "sector": null
+    },
+    {
+        "stock": "RBIR11",
+        "name": "FII RBRES IVCI",
+        "close": 81,
+        "change": 2.66159436,
+        "volume": 513,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "ALZM11",
+        "name": "FII ALIANZMECI",
+        "close": 90.97,
+        "change": 0.45274073,
+        "volume": 446,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "SNLG11",
+        "name": "FII SUNO LG CI",
+        "close": 34.99,
+        "change": 1.77428442,
+        "volume": 438,
+        "market_cap": null,
+        "logo": "https://brapi.dev/favicon.svg",
+        "sector": null
+    },
+    {
+        "stock": "SHPH11",
+        "name": "FII HIGIENOPCI",
+        "close": 684,
+        "change": -0.1445262,
+        "volume": 436,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "FIIB11",
+        "name": "FII INDL BR CI",
+        "close": 466,
+        "change": -1.06157113,
+        "volume": 414,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "RBRD11",
+        "name": "FII RB II CI",
+        "close": 34.46,
+        "change": -0.11594203,
+        "volume": 414,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "FATN11",
+        "name": "FII ATHENA ICI ER",
+        "close": 94.99,
+        "change": 1.47420039,
+        "volume": 407,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "FLMA11",
+        "name": "FII S F LIMACI ER",
+        "close": 124.44,
+        "change": -0.20049723,
+        "volume": 398,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": "Miscellaneous"
+    },
+    {
+        "stock": "EVBI11",
+        "name": "FII VBI CON CI ERS",
+        "close": 93.95,
+        "change": 0.01064296,
+        "volume": 395,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "CXCI11",
+        "name": "FII CAIXA CICI ER",
+        "close": 77,
+        "change": 0.13003641,
+        "volume": 390,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "SCPF11",
+        "name": "FII SCP CI ER",
+        "close": 5.3,
+        "change": 0.37878788,
+        "volume": 373,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "IBCR11",
+        "name": "FII BREI CI ER",
+        "close": 75,
+        "change": 1.20091619,
+        "volume": 355,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": "Miscellaneous"
+    },
+    {
+        "stock": "NSLU11",
+        "name": "FII LOURDES CI",
+        "close": 170.97,
+        "change": 1.76180595,
+        "volume": 339,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "NCRI11",
+        "name": "FII NAVI CRICI ER",
+        "close": 8.44,
+        "change": -0.82256169,
+        "volume": 330,
+        "market_cap": null,
+        "logo": "https://brapi.dev/favicon.svg",
+        "sector": null
+    },
+    {
+        "stock": "NAVT11",
+        "name": "FII NAVI TOTCI",
+        "close": 75.95,
+        "change": 0.02634005,
+        "volume": 329,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "QAMI11",
+        "name": "FII QUASAR CCI",
+        "close": 74.78,
+        "change": -0.02674198,
+        "volume": 300,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "FVPQ11",
+        "name": "FII V PARQUECI",
+        "close": 100.7,
+        "change": 0.09940358,
+        "volume": 276,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "ITIT11",
+        "name": "FII INTER ITCI",
+        "close": 72.85,
+        "change": 0.51048149,
+        "volume": 271,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "PLCA11",
+        "name": "FIAGRO PLUR CI",
+        "close": 83,
+        "change": 0.24154226,
+        "volume": 262,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/banco-do-brasil--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "HCRI11",
+        "name": "FII CRIANCA CI",
+        "close": 238.9,
+        "change": 0.08798023,
+        "volume": 250,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "MCHY11",
+        "name": "FII MAUA HY CI",
+        "close": 110,
+        "change": 0,
+        "volume": 242,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "NVHO11",
+        "name": "FII NOVOHORICI",
+        "close": 11.9,
+        "change": -0.58479532,
+        "volume": 222,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "HOSI11",
+        "name": "FII HOUSI CI",
+        "close": 53.03,
+        "change": -0.91554559,
+        "volume": 216,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "RBOP11",
+        "name": "FII MERC BR CI ER",
+        "close": 460.01,
+        "change": -0.43073593,
+        "volume": 215,
+        "market_cap": null,
+        "logo": "https://brapi.dev/favicon.svg",
+        "sector": null
+    },
+    {
+        "stock": "VOTS11",
+        "name": "FII V MASTERCI",
+        "close": 81.41,
+        "change": -0.12268678,
+        "volume": 215,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii-vot-log-ci-er--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "JRDM11",
+        "name": "FII SHOPJSULCI",
+        "close": 79,
+        "change": -0.31545741,
+        "volume": 199,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "BRIP11",
+        "name": "FII BRIO IIICI",
+        "close": 999.98,
+        "change": -13.04446126,
+        "volume": 182,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "PLRI11",
+        "name": "FII POLO I CI",
+        "close": 19.1,
+        "change": -2.05128205,
+        "volume": 175,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "ZAVI11",
+        "name": "FII ZAVIT R CI",
+        "close": 126,
+        "change": 0,
+        "volume": 169,
+        "market_cap": null,
+        "logo": "https://brapi.dev/favicon.svg",
+        "sector": null
+    },
+    {
+        "stock": "HGIC11",
+        "name": "FII HGI CRI CI ER",
+        "close": 98.3,
+        "change": 0.30612245,
+        "volume": 166,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "CBOP11",
+        "name": "FII C BRANCOCI",
+        "close": 35.57,
+        "change": 0.25366404,
+        "volume": 166,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "RECX11",
+        "name": "FII REC FOF CI",
+        "close": 64.48,
+        "change": 1.62332385,
+        "volume": 139,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "NEWL11",
+        "name": "FII NEWPORT CI",
+        "close": 100.5,
+        "change": -0.16886858,
+        "volume": 137,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "HGAG11",
+        "name": "FIAGRO HIGH CI",
+        "close": 38.34,
+        "change": 4.41176186,
+        "volume": 136,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/banco-do-brasil--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "CNES11",
+        "name": "FII CENESP CI",
+        "close": 27.01,
+        "change": -0.6254599,
+        "volume": 133,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "BMLC11",
+        "name": "FII BMBRC LCCI ER",
+        "close": 102.81,
+        "change": -0.15538506,
+        "volume": 130,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "GCOI11",
+        "name": "FII GALAP SPCI",
+        "close": 98.99,
+        "change": 0.00000202,
+        "volume": 130,
+        "market_cap": null,
+        "logo": "https://brapi.dev/favicon.svg",
+        "sector": null
+    },
+    {
+        "stock": "RMAI11",
+        "name": "FII REAGMULTCI",
+        "close": 46.5,
+        "change": 0,
+        "volume": 127,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "RBVO11",
+        "name": "FII RIOBCRI2CI",
+        "close": 8.6,
+        "change": -0.92165899,
+        "volume": 108,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "RRCI11",
+        "name": "FII RBCAP RICI",
+        "close": 80.81,
+        "change": -0.19760528,
+        "volume": 105,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "XPHT11",
+        "name": "FII XP HOT CI",
+        "close": 108.59,
+        "change": -1.68401992,
+        "volume": 103,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "HCRA11",
+        "name": "FIAGRO HEDGECI ER",
+        "close": 102.5,
+        "change": 0.04881601,
+        "volume": 99,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/banco-do-brasil--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "ASMT11",
+        "name": "FII ASA MET CI",
+        "close": 50,
+        "change": 0,
+        "volume": 93,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "TJKB11",
+        "name": "FII TJK RENDCI",
+        "close": 262.5,
+        "change": 0,
+        "volume": 91,
+        "market_cap": null,
+        "logo": "https://brapi.dev/favicon.svg",
+        "sector": null
+    },
+    {
+        "stock": "PQDP11",
+        "name": "FII D PEDRO CI",
+        "close": 1734,
+        "change": -0.05763689,
+        "volume": 91,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "MFAI11",
+        "name": "FII MERITOFACI",
+        "close": 57.99,
+        "change": 0.72954664,
+        "volume": 86,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "CJCT11",
+        "name": "FII CJCTOWERCI",
+        "close": 60,
+        "change": 0,
+        "volume": 86,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": "Miscellaneous"
+    },
+    {
+        "stock": "ZIFI11",
+        "name": "FII ZION CI",
+        "close": 1018.99,
+        "change": -6.42883379,
+        "volume": 81,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii-zion-ci--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "CRAA11",
+        "name": "FIAGRO CRAA CI ER",
+        "close": 103.29,
+        "change": 0,
+        "volume": 73,
+        "market_cap": null,
+        "logo": "https://brapi.dev/favicon.svg",
+        "sector": null
+    },
+    {
+        "stock": "HUSC11",
+        "name": "FII H UNIMEDCI",
+        "close": 98,
+        "change": -1.01010101,
+        "volume": 66,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "IDFI11",
+        "name": "FII UNIDADESCI",
+        "close": 45.5,
+        "change": 0,
+        "volume": 65,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "PEMA11",
+        "name": "FII PERFORMACI",
+        "close": 33.89,
+        "change": 5.67508575,
+        "volume": 58,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "LFTT11",
+        "name": "FII LOFT II CI",
+        "close": 65,
+        "change": 0,
+        "volume": 58,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "EURO11",
+        "name": "FII EUROPAR CI",
+        "close": 237,
+        "change": 0.17329557,
+        "volume": 56,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "KEVE11",
+        "name": "FII EVEN II CI",
+        "close": 999.99,
+        "change": 0.000001,
+        "volume": 53,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "CCRF11",
+        "name": "RBR CRI FII CI",
+        "close": 80,
+        "change": -1.85253584,
+        "volume": 53,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "FZDA11",
+        "name": "FIAGRO 051 CI",
+        "close": 119,
+        "change": 0,
+        "volume": 52,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/banco-do-brasil--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "BLMC11",
+        "name": "FII BLUE CRICI",
+        "close": 77.19,
+        "change": 5.73972603,
+        "volume": 48,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "RBLG11",
+        "name": "FII RBCAP LGCI ER",
+        "close": 92,
+        "change": 0,
+        "volume": 43,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "BREV11",
+        "name": "FII BRE VIC CI ER",
+        "close": 85,
+        "change": 0,
+        "volume": 40,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "CTXT11",
+        "name": "FII C TEXTILCI",
+        "close": 10.82,
+        "change": 0.27803522,
+        "volume": 40,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "HCHG11",
+        "name": "FII HECT CRICI",
+        "close": 81.77,
+        "change": -0.01222671,
+        "volume": 38,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "RNDP11",
+        "name": "FII BB R PAPCI",
+        "close": 107.2,
+        "change": -8.49338455,
+        "volume": 37,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "MATV11",
+        "name": "FII MORE ATVCI",
+        "close": 75.82,
+        "change": -1.1988507,
+        "volume": 32,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "ONEF11",
+        "name": "FII THEE CI ER",
+        "close": 184,
+        "change": -0.15735526,
+        "volume": 29,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "ALMI11",
+        "name": "FII TORRE ALCI",
+        "close": 765,
+        "change": 1.45888594,
+        "volume": 29,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": "Miscellaneous"
+    },
+    {
+        "stock": "OGHY11",
+        "name": "FII ORAMA CI",
+        "close": 9.97,
+        "change": 0,
+        "volume": 28,
+        "market_cap": null,
+        "logo": "https://brapi.dev/favicon.svg",
+        "sector": null
+    },
+    {
+        "stock": "PQAG11",
+        "name": "FII PARQ ANHCI",
+        "close": 50,
+        "change": 1.2145708,
+        "volume": 28,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "PABY11",
+        "name": "FII PANAMBY CI",
+        "close": 12.08,
+        "change": -1.14566285,
+        "volume": 25,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "RBDS11",
+        "name": "FII RBRESID2CI",
+        "close": 2.71,
+        "change": 11.98347107,
+        "volume": 23,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": "Miscellaneous"
+    },
+    {
+        "stock": "JPPC11",
+        "name": "FII JPP CAPICI",
+        "close": 130,
+        "change": 18.18181818,
+        "volume": 22,
+        "market_cap": null,
+        "logo": "https://brapi.dev/favicon.svg",
+        "sector": null
+    },
+    {
+        "stock": "WPLZ11",
+        "name": "FII W PLAZA CI",
+        "close": 62.1,
+        "change": 1.7865957,
+        "volume": 18,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii-w-plaza-ci-er--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "HSRE11",
+        "name": "FII HSIRENDACI",
+        "close": 102.49,
+        "change": -0.49514563,
+        "volume": 17,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "WSEC11",
+        "name": "FII WARREN CI ER",
+        "close": 90,
+        "change": 0.01111457,
+        "volume": 14,
+        "market_cap": null,
+        "logo": "https://brapi.dev/favicon.svg",
+        "sector": null
+    },
+    {
+        "stock": "DPRO11",
+        "name": "FII DEVA PROCI ER",
+        "close": 96,
+        "change": -1.89064695,
+        "volume": 12,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "PRSV11",
+        "name": "FII P VARGASCI",
+        "close": 90.12,
+        "change": -0.00000333,
+        "volume": 10,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": "Miscellaneous"
+    },
+    {
+        "stock": "LASC11",
+        "name": "FII LEGATUS CI",
+        "close": 103.94,
+        "change": -0.04808155,
+        "volume": 10,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "IAGR11",
+        "name": "FIAGRO SFI CI",
+        "close": 99.25,
+        "change": 0,
+        "volume": 8,
+        "market_cap": null,
+        "logo": "https://brapi.dev/favicon.svg",
+        "sector": null
+    },
+    {
+        "stock": "HAAA11",
+        "name": "FII HEDGEAAACI",
+        "close": 61.9,
+        "change": 1.47540984,
+        "volume": 7,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "VVRI11",
+        "name": "FII V2 RENDACI",
+        "close": 100,
+        "change": 0,
+        "volume": 6,
+        "market_cap": null,
+        "logo": "https://brapi.dev/favicon.svg",
+        "sector": null
+    },
+    {
+        "stock": "BZLI11",
+        "name": "FII BRREALTYCI",
+        "close": 17.11,
+        "change": 0.05847953,
+        "volume": 5,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "HPDP11",
+        "name": "FII HEDGEPDPCI",
+        "close": 69.99,
+        "change": 2.89621154,
+        "volume": 5,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "IDGR11",
+        "name": "FII UNID II CI",
+        "close": 60,
+        "change": 0,
+        "volume": 4,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "HBRH11",
+        "name": "FII MULT RENCI",
+        "close": 94,
+        "change": 0,
+        "volume": 4,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "CXTL11",
+        "name": "FII CX TRX CI",
+        "close": 335.91,
+        "change": -3.17922407,
+        "volume": 3,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "HUSI11",
+        "name": "FII HUSI CI",
+        "close": 989.5,
+        "change": 43.19826339,
+        "volume": 2,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "FPAB11",
+        "name": "FII A BRANCACI",
+        "close": 137,
+        "change": 1.62450857,
+        "volume": 1,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii-a-brancaci--big.svg",
+        "sector": "Miscellaneous"
+    },
+    {
+        "stock": "VVCO11",
+        "name": "FII V2EDCORPCI",
+        "close": 10,
+        "change": 0.50251256,
+        "volume": 1,
+        "market_cap": null,
+        "logo": "https://brapi.dev/favicon.svg",
+        "sector": null
+    },
+    {
+        "stock": "ROOF11",
+        "name": "FII ROOFTOPICI",
+        "close": 760,
+        "change": 0,
+        "volume": 1,
+        "market_cap": null,
+        "logo": "https://brapi.dev/favicon.svg",
+        "sector": null
+    },
+    {
+        "stock": "CCME11",
+        "name": "FII CANUMA CI ERS",
+        "close": 109,
+        "change": 7.92079208,
+        "volume": 1,
+        "market_cap": null,
+        "logo": "https://brapi.dev/favicon.svg",
+        "sector": null
+    },
+    {
+        "stock": "TRNT11",
+        "name": "FII TORRE NOCI",
+        "close": 101,
+        "change": 0.98990101,
+        "volume": 1,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": "Miscellaneous"
+    },
+    {
+        "stock": "FLRP11",
+        "name": "FII FLORIPA CI",
+        "close": 1609.01,
+        "change": 0,
+        "volume": 1,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": "Miscellaneous"
+    },
+    {
+        "stock": "HUCG11",
+        "name": "FII UNIMED CCI",
+        "close": 77.99,
+        "change": 9.92248527,
+        "volume": 1,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    },
+    {
+        "stock": "RBRI11",
+        "name": "FII RBR III CI",
+        "close": 995,
+        "change": 0,
+        "volume": 1,
+        "market_cap": null,
+        "logo": "https://s3-symbol-logo.tradingview.com/fii--big.svg",
+        "sector": null
+    }
+]
