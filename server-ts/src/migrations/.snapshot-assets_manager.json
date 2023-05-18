@@ -47,6 +47,15 @@
           "primary": false,
           "nullable": false,
           "mappedType": "string"
+        },
+        "user_picture": {
+          "name": "user_picture",
+          "type": "varchar(5000)",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": true,
+          "mappedType": "string"
         }
       },
       "name": "user",

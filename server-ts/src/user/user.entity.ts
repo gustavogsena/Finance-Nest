@@ -27,6 +27,9 @@ export class User {
   @Property()
   password: string;
 
+  @Property({ nullable: true, columnType: 'varchar(5000)' })
+  userPicture: string;
+
   @OneToMany(() => Asset, (asset) => asset.user)
   assets = new Collection<Asset>(this);
 

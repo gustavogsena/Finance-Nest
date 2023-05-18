@@ -145,8 +145,9 @@ export type User = {
     username?: string;
     name?: string;
     surname?: string;
-    assets?: number
-    isAuthenticated?: boolean
+    assets?: number;
+    isAuthenticated?: boolean;
+    userPicture: string | null
 }
 
 export type UserForm = {

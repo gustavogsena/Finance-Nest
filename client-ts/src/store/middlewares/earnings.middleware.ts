@@ -38,6 +38,8 @@ earningsListener.startListening({
             dispatch(getConsolidatedAsset())
             dispatch(getAssets())
             dispatch(getEarnings(query))
+        } else {
+            toast('Falha ao deletar provento')
         }
     }
 });
@@ -57,6 +59,8 @@ earningsListener.startListening({
             dispatch(getConsolidatedAsset())
             dispatch(getAssets())
             dispatch(getEarnings(query))
+        } else {
+            toast('Falha ao criar provento')
         }
     }
 });
@@ -76,6 +80,8 @@ earningsListener.startListening({
             dispatch(getConsolidatedAsset())
             dispatch(getAssets())
             dispatch(getEarnings(query))
+        } else {
+            toast('Falha ao editar provento')
         }
     }
 });

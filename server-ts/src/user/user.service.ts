@@ -5,6 +5,8 @@ import { User } from 'src/user/user.entity';
 import { PopulateHint } from '@mikro-orm/core';
 import { Asset } from 'src/assets/assets.entity';
 import { CreateUserDto } from './dto/createUser.dto';
+import * as path from 'path';
+import { promises as fs } from 'fs';
 
 @Injectable()
 export class UserService {
@@ -23,5 +25,27 @@ export class UserService {
         const user = this.userRepository.create(createUserDto)
         await this.userRepository.flush()
         return user
-    }   
+    }
+
+    async uploadPicture(userId: number, picture: Buffer) {
+        const picturePath = path.join('public', 'pictures', `${userId}.jpeg`);
+        const user = await this.findById(userId);
+        try {
+            await fs.writeFile(picturePath, picture);
+        } catch (error) {
+            console.log(error);
+            return {
+                success: false,
+                user,
+            };
+        }
+        const pictureUrl = `/pictures/${userId}.jpeg`;
+        user.userPicture = pictureUrl;
+        this.userRepository.flush();
+
+        return {
+            success: true,
+            user,
+        };
+    }
 }

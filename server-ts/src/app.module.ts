@@ -9,8 +9,20 @@ import { UserModule } from './user/user.module';
 import { AuthModule } from './auth/auth.module';
 import { EarningModule } from './earnings/earning.module';
 import { ConfigModule } from '@nestjs/config'
+import { ServeStaticModule } from '@nestjs/serve-static';
+import * as path from 'path';
 @Module({
-  imports: [MikroOrmModule.forRoot(), ConfigModule.forRoot(), BolsaModule, AssetsModule, OperationModule, UserModule, AuthModule, EarningModule],
+  imports: [
+    ServeStaticModule.forRoot({
+      rootPath: path.join(__dirname, '..', 'public'),
+    }),
+    MikroOrmModule.forRoot(),
+    ConfigModule.forRoot(),
+    BolsaModule, AssetsModule,
+    OperationModule,
+    UserModule,
+    AuthModule,
+    EarningModule],
   controllers: [AppController],
   providers: [AppService],
 })

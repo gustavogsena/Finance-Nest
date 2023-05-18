@@ -1,6 +1,6 @@
 import { createListenerMiddleware } from "@reduxjs/toolkit";
-import { authenticatedUser, getUser, removeUser, updateUser, userCreate, userLogin, userLogout } from "../reducers/user.slice";
-import { createUserApi, getUserApi, login } from "../../api/services/user.api";
+import { authenticated, authenticatedUser, getUser, removeUser, updateUser, userCreate, userLogin, userLogout, userUploadPicture } from "../reducers/user.slice";
+import { createUserApi, getUserApi, login, uploadUserPictureApi } from "../../api/services/user.api";
 import { getConsolidatedAsset, resetConsolidatedAssets } from "../reducers/consolidated.slice";
 import { resetQuery, updateQuery } from "../reducers/query.slice";
 import { resetOperationForm, updateOperationForm } from "../reducers/operationForm.slice";
@@ -24,6 +24,7 @@ userListener.startListening({
 
         if (response.status === 'ok') {
             dispatch(updateUser(response.value))
+            dispatch(authenticated())
             dispatch(getConsolidatedAsset())
             dispatch(getAssets())
             dispatch(dispatch(getEarnings({ offset: 0, limit: 15 })))
@@ -51,6 +52,8 @@ userListener.startListening({
             dispatch(dispatch(getEarnings({ offset: 0, limit: 15 })))
             dispatch(dispatch(getEarningsByMonth({ offset: 0, limit: 15 })))
             browserHistory.push("/")
+        } else {
+            toast('Falha no login')
         }
     }
 });
@@ -81,6 +84,27 @@ userListener.startListening({
         if (response.status === 'ok') {
             toast('Usuario criado com sucesso')
             dispatch(userLogin({ email: credentials.email, password: credentials.password }))
+        } else {
+            toast('Falha na criação de usuário')
+        }
+    }
+});
+userListener.startListening({
+    actionCreator: userUploadPicture,
+    effect: async (action, { dispatch, fork, unsubscribe }) => {
+
+        const uploadPicture = fork(async (api) => {
+            const user = await uploadUserPictureApi(action.payload);
+            return user
+        });
+        const response = await uploadPicture.result
+        console.log(response)
+        if (response.status === 'ok') {
+            toast('Upload realizado com sucesso')
+            dispatch(updateUser(response.value.user))
+            dispatch(authenticated())
+        } else {
+            toast('Falha no upload')
         }
     }
 });

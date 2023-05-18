@@ -44,6 +44,8 @@ operationsListener.startListening({
             dispatch(resetOperationForm())
             dispatch(getConsolidatedAsset())
             dispatch(getAssets())
+        } else {
+            toast('Falha ao criar operação')
         }
     }
 });
@@ -63,6 +65,8 @@ operationsListener.startListening({
             dispatch(resetOperationForm())
             dispatch(getConsolidatedAsset())
             dispatch(getAssets())
+        } else {
+            toast('Falha ao editar operação')
         }
     }
 });
@@ -84,6 +88,8 @@ operationsListener.startListening({
             dispatch(getEarnings(query))
             dispatch(getConsolidatedAsset())
             dispatch(getAssets())
+        } else {
+            toast('Falha ao deletar operação')
         }
     }
 });

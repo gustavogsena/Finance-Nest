@@ -6,10 +6,12 @@ import { browserHistory } from '../../browserHistory';
 export const getUser = createAction('getUser')
 export const userLogin = createAction<LoginInput>('userLogin')
 export const userCreate = createAction<UserForm>('userCreate')
+export const userUploadPicture = createAction<File>('userUploadPicture')
 export const userLogout = createAction('userLogout')
 
 const initialState: User = {
-    isAuthenticated: false
+    isAuthenticated: false,
+    userPicture: null
 }
 
 const userSlice = createSlice({
@@ -30,11 +32,17 @@ const userSlice = createSlice({
                 ...state,
                 isAuthenticated: true
             }
+        },
+        authenticated: (state) => {
+            return {
+                ...state,
+                isAuthenticated: true
+            }
         }
 
     }
 });
 
-export const { updateUser, removeUser, authenticatedUser } = userSlice.actions;
+export const { updateUser, removeUser, authenticatedUser, authenticated } = userSlice.actions;
 
 export default userSlice.reducer;
