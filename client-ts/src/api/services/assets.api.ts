@@ -10,6 +10,7 @@ export const getAssetsApi = async (): Promise<BasicAsset[]> => {
 
 export const getConsolidatedAssetsApi = async (): Promise<ConsolidatedAsset> => {
   const resposta = await api.get(`/assets/consolidated`)
+  console.log(resposta.data)
   return resposta.data
 }
 

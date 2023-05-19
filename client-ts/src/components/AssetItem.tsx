@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { BasicAsset, ConsolidatedAssetItem, Query } from '../types'
 import { useNavigate } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
@@ -24,6 +24,7 @@ function AssetItem({ asset, consolidado }: AssetItem) {
         
         navigate('/asset')
     }
+
 
     return (
         <div

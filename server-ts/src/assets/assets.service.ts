@@ -22,6 +22,7 @@ export interface AssetCurrentPrice extends AssetAvaragePrice {
     current_price: number,
     current_total: number,
     balance: number
+    balance_with_earnings: number
 }
 
 export interface AssetWithEarnings extends Asset {
@@ -35,14 +36,12 @@ export class AssetsService {
         private readonly bolsaService: BolsaService
     ) { }
 
-    async findAssets(
-        {
-            type = ''
-        }: AssetQueryDto,
-        userId: number) {
+    async findAssets({ type = '' }: AssetQueryDto, userId: number): Promise<AssetCurrentPrice[]> {
         const where = type ? { user: userId, asset_type: type } : { user: userId }
+
+        /* First query builder to group by asset_id based on operation table */
         const qb = this.assetRepository.createQueryBuilder('a')
-        const query = qb
+        const operationsQuery = qb
             .select([
                 '*',
                 "SUM(case when o.operation_type = 'bought' then o.operation_price * o.quantity ELSE o.operation_price * -o.quantity END) as total_price",
@@ -53,21 +52,27 @@ export class AssetsService {
             .groupBy('asset_id')
 
 
+        /* Second query builder to group by asset_id based on a left join with earnings, because some assets don't have any earning*/
         const qb2 = this.assetRepository.createQueryBuilder('a')
-        const earnings = qb2.select(['*', 'SUM(e.earning_value) as earnings_received']).leftJoin('a.earnings', 'e').where(where).groupBy('asset_id')
+        const earningsQuery = qb2.select(['*', 'SUM(e.earning_value) as earnings_received']).leftJoin('a.earnings', 'e').where(where).groupBy('asset_id')
 
-        const earningsResult: AssetWithEarnings[] = await earnings.execute()
-        const result: AssetConsolidated[] = await query.execute()
+        /* Execute both querys */
+        const totalResult: AssetConsolidated[] = await operationsQuery.execute()
+        const earningsResult: AssetWithEarnings[] = await earningsQuery.execute()
+        
 
-        const resultWithEarnings = result.map((item) => {
+        /* Get the array result from 1st query and map it to add the 'sum(earnings_received)' from 2nd query in only one array*/
+        const resultWithEarnings = totalResult.map((item) => {
             const [asset] = earningsResult.filter((earningAsset) => earningAsset.asset_id === item.asset_id)
             return {
                 ...item,
+                total_quantity: Number(item.total_quantity),
                 earnings_received: asset.earnings_received
             }
         })
 
-        const queryWithAvaragePrice: AssetAvaragePrice[] = resultWithEarnings.map((asset) => {
+        /* Calculate avarage and discounted prices and return a new array with this new entries  */
+        const assetsWithAvaragePrice: AssetAvaragePrice[] = resultWithEarnings.map((asset) => {
             const average_price = (asset.total_price / asset.total_quantity).toFixed(2)
             const discounted_price = asset.total_price - +asset.earnings_received
             const discounted_average_price = (discounted_price / asset.total_quantity).toFixed(2)
@@ -75,7 +80,8 @@ export class AssetsService {
             return { ...asset, earnings_received, average_price, discounted_average_price, discounted_price }
         })
 
-        const assetsWithCurrentPrice: AssetCurrentPrice[] = await this.findAssetsCurrentPrice(queryWithAvaragePrice)
+        /* Get current price of each asset and calculate its total balance  */
+        const assetsWithCurrentPrice: AssetCurrentPrice[] = await this.findAssetsCurrentPrice(assetsWithAvaragePrice)
 
         return assetsWithCurrentPrice
     }
@@ -83,18 +89,30 @@ export class AssetsService {
 
     async findAssetsCurrentPrice(assetArray: AssetAvaragePrice[]): Promise<AssetCurrentPrice[]> {
         const assets = await Promise.all(assetArray.map(async (asset: AssetAvaragePrice) => {
+
+            /* Make a request to api to get the current price of the asset */
             const [currentStock] = await this.bolsaService.retornaAtivoProcurado(asset.asset_code)
+            
             const current_price = currentStock.regularMarketPrice
             const current_total = currentStock.regularMarketPrice * asset.total_quantity
             const balance = Number((current_total - asset.total_price).toFixed(2))
             const balance_with_earnings = Number((balance + +asset.earnings_received).toFixed(2))
             return { ...asset, current_price, current_total: Number(current_total.toFixed(2)), balance, balance_with_earnings }
         }))
+
         return assets
     }
 
     async consolidateAssets(assets: AssetCurrentPrice[]) {
-        const consolidated = assets.reduce((acc, asset) => {
+
+        /* Separate the assets by total_quantity */
+        const notSoldAssets = assets.filter((asset) => asset.total_quantity > 0)
+
+        /* If total_quantity is equal 0, it means that it's a fully sold asset */
+        const soldAssets = assets.filter((asset) => asset.total_quantity === 0)
+
+        /* Reduce the not fully sold assets to get the consolidated amount of each information */
+        const consolidated = notSoldAssets.reduce((acc, asset) => {
             return acc = {
                 ...acc,
                 [asset.asset_type]: {
@@ -102,24 +120,51 @@ export class AssetsService {
                     price: acc[asset.asset_type].price + +asset.total_price,
                     discounted_price: acc[asset.asset_type].discounted_price + +asset.discounted_price,
                     earnings: acc[asset.asset_type].earnings + +asset.earnings_received,
-                    balance: Number((acc[asset.asset_type].balance + +asset.current_total - asset.total_price).toFixed(2)),
-                    discounted_balance: Number((acc[asset.asset_type].discounted_balance + +asset.current_total - +asset.discounted_price).toFixed(2))
+                    balance: Number((acc[asset.asset_type].balance + asset.balance).toFixed(2)),
+                    discounted_balance: Number((acc[asset.asset_type].discounted_balance + asset.balance_with_earnings).toFixed(2)),
+                    sold_balance: 0,
+                    total_sold_balance: Number((acc[asset.asset_type].discounted_balance + asset.balance_with_earnings).toFixed(2))
                 },
                 total: {
                     current: acc.total.current + +asset.current_total,
                     price: acc.total.price + +asset.total_price,
                     discounted_price: acc.total.discounted_price + +asset.discounted_price,
                     earnings: acc.total.earnings + +asset.earnings_received,
-                    balance: Number((acc.total.balance + +asset.current_total - asset.total_price).toFixed(2)),
-                    discounted_balance: Number((acc.total.discounted_balance + +asset.current_total - +asset.discounted_price).toFixed(2))
+                    balance: Number((acc.total.balance + asset.balance).toFixed(2)),
+                    discounted_balance: Number((acc.total.discounted_balance + asset.balance_with_earnings).toFixed(2)),
+                    sold_balance: 0,
+                    total_sold_balance: Number((acc.total.discounted_balance + asset.balance_with_earnings).toFixed(2))
                 }
             }
         }, {
-            realestate: { current: 0, price: 0, discounted_price: 0, earnings: 0, balance: 0, discounted_balance: 0 },
-            stockshare: { current: 0, price: 0, discounted_price: 0, earnings: 0, balance: 0, discounted_balance: 0 },
-            total: { current: 0, price: 0, discounted_price: 0, earnings: 0, balance: 0, discounted_balance: 0 }
+            realestate: { current: 0, price: 0, discounted_price: 0, earnings: 0, balance: 0, discounted_balance: 0, sold_balance: 0, total_sold_balance: 0 },
+            stockshare: { current: 0, price: 0, discounted_price: 0, earnings: 0, balance: 0, discounted_balance: 0, sold_balance: 0, total_sold_balance: 0 },
+            total: { current: 0, price: 0, discounted_price: 0, earnings: 0, balance: 0, discounted_balance: 0, sold_balance: 0, total_sold_balance: 0 }
         })
-        return consolidated
+
+        /* Reduce the fully sold assets, starting with the previous calculated consolidated, to get the consolidated with the fully sold values  */
+        const consolidatedWithSoldAssets = soldAssets.reduce((acc, asset) => {
+            console.log(asset)
+            return acc = {
+                ...acc,
+                [asset.asset_type]: {
+                    ...acc[asset.asset_type],
+                    earnings: acc[asset.asset_type].earnings + asset.earnings_received,
+                    discounted_balance: Number((acc[asset.asset_type].discounted_balance + asset.earnings_received).toFixed(2)),
+                    sold_balance: Number((acc[asset.asset_type].sold_balance + asset.balance).toFixed(2)),
+                    total_sold_balance: Number((acc[asset.asset_type].total_sold_balance + asset.balance_with_earnings).toFixed(2))
+                },
+                total: {
+                    ...acc.total,
+                    earnings: acc.total.earnings + asset.earnings_received,
+                    discounted_balance: Number((acc.total.discounted_balance + asset.earnings_received).toFixed(2)),
+                    sold_balance: Number((acc.total.sold_balance + asset.balance).toFixed(2)),
+                    total_sold_balance: Number((acc.total.total_sold_balance + asset.balance_with_earnings).toFixed(2))
+                }
+            }
+        }, consolidated)
+
+        return consolidatedWithSoldAssets
     }
 
     async findAssetById(assetId: number, userId: number) {

@@ -15,7 +15,9 @@ export type ConsolidatedAssetItem = {
     discounted_price: number,
     earnings: number,
     balance: number,
-    discounted_balance: number
+    discounted_balance: number,
+    sold_balance: number,
+    total_sold_balance: number
 }
 
 export type BasicAsset = {

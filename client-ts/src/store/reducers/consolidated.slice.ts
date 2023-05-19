@@ -11,23 +11,29 @@ const initialState: ConsolidatedAsset = {
     discounted_price: 0,
     earnings: 0,
     balance: 0,
-    discounted_balance: 0
+    discounted_balance: 0,
+    sold_balance: 0,
+    total_sold_balance: 0
   },
-  "stockshare": {
+  stockshare: {
     current: 0,
     price: 0,
     discounted_price: 0,
     earnings: 0,
     balance: 0,
-    discounted_balance: 0
+    discounted_balance: 0,
+    sold_balance: 0,
+    total_sold_balance: 0
   },
-  "total": {
+  total: {
     current: 0,
     price: 0,
     discounted_price: 0,
     earnings: 0,
     balance: 0,
-    discounted_balance: 0
+    discounted_balance: 0,
+    sold_balance: 0,
+    total_sold_balance: 0
   }
 }
 

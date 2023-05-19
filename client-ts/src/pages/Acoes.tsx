@@ -16,7 +16,7 @@ export default function Acoes() {
     const dispatch = useDispatch()
     const [chartData, setChartData] = useState<ChartDataType[]>([])
     const consolidado = useSelector<RootState, ConsolidatedAsset>(state => state.consolidatedAssets)
-    const assets = useSelector<RootState, BasicAsset[]>(state => state.assets.filter((asset) => asset.asset_type === 'stockshare'))
+    const assets = useSelector<RootState, BasicAsset[]>(state => state.assets.filter((asset) => asset.asset_type === 'stockshare' && asset.total_quantity !== 0))
 
 useEffect(() => {
     dispatch(resetQuery())
