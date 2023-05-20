@@ -22,7 +22,6 @@ export class UserSeeder extends Seeder {
 }
 
 const getPrice = async (code: string): Promise<DecimalType> => {
-
   const randomValue = Math.random()
   const [asset] = await (new BolsaService).retornaAtivoProcurado(code)
   let price = asset.regularMarketPrice

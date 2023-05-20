@@ -5,10 +5,12 @@ import { Earning } from './earnings/earning.entity';
 
 export default {
   entities: [User, Operation, Asset, Earning],
-  port: 3306,
-  dbName: 'assets_manager',
-  host: '127.0.0.1',
-  user: 'root',
-  password: '123456',
+  port: process.env.PORT,
+  dbName: process.env.DB_NAME,
+  host: process.env.HOST,
+  user: process.env.USER,
+  password: process.env.PASSWORD,
   type: 'mysql',
+  
 };
+

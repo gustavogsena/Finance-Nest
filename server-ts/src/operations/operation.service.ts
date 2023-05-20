@@ -114,9 +114,9 @@ export class OperationService {
 
     async deleteOperation(operationId: number, userId: number) {
         const operation: Operation = await this.operationRepository.findOneOrFail({ operation_id: operationId, asset: { user: userId } })
-        const asset: Asset = await this.assetRepository.findOneOrFail({ asset_id: operation.asset.asset_id, user: userId }, { populate: ['operations'] })
         this.operationRepository.remove(operation)
         await this.operationRepository.flush()
+        const asset: Asset = await this.assetRepository.findOneOrFail({ asset_id: operation.asset.asset_id, user: userId }, { populate: ['operations'] })
         if (asset.operations.length === 0) {
             this.assetRepository.remove(asset)
             await this.assetRepository.flush()
