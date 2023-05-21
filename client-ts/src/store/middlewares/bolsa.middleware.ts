@@ -24,6 +24,7 @@ bolsaListener.startListening({
 bolsaListener.startListening({
   actionCreator: getMarketRealStates,
   effect: async (action, { dispatch, fork, unsubscribe }) => {
+    
     const stocksData = fork(async api => {
       await api.delay(1000);
       return await getAllRealStates();

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useRef } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { RootState } from '../store'
 import { FullStockRequestType, SingleStockRequestType } from '../store/reducers/bolsa/types'
@@ -16,6 +16,7 @@ import { resetFormStatus } from '../store/reducers/form.slice'
 
 function FormOperacao() {
     const dispatch = useDispatch()
+    const firstRender = useRef<boolean>(true)
 
     const assetTypes = [['Ações', 'stockshare'], ['Fundos Imobiliarios', 'realestate']]
     const operationTypes = [['Compra', 'bought'], ['Venda', 'sold']]
@@ -56,7 +57,7 @@ function FormOperacao() {
     }, [])
 
     useEffect(() => {
-        if (formOperation.asset.asset_code.length > 4) dispatch(searchMarketAsset(formOperation.asset.asset_code))
+            if (formOperation.asset.asset_code.length > 4) dispatch(searchMarketAsset(formOperation.asset.asset_code))
     }, [formOperation.asset.asset_code, dispatch])
     return (
         <>
@@ -89,6 +90,7 @@ function FormOperacao() {
                 {formOperation.asset.asset_code.length >= 5 &&
                     <>
                         <div className='flex justify-center flex-col items-center'>
+                            <img src={`${searchAsset.logourl}`} className='w-9 aspect-[32/27] pr-2' />
                             <span className='font-bold'>
                                 {searchAsset.longName}
                             </span>

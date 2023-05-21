@@ -26,7 +26,7 @@ function AssetBar() {
     }
     return (
         <div className='bg-verde-300 text-white rounded-3xl py-3 mb-2 w-fit min-w-[100%] h-full drop-shadow-lg px-6 flex justify-between'>
-            <span className={`w-1/6 min-w-[130px] cursor-pointer ${sortAttribute === "asset_code" && 'text-orange-400'}`} onClick={() => sortByAssetCode()}>Código</span>
+            <span className={`w-1/6 min-w-[130px] cursor-pointer pl-6 ${sortAttribute === "asset_code" && 'text-orange-400'}`} onClick={() => sortByAssetCode()}>Código</span>
             <span className={`w-1/6 min-w-[130px] text-center cursor-pointer ${sortAttribute === "total_quantity" && 'text-orange-400'}`} onClick={() => sort("total_quantity")}>Quantidade</span>
             <span className={`w-1/6 min-w-[130px] text-center cursor-pointer ${sortAttribute === "discounted_average_price" && 'text-orange-400'}`} onClick={() => sort("discounted_average_price")}>Preço Ajustado</span>
             <span className={`w-1/6 min-w-[130px] text-center cursor-pointer ${sortAttribute === "average_price" && 'text-orange-400'}`} onClick={() => sort("average_price")}>Preço Médio</span>

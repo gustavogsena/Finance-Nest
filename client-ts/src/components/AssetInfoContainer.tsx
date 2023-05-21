@@ -14,7 +14,7 @@ function AssetInfoContainer() {
 
     return (
         <div className='bg-cinza-400 rounded-3xl p-6 mb-8'>
-            <h2 className='text-center text-4xl text-verde-300 pb-4'>{ativo.asset_name}</h2>
+            <h2 className='text-center text-4xl text-verde-300 pb-4  flex justify-center'><img src={`${ativo.logourl}`} className='w-[52px] aspect-[32/27] pr-2'/>{ativo.asset_name}</h2>
             <h4 className='text-center text-4xl text-verde-300 pb-4'>{ativo.asset_code.toUpperCase()}</h4>
             <div className='flex w-full px-6 flex-wrap justify-around text-center text-verde-600'>
                 <InfoContainerItem title='Total Descontado' value={`R$ ${ativo.discounted_price.toFixed(2)}`} />

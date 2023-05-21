@@ -22,7 +22,8 @@ export interface AssetCurrentPrice extends AssetAvaragePrice {
     current_price: number,
     current_total: number,
     balance: number
-    balance_with_earnings: number
+    balance_with_earnings: number,
+    logourl: string
 }
 
 export interface AssetWithEarnings extends Asset {
@@ -97,7 +98,8 @@ export class AssetsService {
             const current_total = currentStock.regularMarketPrice * asset.total_quantity
             const balance = Number((current_total - asset.total_price).toFixed(2))
             const balance_with_earnings = Number((balance + +asset.earnings_received).toFixed(2))
-            return { ...asset, current_price, current_total: Number(current_total.toFixed(2)), balance, balance_with_earnings }
+            const logourl = currentStock.logourl
+            return { ...asset, current_price, current_total: Number(current_total.toFixed(2)), balance, balance_with_earnings, logourl }
         }))
 
         return assets
@@ -144,7 +146,6 @@ export class AssetsService {
 
         /* Reduce the fully sold assets, starting with the previous calculated consolidated, to get the consolidated with the fully sold values  */
         const consolidatedWithSoldAssets = soldAssets.reduce((acc, asset) => {
-            console.log(asset)
             return acc = {
                 ...acc,
                 [asset.asset_type]: {

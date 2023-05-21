@@ -31,7 +31,7 @@ function AssetItem({ asset, consolidado }: AssetItem) {
             onClick={() => navigateToSingleAsset()}
             className='bg-cinza-400 rounded-3xl py-4 mb-2 w-fit drop-shadow min-w-[100%] h-full px-6 flex justify-between cursor-pointer'
         >
-            <span className='w-1/6 min-w-[130px]'>{asset.asset_code.toUpperCase()}</span>
+            <span className='w-1/6 min-w-[130px] flex'><img src={`${asset.logourl}`} className='w-[30px] pr-2'/>{asset.asset_code.toUpperCase()}</span>
             <span className='w-1/6 min-w-[130px] text-center'>{asset.total_quantity}</span>
             <span className='w-1/6 min-w-[130px] text-center'>{formatCurrency(asset.discounted_average_price)}</span>
             <span className='w-1/6 min-w-[130px] text-center'>{formatCurrency(asset.average_price)}</span>

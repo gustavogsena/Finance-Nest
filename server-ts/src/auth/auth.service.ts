@@ -15,7 +15,6 @@ export class AuthService {
 
   async login({ email, password }: LoginCredentialsDto) {
     const findUser = await this.userService.findByEmail(email);
-    console.log(`find ${JSON.stringify(findUser)}`)
     if (findUser?.id === undefined) {
       throw new UnauthorizedException();
     }

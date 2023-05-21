@@ -17,7 +17,8 @@ const initialState: BasicAsset = {
   "balance_with_earnings": 0,
   "discounted_price": 0,
   "discounted_average_price": 0,
-  "earnings_received": 0
+  "earnings_received": 0,
+  "logourl": ''
 }
 
 const singleAssetSlice = createSlice({

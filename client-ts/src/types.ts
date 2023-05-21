@@ -36,7 +36,8 @@ export type BasicAsset = {
     "balance_with_earnings": number,
     "discounted_price": number,
     "discounted_average_price": number,
-    "earnings_received": number
+    "earnings_received": number,
+    "logourl": string
 }
 
 export type BasicAssetSortKeys = {

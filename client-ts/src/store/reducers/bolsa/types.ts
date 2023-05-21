@@ -29,7 +29,6 @@ export type FullStockRequestType = {
   "averageDailyVolume10Day": number,
   "averageDailyVolume3Month": number,
   "fiftyTwoWeekLowChange": number,
-  "fiftyTwoWeekLowChangePercent": number,
   "fiftyTwoWeekRange": "9.31 - 10.49",
   "fiftyTwoWeekHighChange": number,
   "fiftyTwoWeekHighChangePercent": number,
@@ -38,4 +37,7 @@ export type FullStockRequestType = {
   "twoHundredDayAverage": number,
   "twoHundredDayAverageChange": number,
   "twoHundredDayAverageChangePercent": number
+  "priceEarnings": number | null,
+  "earningsPerShare": number | null,
+  "logourl": string
 }

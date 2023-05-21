@@ -1,4 +1,5 @@
 import { Injectable } from '@nestjs/common';
+import axios from 'axios';
 
 export type Ativos = {
     stock: string;
@@ -11,19 +12,50 @@ export type Ativos = {
     sector: string;
 }
 
+export type FullStockRequestType = {
+    "symbol": string
+    "shortName": string,
+    "longName": string
+    "currency": string
+    "regularMarketPrice": number,
+    "regularMarketDayHigh": number,
+    "regularMarketDayLow": number,
+    "regularMarketDayRange": string
+    "regularMarketChange": number,
+    "regularMarketChangePercent": number,
+    "regularMarketTime": Date
+    "marketCap": number,
+    "regularMarketVolume": number,
+    "regularMarketPreviousClose": number,
+    "regularMarketOpen": number,
+    "averageDailyVolume10Day": number,
+    "averageDailyVolume3Month": number,
+    "fiftyTwoWeekLowChange": number,
+    "fiftyTwoWeekRange": "9.31 - 10.49",
+    "fiftyTwoWeekHighChange": number,
+    "fiftyTwoWeekHighChangePercent": number,
+    "fiftyTwoWeekLow": number,
+    "fiftyTwoWeekHigh": number,
+    "twoHundredDayAverage": number,
+    "twoHundredDayAverageChange": number,
+    "twoHundredDayAverageChangePercent": number
+    "priceEarnings": number | null,
+    "earningsPerShare": number | null,
+    "logourl": string
+}
+
+
 @Injectable()
 export class BolsaService {
 
     async retornaTodasAcoes() {
-        const todasAcoes = await fetch('https://brapi.dev/api/quote/list')
-        const todasAcoesConvertidas = await todasAcoes.json()
-        return todasAcoesConvertidas.stocks
+        const todasAcoes = await axios.get('https://brapi.dev/api/quote/list')
+        return todasAcoes.data.stocks
     }
 
-    async retornaAtivoProcurado(codigo: string) {
-        const ativoProcurado = await fetch(`https://brapi.dev/api/quote/${codigo}`)
-        const ativoProcuradoConvertido = await ativoProcurado.json()
-        return ativoProcuradoConvertido.results
+    async retornaAtivoProcurado(codigo: string): Promise<FullStockRequestType[]> {
+        const ativoProcurado = await axios.get(`https://brapi.dev/api/quote/${codigo}`, { params: { fundamental: true } })
+        return ativoProcurado.data.results
     }
 
     async filterFundosImobiliarios(data: Ativos[]) {
