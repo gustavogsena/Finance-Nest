@@ -7,6 +7,7 @@ import { updateSingleAsset } from '../store/reducers/singleAsset.slice'
 import { getEarnings } from '../store/reducers/earnings.slice'
 import { RootState } from '../store'
 import { formatCurrency } from '../services'
+import { searchMarketDataSeries } from '../store/reducers/bolsa/searchAsset.slice'
 
 type AssetItem = {
     asset: BasicAsset,
@@ -21,7 +22,6 @@ function AssetItem({ asset, consolidado }: AssetItem) {
     const navigateToSingleAsset = () => {
         dispatch(updateQuery({ assetId: asset.asset_id }))
         dispatch(updateSingleAsset(asset))
-        
         navigate('/asset')
     }
 

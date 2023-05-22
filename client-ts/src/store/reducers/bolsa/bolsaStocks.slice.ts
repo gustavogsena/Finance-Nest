@@ -1,5 +1,6 @@
 import { PayloadAction, createAction, createSlice } from '@reduxjs/toolkit';
-import { SingleStockRequestType } from './types';
+import { SingleStockRequestType } from '../../../types';
+
 
 export const getMarketStocks = createAction('bolsa/getMarketStocks');
 

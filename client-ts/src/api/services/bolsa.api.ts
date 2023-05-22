@@ -1,11 +1,16 @@
-import { FullStockRequestType } from "../../store/reducers/bolsa/types"
+
+import { FullStockQuery, FullStockRequestType } from "../../types"
 import api from "../api"
 
-export const buscaAtivo = async (codigoAtivo: string): Promise<FullStockRequestType[] | void> => {
+
+
+export const buscaAtivo = async (codigoAtivo: string, query?: FullStockQuery): Promise<FullStockRequestType[]> => {
+    const defaultQuery = {fundamental: true}
     if (codigoAtivo) {
-        const resposta = await api.get(`/bolsa/${codigoAtivo}`)
+        const resposta = await api.get(`/bolsa/${codigoAtivo}`, { params: query ? query : defaultQuery})
         return resposta.data
-    } 
+    }
+    return []
 }
 
 export const getAllStocks = async () => {

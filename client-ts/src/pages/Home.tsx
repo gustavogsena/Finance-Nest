@@ -43,7 +43,7 @@ function Home() {
             <InfoContainer title='Meus Investimentos' data={consolidado.total} />
 
             <div className='flex justify-between'>
-
+        
                 <Grafico
                     initialShow={true}
                     dados={data2}

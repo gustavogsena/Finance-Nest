@@ -1,5 +1,5 @@
-import { Controller, Get, Param } from "@nestjs/common";
-import { BolsaService } from "./bolsa.service";
+import { Controller, Get, Param, Query } from "@nestjs/common";
+import { BolsaService, SingleStockQuery } from "./bolsa.service";
 import { Public } from "../auth/auth.guard";
 
 @Controller('/bolsa')
@@ -21,9 +21,9 @@ export class BolsaController {
     }
 
     @Public()
-    @Get(':id')
-    async getStockById(@Param('id') id: string) {
-        const response = await this.bolsaService.retornaAtivoProcurado(id)
+    @Get(':code')
+    async getStockByCode(@Param('code') code: string, @Query() query: SingleStockQuery) {
+        const response = await this.bolsaService.retornaAtivoProcurado(code, query)
         return response
 
     }

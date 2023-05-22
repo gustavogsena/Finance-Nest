@@ -195,3 +195,116 @@ export type NewEarning = {
     "earning_date": string,
     "earning_value": number
 }
+
+/* ApexChart */
+export type ChartType =
+    "line" | "area" | "bar" | "histogram" | "pie" | "donut" | "radialBar" | "scatter" | "bubble" | "heatmap" | "treemap" | "boxPlot" | "candlestick" | "radar" | "polarArea" | "rangeBar"
+
+
+/* Bolsa Types */
+export type FullStockRequestType = {
+    "symbol": string
+    "shortName": string,
+    "longName": string
+    "currency": string
+    "regularMarketPrice": number,
+    "regularMarketDayHigh": number,
+    "regularMarketDayLow": number,
+    "regularMarketDayRange": string
+    "regularMarketChange": number,
+    "regularMarketChangePercent": number,
+    "regularMarketTime": Date
+    "marketCap": number,
+    "regularMarketVolume": number,
+    "regularMarketPreviousClose": number,
+    "regularMarketOpen": number,
+    "averageDailyVolume10Day": number,
+    "averageDailyVolume3Month": number,
+    "fiftyTwoWeekLowChange": number,
+    "fiftyTwoWeekRange": "9.31 - 10.49",
+    "fiftyTwoWeekHighChange": number,
+    "fiftyTwoWeekHighChangePercent": number,
+    "fiftyTwoWeekLow": number,
+    "fiftyTwoWeekHigh": number,
+    "twoHundredDayAverage": number,
+    "twoHundredDayAverageChange": number,
+    "twoHundredDayAverageChangePercent": number
+    "priceEarnings": number | null,
+    "earningsPerShare": number | null,
+    "logourl": string,
+    "validRange"?: Range[],
+    "historicalDataPrice"?: DataPriceType[],
+    "dividendsData"?: DividendsData
+}
+
+export type DataPriceType = {
+    "date": number,
+    "open": number,
+    "high": number,
+    "low": number,
+    "close": number,
+    "volume": number,
+    "adjustedClose": number
+}
+
+export type FullStockQuery = {
+    range?: Range,
+    interval?: Range,
+    fundamental?: boolean,
+    dividends?: boolean
+}
+
+
+export type SingleStockRequestType = {
+    change: number
+    close: number
+    logo: string
+    market_cap: number | null
+    name: string
+    sector: string
+    stock: string
+    volume: number
+}
+
+export type Range = '1d' | '5d' | '1mo' | '3mo' | '6mo' | '1y' | '2y' | '5y' | '10y' | 'ytd' | 'max'
+
+export type DividendsData = {
+    cashDividends: CashDividends[],
+    stockDividends: StockDividends[],
+    subscriptions: Subscriptions[]
+}
+
+export type CashDividends = {
+    "assetIssued": string,
+    "paymentDate": string,
+    "rate": number,
+    "relatedTo": string,
+    "approvedOn": string,
+    "isinCode": string,
+    "label": string,
+    "lastDatePrior": string,
+    "remarks": string
+}
+
+export type StockDividends = {
+    "assetIssued": string,
+    "factor": number,
+    "approvedOn": string,
+    "isinCode": string,
+    "label": string,
+    "lastDatePrior": string,
+    "remarks": string
+}
+
+export type Subscriptions = {
+    "assetIssued": string,
+     "percentage": number, 
+     "priceUnit": number, 
+     "tradingPeriod": string, 
+     "subscriptionDate": string, 
+     "approvedOn": string, 
+     "isinCode": string, 
+     "label": string, 
+     "lastDatePrior": string, 
+     "remarks": string
+}

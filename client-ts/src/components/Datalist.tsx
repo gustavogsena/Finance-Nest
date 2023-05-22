@@ -1,5 +1,5 @@
 import React, { forwardRef } from 'react'
-import { SingleStockRequestType } from '../store/reducers/bolsa/types'
+import { SingleStockRequestType } from '../types'
 
 type DatalistType = {
     id: string,

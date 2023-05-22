@@ -1,7 +1,13 @@
 import { PayloadAction, createAction, createSlice } from '@reduxjs/toolkit';
-import { FullStockRequestType, SingleStockRequestType } from './types';
+import { FullStockQuery, FullStockRequestType } from '../../../types';
 
-export const searchMarketAsset = createAction<string>('bolsa/getMarketStocks');
+type searchMarketDataSeriesActionType = {
+  code: string,
+  query?: FullStockQuery
+}
+
+export const searchMarketAsset = createAction<string>('bolsa/searchMarketAsset');
+export const searchMarketDataSeries = createAction<searchMarketDataSeriesActionType>('bolsa/searchMarketDataSeries');
 
 const initialState: Partial<FullStockRequestType> = {}
 

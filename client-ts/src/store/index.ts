@@ -21,6 +21,7 @@ import earningsSlice from './reducers/earnings.slice';
 import { earningsListener } from './middlewares/earnings.middleware';
 import formSlice from './reducers/form.slice';
 import userFormSlice from './reducers/userForm.slice';
+import chartDataSlice from './reducers/chartData.slice';
 
 const store = configureStore({
   reducer: {
@@ -37,7 +38,8 @@ const store = configureStore({
     earningForm: earningFormSlice,
     searchAsset: searchAssetSlice,
     user: userSlice,
-    userForm: userFormSlice
+    userForm: userFormSlice,
+    chartData: chartDataSlice
   },
   middleware:
     getDefaultMiddleware =>

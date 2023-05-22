@@ -1,4 +1,34 @@
-import { BasicAsset, ChartDataType, ConsolidatedAssetItem, } from "./types";
+import { BasicAsset, ChartDataType, ConsolidatedAssetItem, DataPriceType, } from "./types";
+
+export class Candle {
+    private x: Date;
+    private y: number[]
+
+    constructor(date: number, open: number, high: number, low: number, close: number) {
+
+        this.x = (new Date(date * 1000));
+        this.y = [open, high, low, close]
+    }
+}
+export class LineChartData {
+    x: Date;
+    y: number
+
+    constructor(date: number, close: number) {
+
+        this.x = (new Date(date * 1000));
+        this.y = Number(close.toFixed(2))
+    }
+}
+
+export function createLineChartData(data: DataPriceType[]): Array<LineChartData> {
+    const result = data
+        .filter(item => item.close !== null)
+        .map((item) => new LineChartData(item.date, item.close))
+
+    return result
+}
+
 
 export function padTo2Digits(num: number) {
     return num.toString().padStart(2, '0');
