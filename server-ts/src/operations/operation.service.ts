@@ -81,7 +81,7 @@ export class OperationService {
     }
 
     async getOperationById(operationId: number, userId: number) {
-        const [operation] = await this.operationRepository.find({ operation_id: operationId, asset: {user: userId} }, { populate: ['asset', 'asset.user'] })
+        const [operation] = await this.operationRepository.find({ operation_id: operationId, asset: {user: userId} }, { populate: ['asset', 'asset.user'], fields: ['*','asset.*','asset.user.id'] })
         return operation
     }
 

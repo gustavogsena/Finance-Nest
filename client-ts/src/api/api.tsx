@@ -1,8 +1,7 @@
 import axios from 'axios';
 import { AuthToken } from '../authToken';
-import { browserHistory } from '../browserHistory';
 import store from '../store';
-import { authenticatedUser, removeUser, userLogout } from '../store/reducers/user.slice';
+import { authenticatedUser, userLogout } from '../store/reducers/user.slice';
 import toast from 'react-simple-toasts';
 import { ErrorToast } from '../components/ErrorToast';
 
@@ -19,7 +18,6 @@ api.interceptors.request.use(config => {
         config.headers.Authorization = `Bearer ${token}`
         store.dispatch(authenticatedUser(token))
     }
-
     return config
 })
 

@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Grafico from '../components/Grafico';
 import Radar from '../components/Radar';
-import { getConsolidatedAsset } from '../store/reducers/consolidated.slice';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { RootState } from '../store';
 import { ConsolidatedAsset } from '../types';
 import InfoContainer from '../components/InfoContainer';

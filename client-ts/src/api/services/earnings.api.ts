@@ -1,5 +1,5 @@
 
-import { Earning, EarningResponseType, EarningsByMonth, PartialPostEarning, PostEarning, Query } from "../../types"
+import { Earning, EarningResponseType, EarningsByMonth, PostEarning, Query } from "../../types"
 import api from "../api"
 
 

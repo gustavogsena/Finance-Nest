@@ -1,14 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import { RootState } from '../store'
-import { BasicAsset, ChartDataType, ConsolidatedAsset, Query } from '../types'
+import { BasicAsset, ChartDataType, ConsolidatedAsset } from '../types'
 import { useDispatch, useSelector } from 'react-redux'
 import InfoContainer from '../components/InfoContainer'
-import AssetItem from '../components/AssetItem'
-import PaginationArrows from '../components/PaginationArrows'
-import { updateQuery, resetQuery } from '../store/reducers/query.slice'
+import { resetQuery } from '../store/reducers/query.slice'
 import Grafico from '../components/Grafico'
 import StandardContainer from '../components/StandardContainer'
-import AssetBar from '../components/AssetBar'
 import AssetContainer from '../components/AssetContainer'
 import { createPorcentageTable } from '../services'
 
@@ -22,7 +19,7 @@ export default function FundosImobiliarios() {
   useEffect(() => {
     dispatch(resetQuery())
     setChartData(createPorcentageTable(realestate, consolidado.realestate))
-  }, [consolidado])
+  }, [consolidado, realestate, dispatch])
 
   return (
     <StandardContainer>

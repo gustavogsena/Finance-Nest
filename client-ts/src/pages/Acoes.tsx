@@ -1,14 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import InfoContainer from '../components/InfoContainer'
 import { RootState } from '../store'
-import { BasicAsset, ChartDataType, ConsolidatedAsset, Query } from '../types'
+import { BasicAsset, ChartDataType, ConsolidatedAsset } from '../types'
 import { useDispatch, useSelector } from 'react-redux'
-import AssetItem from '../components/AssetItem'
-import PaginationArrows from '../components/PaginationArrows'
-import { updateQuery, resetQuery } from '../store/reducers/query.slice'
+import { resetQuery } from '../store/reducers/query.slice'
 import Grafico from '../components/Grafico'
 import StandardContainer from '../components/StandardContainer'
-import AssetBar from '../components/AssetBar'
 import AssetContainer from '../components/AssetContainer'
 import { createPorcentageTable } from '../services'
 
@@ -21,7 +18,7 @@ export default function Acoes() {
 useEffect(() => {
     dispatch(resetQuery())
     setChartData(createPorcentageTable(assets, consolidado.stockshare))
-}, [])
+}, [consolidado, assets, dispatch])
 
 return (
     <StandardContainer>

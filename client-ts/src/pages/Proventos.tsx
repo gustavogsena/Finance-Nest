@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import StandardContainer from '../components/StandardContainer'
-import InfoContainerItem from '../components/InfoContainerItem'
 import { useDispatch, useSelector } from 'react-redux'
 import { RootState } from '../store'
-import { BasicAsset, ChartDataType, ConsolidatedAsset, EarningResponseType, Query, WalletAssets } from '../types'
+import { BasicAsset, ChartDataType, EarningResponseType, Query } from '../types'
 import Grafico from '../components/Grafico'
 import EarningsContainer from '../components/EarningsContainer'
 import { resetQuery } from '../store/reducers/query.slice'
@@ -15,22 +14,21 @@ import EarningsInfoContainer from '../components/EarningsInfoContainer'
 function Proventos() {
     const dispatch = useDispatch()
     const [chartData, setChartData] = useState<ChartDataType[]>([])
-    const consolidado = useSelector<RootState, ConsolidatedAsset>(state => state.consolidatedAssets)
     const assets = useSelector<RootState, BasicAsset[]>(state => state.assets)
     const earnings = useSelector<RootState, EarningResponseType>(state => state.earnings)
     const query = useSelector<RootState, Query>(state => state.query)
 
     useEffect(() => {
         dispatch(resetQuery)
-    }, [])
+    }, [dispatch])
 
     useEffect(() => {
         setChartData(createEarningsTable(assets))
-    }, [earnings])
+    }, [earnings, assets])
 
     useEffect(() => {
         dispatch(getEarnings(query))
-    }, [query])
+    }, [query, dispatch])
 
     return (
         <StandardContainer>
