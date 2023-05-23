@@ -15,11 +15,11 @@ export default function Operacoes() {
 
     useEffect(() => {
         dispatch(resetQuery())
-    }, [dispatch])
+    }, [])
 
     useEffect(() => {
         dispatch(getOperations(query))
-    }, [query, dispatch])
+    }, [query])
 
     return (
         <StandardContainer>

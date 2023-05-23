@@ -4,11 +4,6 @@ import { BasicAsset } from '../types'
 import { RootState } from '../store'
 import { useSelector } from 'react-redux'
 
-type InfoAssetContainerType = {
-    ativo: BasicAsset
-}
-
-
 function AssetInfoContainer() {
     const ativo = useSelector<RootState, BasicAsset>(state => state.singleAsset)
 

@@ -1,4 +1,4 @@
-import React, { forwardRef } from 'react'
+import React from 'react'
 import { SingleStockRequestType } from '../types'
 
 type DatalistType = {

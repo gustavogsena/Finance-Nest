@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
-import { userLogin, userLogout } from '../store/reducers/user.slice'
+import { userLogin } from '../store/reducers/user.slice'
 import Textfield from '../components/Textfield'
 
 function FormLogin() {

@@ -10,9 +10,9 @@ function Consolidado() {
     return (
         <StandardContainer>
 
-            <InfoContainer title='Minha Carteira' data={consolidado.total} />
-            <InfoContainer title='Ações' data={consolidado.stockshare} />
-            <InfoContainer title='Fundos Imobiliarios' data={consolidado.realestate} />
+            <InfoContainer title='Minha Carteira' data={consolidado.total} vendas={true}/>
+            <InfoContainer title='Ações' data={consolidado.stockshare} vendas={true}/>
+            <InfoContainer title='Fundos Imobiliarios' data={consolidado.realestate} vendas={true}/>
 
         </StandardContainer>
 

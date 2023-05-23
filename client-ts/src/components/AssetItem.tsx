@@ -1,13 +1,10 @@
-import React, { useEffect, useState } from 'react'
-import { BasicAsset, ConsolidatedAssetItem, Query } from '../types'
+import React from 'react'
+import { BasicAsset, ConsolidatedAssetItem } from '../types'
 import { useNavigate } from 'react-router-dom'
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { updateQuery } from '../store/reducers/query.slice'
 import { updateSingleAsset } from '../store/reducers/singleAsset.slice'
-import { getEarnings } from '../store/reducers/earnings.slice'
-import { RootState } from '../store'
 import { formatCurrency } from '../services'
-import { searchMarketDataSeries } from '../store/reducers/bolsa/searchAsset.slice'
 
 type AssetItem = {
     asset: BasicAsset,
@@ -22,7 +19,7 @@ function AssetItem({ asset, consolidado }: AssetItem) {
     const navigateToSingleAsset = () => {
         dispatch(updateQuery({ assetId: asset.asset_id }))
         dispatch(updateSingleAsset(asset))
-        navigate('/asset')
+        navigate(`/asset/${asset.asset_code}`)
     }
 
 

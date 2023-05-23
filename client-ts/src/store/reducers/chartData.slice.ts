@@ -1,6 +1,4 @@
 import { PayloadAction, createSlice } from '@reduxjs/toolkit';
-import { DataPriceType } from '../../types';
-import { Candle } from '../../services';
 
 const initialState: number[] = []
 

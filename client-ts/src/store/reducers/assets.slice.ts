@@ -1,5 +1,5 @@
 import { PayloadAction, createAction, createSlice } from '@reduxjs/toolkit';
-import { BasicAssetSortKeys, WalletAssets } from '../../types';
+import { BasicAssetSortKeys } from '../../types';
 import { BasicAsset } from '../../types';
 
 export const getAssets = createAction('getAssets')

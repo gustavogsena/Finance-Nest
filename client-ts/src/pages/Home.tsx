@@ -6,18 +6,18 @@ import { RootState } from '../store';
 import { ConsolidatedAsset } from '../types';
 import InfoContainer from '../components/InfoContainer';
 import StandardContainer from '../components/StandardContainer';
+import ApexChart from '../components/ApexChart';
 
 export const data2 = [
-    ["data", "Valor Total"],
-    ["11/02/23", 3000],
-    ["13/02/23", 10000],
-    ["15/02/23", 8000],
-    ["11/02/23", 15000],
-    ["13/02/23", 16000],
-    ["15/02/23", 14850],
-    ["11/02/23", 18000],
-    ["13/02/23", 19563],
-    ["15/02/23", 20000]
+    { x: new Date("01/02/23"), y: 3000 },
+    { x: new Date("02/02/23"), y: 10000 },
+    { x: new Date("03/02/23"), y: 8000 },
+    { x: new Date("04/02/23"), y: 15000 },
+    { x: new Date("05/02/23"), y: 16000 },
+    { x: new Date("07/02/23"), y: 14850 },
+    { x: new Date("09/02/23"), y: 18000 },
+    { x: new Date("11/02/23"), y: 19563 },
+    { x: new Date("12/02/23"), y: 20000 }
 ];
 
 export const options = {
@@ -25,49 +25,49 @@ export const options = {
 };
 
 function Home() {
-    const [pieChartData, setPieChartData] = useState<Array<Array<string | number>>>([])
+    const [pieChartData, setPieChartData] = useState<number[]>([])
+    const [lineChartData, setLineChartData] = useState<number[]>([])
 
     const consolidado = useSelector<RootState, ConsolidatedAsset>(state => state.consolidatedAssets)
 
     useEffect(() => {
-        setPieChartData(() => {
-            let newData: Array<Array<string | number>> = [["Ativos", "Composição da carteira"]]
-            newData = [["Ativos", "Composição da carteira"], ['Fundos Imobiliarios', consolidado.realestate.current], ['Acoes', consolidado.stockshare.current], ['Renda Fixa', 0]]
-            return newData
-        })
+        setPieChartData([consolidado.realestate.current, consolidado.stockshare.current])
+        setLineChartData([])
     }, [consolidado])
 
     return (
         <StandardContainer>
             <InfoContainer title='Meus Investimentos' data={consolidado.total} />
 
-            <div className='flex justify-between'>
-        
-                <Grafico
-                    initialShow={true}
-                    dados={data2}
-                    chartType='LineChart'
-                    height='200px'
-                    className='w-4/6 mr-4 mb-8'
-                    title='Evolução de Patrimônio'
-                    options={{
-                        legend: "none",
-                        backgroundColor: '#F9F9F9',
-                        height: 200
-                    }} />
+            <div className='flex justify-between flex-wrap'>
 
-                <Grafico
+                <ApexChart
+                    className='w-full md:w-[60%] mr-4 mb-8'
+                    series={[{ name: 'Evolução', data: data2 }]}
+                    title='Evolução patrimonial'
+                    type='line'
                     initialShow={true}
-                    dados={pieChartData}
-                    chartType='PieChart'
-                    height='200px'
-                    className='w-2/6 ml-4 mb-8'
-                    title='Composição da Carteira'
+                    height='300px' />
+
+                <ApexChart
+                    className='w-full md:w-[35%] mb-8'
+                    series={pieChartData}
                     options={{
-                        colors: ['#000', "#666", "#ccc"],
-                        backgroundColor: '#F9F9F9',
-                        height: 200
-                    }} />
+
+                        labels: ['Fundos Imobiliarios', 'Acoes'],
+                        legend: { show: true, position: 'bottom' },
+                        responsive: [{
+                            breakpoint: 768,
+                            options: {
+                                legend: { position: 'right' }
+                            }
+                        }]
+                    }}
+                    title='Composição'
+                    type='pie'
+                    initialShow={true}
+
+                    height='300px' />
 
             </div>
 

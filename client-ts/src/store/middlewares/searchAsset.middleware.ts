@@ -1,9 +1,7 @@
 import { createListenerMiddleware } from "@reduxjs/toolkit";
 import { buscaAtivo } from "../../api/services/bolsa.api";
-import { searchMarketAsset, searchMarketDataSeries, updateSearchAsset } from "../reducers/bolsa/searchAsset.slice";
+import { searchMarketAsset, updateSearchAsset } from "../reducers/bolsa/searchAsset.slice";
 import { updateOperationForm } from "../reducers/operationForm.slice";
-import { updateChartData } from "../reducers/chartData.slice";
-import { Candle } from "../../services";
 
 export const searchAssetListener = createListenerMiddleware();
 

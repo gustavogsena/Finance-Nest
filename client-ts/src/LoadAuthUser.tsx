@@ -4,7 +4,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "./store";
 import { User } from "./types";
 import { getUser } from "./store/reducers/user.slice";
-import logo from './images/logo.png'
 import { useNavigate } from "react-router-dom";
 
 export default function LoadAuthUser() {

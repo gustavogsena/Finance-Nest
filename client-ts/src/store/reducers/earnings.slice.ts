@@ -1,5 +1,5 @@
 import { PayloadAction, createAction, createSlice } from '@reduxjs/toolkit';
-import { Query, EarningResponseType, PostEarning, PartialPostEarning } from '../../types';
+import { Query, EarningResponseType, PostEarning } from '../../types';
 
 export const getEarnings = createAction<Query>('getEarnings')
 export const deleteEarning = createAction<number>('deleteEarnings')

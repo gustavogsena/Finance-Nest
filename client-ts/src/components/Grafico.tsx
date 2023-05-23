@@ -1,9 +1,7 @@
 import React, { useState } from 'react'
-import { Chart, ChartWrapperOptions, GoogleChartWrapperChartType, GoogleDataTableColumn } from 'react-google-charts';
+import { Chart, ChartWrapperOptions, GoogleChartWrapperChartType } from 'react-google-charts';
 import CollapseTitle from './CollapseTitle';
 import { ChartDataType } from '../types';
-import ReactApexChart from 'react-apexcharts';
-import { ApexOptions } from 'apexcharts';
 
 interface GraficoInterface {
     dados: ChartDataType[]

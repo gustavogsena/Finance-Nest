@@ -15,10 +15,10 @@ function Nav() {
         <nav className={`flex flex-col  md:pl-0 w-[100px] mt-12 relative ${show ? ' xl:min-w-[380px] xl:pl-24' : ''}`}>
             <span className={`xl:block hidden text-4xl text-verde-300 ${!show ? 'self-center' : 'pr-4'}`} onClick={() => setShow(!show)}>
                 {!show ?
-                    <IoIosArrowForward /> :
+                    <IoIosArrowForward className='cursor-pointer'/> :
                     <div className='flex justify-center'>
                         <span className='text-2xl ml-auto underline'>MENU</span>
-                        <IoIosArrowBack className='ml-auto' />
+                        <IoIosArrowBack className='ml-auto cursor-pointer' />
                     </div>}
             </span>
             <ItemNav to='/fiis' image={fiis} title='Fundos Imobiliarios' show={show} />

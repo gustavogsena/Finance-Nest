@@ -4,7 +4,7 @@ import EarningItem from './EarningItem'
 import PaginationArrows from './PaginationArrows'
 import { useDispatch, useSelector } from 'react-redux'
 import { RootState } from '../store'
-import { Earning, EarningResponseType, Query } from '../types'
+import { EarningResponseType, Query } from '../types'
 import { updateQuery } from '../store/reducers/query.slice'
 
 type EarningsContainerType = {

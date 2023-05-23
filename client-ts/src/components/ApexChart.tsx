@@ -11,10 +11,11 @@ type ApexChartType = {
     type?: ChartType
     className?: string,
     initialShow?: boolean,
+    height?: string
 }
 
 
-function ApexChart({ title, className, series, options, initialShow = false, type = 'bar' }: ApexChartType) {
+function ApexChart({ title, className, series, options, initialShow = false, type = 'bar', height=`400px` }: ApexChartType) {
     const defaultOptions = {
         chart: {
             type: type,
@@ -32,7 +33,7 @@ function ApexChart({ title, className, series, options, initialShow = false, typ
 
     return (
         <CollapseTitle title={title} className={className} initialShow={initialShow} >
-            <ReactApexChart series={series} type={type} options={defaultOptions} height={`400px`} />
+            <ReactApexChart series={series} type={type} options={{...defaultOptions, ...options}} height={height} />
         </CollapseTitle >
     )
 }

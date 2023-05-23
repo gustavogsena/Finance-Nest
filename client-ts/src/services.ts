@@ -20,6 +20,15 @@ export class LineChartData {
         this.y = Number(close.toFixed(2))
     }
 }
+export class BarChartData {
+    x: string | number;
+    y: number
+
+    constructor(label: string | number, value: number) {
+        this.x = label;
+        this.y = Number(value.toFixed(2))
+    }
+}
 
 export function createLineChartData(data: DataPriceType[]): Array<LineChartData> {
     const result = data
@@ -27,6 +36,14 @@ export function createLineChartData(data: DataPriceType[]): Array<LineChartData>
         .map((item) => new LineChartData(item.date, item.close))
 
     return result
+}
+
+export function createBarChartData(data: BasicAsset[], consolidated: ConsolidatedAssetItem): Array<BarChartData> {
+    const chartData = data.map((asset) => {
+        const porcentagemDaCarteira = asset.current_total * 100 / consolidated.current
+        return new BarChartData(asset.asset_code.toUpperCase(), Number(porcentagemDaCarteira.toFixed(2)))
+    })
+    return chartData
 }
 
 

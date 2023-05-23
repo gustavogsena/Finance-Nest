@@ -5,9 +5,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { FormStatus, PartialPostEarning, PostEarning } from '../types'
 import { resetEarningForm, updateEarningForm } from '../store/reducers/earningForm.slice'
 import Textfield from '../components/Textfield'
-import { useParams } from 'react-router-dom'
 import { postEarning, putEarning } from '../store/reducers/earnings.slice'
-import { resetFormStatus } from '../store/reducers/form.slice'
 
 function FormEarning() {
     const dispatch = useDispatch()

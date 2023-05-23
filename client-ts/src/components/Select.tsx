@@ -1,5 +1,4 @@
-import React, { forwardRef } from 'react'
-import { FieldValues, UseFormRegister } from 'react-hook-form'
+import React from 'react'
 
 type SelectType = {
     options: (string | number)[][],

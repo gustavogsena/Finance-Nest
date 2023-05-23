@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import './App.css';
 import { Route, Routes, unstable_HistoryRouter as HistoryRouter, } from 'react-router-dom';
 import PaginaPadrao from './components/PaginaPadrao';
@@ -11,15 +11,11 @@ import RendaFixa from './pages/RendaFixa';
 import Login from './pages/Login';
 import { browserHistory } from './browserHistory';
 import LoadAuthUser from './LoadAuthUser';
-import { useSelector } from 'react-redux';
-import { RootState } from './store';
-import { User } from './types';
 import SingleAsset from './pages/SingleAsset';
 import Proventos from './pages/Proventos';
 import Forms from './pages/Forms';
 
 function App() {
-  const user = useSelector<RootState, User>(state => state.user)
 
   return (
     <HistoryRouter history={browserHistory}>
@@ -33,7 +29,7 @@ function App() {
           <Route path="/rendafixa" element={<RendaFixa />} />
           <Route path="/operacoes" element={<Operacoes />} />
           <Route path="/consolidado" element={<Consolidado />} />
-          <Route path="/asset" element={<SingleAsset />} />
+          <Route path="/asset/:code" element={<SingleAsset />} />
           <Route path="/proventos" element={<Proventos />} />
           <Route path="/adicionar" element={<Forms />} />
           <Route path="/adicionar/:param" element={<Forms />} />

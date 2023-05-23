@@ -1,5 +1,5 @@
-import { PayloadAction, createAction, createSlice } from '@reduxjs/toolkit';
-import { PostOperation, PartialPostOperation, EditOperation } from '../../types';
+import { PayloadAction, createSlice } from '@reduxjs/toolkit';
+import { PostOperation, PartialPostOperation } from '../../types';
 
 const initialState: PostOperation = {
   "operation": {

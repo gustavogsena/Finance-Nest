@@ -1,4 +1,4 @@
-import { PayloadAction, createAction, createSlice } from '@reduxjs/toolkit';
+import { PayloadAction, createSlice } from '@reduxjs/toolkit';
 import { BasicAsset } from '../../types';
 
 const initialState: BasicAsset = {

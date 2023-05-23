@@ -1,5 +1,5 @@
-import { PayloadAction, createAction, createSlice } from '@reduxjs/toolkit';
-import { PostOperation, PartialPostOperation, EditOperation, PostEarning, PartialPostEarning, NewEarning } from '../../types';
+import { PayloadAction, createSlice } from '@reduxjs/toolkit';
+import { PostEarning } from '../../types';
 
 const initialState: PostEarning = {
     "earning": {

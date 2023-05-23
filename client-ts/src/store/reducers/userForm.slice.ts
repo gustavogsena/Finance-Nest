@@ -1,5 +1,5 @@
 import { PayloadAction, createSlice } from '@reduxjs/toolkit';
-import { PostEarning, UserForm } from '../../types';
+import { UserForm } from '../../types';
 
 const initialState: UserForm = {
     "name": "",

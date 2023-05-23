@@ -7,29 +7,41 @@ import { resetQuery } from '../store/reducers/query.slice'
 import Grafico from '../components/Grafico'
 import StandardContainer from '../components/StandardContainer'
 import AssetContainer from '../components/AssetContainer'
-import { createPorcentageTable } from '../services'
+import { BarChartData, createBarChartData, createPorcentageTable } from '../services'
+import ApexChart from '../components/ApexChart'
 
 export default function Acoes() {
     const dispatch = useDispatch()
-    const [chartData, setChartData] = useState<ChartDataType[]>([])
+    const [chartData, setChartData] = useState<BarChartData[]>([])
     const consolidado = useSelector<RootState, ConsolidatedAsset>(state => state.consolidatedAssets)
     const assets = useSelector<RootState, BasicAsset[]>(state => state.assets.filter((asset) => asset.asset_type === 'stockshare' && asset.total_quantity !== 0))
 
-useEffect(() => {
-    dispatch(resetQuery())
-    setChartData(createPorcentageTable(assets, consolidado.stockshare))
-}, [consolidado, assets, dispatch])
+    useEffect(() => {
+        dispatch(resetQuery())
+    }, [])
 
-return (
-    <StandardContainer>
-        <InfoContainer title='Ações' data={consolidado.stockshare} />
-        <Grafico
-            title='Composição'
-            className='px-4 mb-8'
-            options={{ backgroundColor: "#F9F9F9", legend: { position: 'none' } }}
-            dados={chartData}
-            chartType='ColumnChart' />
-        <AssetContainer assets={assets} consolidado={consolidado.stockshare} />
-    </StandardContainer >
-)
+    useEffect(() => {
+        setChartData(createBarChartData(assets, consolidado.stockshare))
+    }, [consolidado])
+
+    return (
+        <StandardContainer>
+            <InfoContainer title='Ações' data={consolidado.stockshare} />
+            <ApexChart className='mr-4 mb-8' series={[{ data: chartData }]} title='Composição' options={{
+                chart: {
+                    type: 'bar'
+                },
+                xaxis: {
+                    type: 'category'
+                },
+                plotOptions: {
+                    bar: {
+                        horizontal: true
+                    }
+                }
+            }} type='bar' initialShow={true} height='300px' />
+
+            <AssetContainer assets={assets} consolidado={consolidado.stockshare} />
+        </StandardContainer >
+    )
 }
