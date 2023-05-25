@@ -1,6 +1,6 @@
 import { createListenerMiddleware } from "@reduxjs/toolkit";
 import { getMarketStocks, getMarketStocksAction } from "../reducers/bolsa/bolsaStocks.slice";
-import { getAllRealStates, getAllStocks } from "../../api/services/bolsa.api";
+import { getAllRealStates, getAllStocks } from "../../api/bolsa.api";
 import { getMarketRealStateAction, getMarketRealStates } from "../reducers/bolsa/bolsaRealState.slice";
 
 export const bolsaListener = createListenerMiddleware();

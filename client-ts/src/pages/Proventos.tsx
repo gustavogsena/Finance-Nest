@@ -5,26 +5,27 @@ import { RootState } from '../store'
 import { BasicAsset, ChartDataType, ConsolidatedAsset, EarningResponseType, Query } from '../types'
 import Grafico from '../components/Grafico'
 import EarningsContainer from '../components/EarningsContainer'
-import { resetQuery } from '../store/reducers/query.slice'
+import { resetQuery, updateQuery } from '../store/reducers/query.slice'
 import { getEarnings } from '../store/reducers/earnings.slice'
-import { createEarningsTable } from '../services'
 import QueryOptions from '../components/QueryOptions'
 import EarningsInfoContainer from '../components/EarningsInfoContainer'
+import ApexChart from '../components/ApexChart'
+import { BarChartData, createEarningsChartData } from '../services/chart.service'
 
 function Proventos() {
     const dispatch = useDispatch()
-    const [chartData, setChartData] = useState<ChartDataType[]>([])
+    const [chartData, setChartData] = useState<BarChartData[]>([])
     const consolidado = useSelector<RootState, ConsolidatedAsset>(state => state.consolidatedAssets)
     const assets = useSelector<RootState, BasicAsset[]>(state => state.assets)
     const earnings = useSelector<RootState, EarningResponseType>(state => state.earnings)
     const query = useSelector<RootState, Query>(state => state.query)
 
     useEffect(() => {
-        dispatch(resetQuery)
+        dispatch(resetQuery())
     }, [])
 
     useEffect(() => {
-        setChartData(createEarningsTable(assets))
+        setChartData(createEarningsChartData(assets))
     }, [earnings])
 
     useEffect(() => {
@@ -34,14 +35,20 @@ function Proventos() {
     return (
         <StandardContainer>
             <EarningsInfoContainer />
-            <QueryOptions title='' />
-            <Grafico
-                title='Proventos Recebidos'
-                className='px-4 mb-8'
-                height='400px'
-                options={{ backgroundColor: "#F9F9F9", legend: { position: 'none' }, height: 400 }}
-                dados={chartData}
-                chartType='BarChart' />
+            <QueryOptions title='' orderBy='earning_date' />
+            <ApexChart className='mr-4 mb-8' series={[{ data: chartData, name: 'Provento(R$)' }]} title='Composição' options={{
+                chart: {
+                    type: 'bar'
+                },
+                xaxis: {
+                    type: 'category'
+                },
+                plotOptions: {
+                    bar: {
+                        horizontal: true
+                    }
+                }
+            }} type='bar' initialShow={true} height='300px' />
 
             <EarningsContainer />
 

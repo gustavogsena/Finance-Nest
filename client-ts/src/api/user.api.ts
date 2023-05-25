@@ -1,5 +1,5 @@
-import { LoginInput, LoginOutput, User, UserForm } from "../../types"
-import api from "../api"
+import { LoginInput, LoginOutput, User, UserForm } from "../types"
+import api from "./api"
 
 type UploadUserPicture = {
     success: boolean;

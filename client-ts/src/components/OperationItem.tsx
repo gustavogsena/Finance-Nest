@@ -6,10 +6,10 @@ import { useDispatch, useSelector } from 'react-redux'
 import { RootState } from '../store'
 import { searchMarketAsset } from '../store/reducers/bolsa/searchAsset.slice'
 import { useNavigate } from 'react-router-dom'
-import { formatCurrency, formatDate } from '../services'
 import { editOperationForm } from '../store/reducers/operationForm.slice'
 import { deleteOperation } from '../store/reducers/operations.slice'
 import { updateFormEdit, updateFormType } from '../store/reducers/form.slice'
+import { formatCurrency, formatDate } from '../services/general.service'
 
 type OperationItemType = {
     data: Operation

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Query } from '../types'
 import { updateQuery } from '../store/reducers/query.slice'
@@ -7,11 +7,12 @@ import { RootState } from '../store'
 import Select from './Select'
 
 type QueryOptionsType = {
-    title: string
+    title: string,
+    orderBy?: string
 }
 
 
-function QueryOptions({ title }: QueryOptionsType) {
+function QueryOptions({ title, orderBy = 'created_at' }: QueryOptionsType) {
     const query = useSelector<RootState, Query>(state => state.query)
     const dispatch = useDispatch()
 
@@ -33,7 +34,7 @@ function QueryOptions({ title }: QueryOptionsType) {
                         defaultOption='Ordenar'
                         options={directionOptions}
                         value={query.direction}
-                        funcaoOnChange={value => setQuery({ direction: value })}
+                        funcaoOnChange={value => setQuery({ direction: value, orderBy: orderBy })}
                     />
 
 

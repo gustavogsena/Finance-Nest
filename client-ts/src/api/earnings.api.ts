@@ -1,6 +1,6 @@
 
-import { Earning, EarningResponseType, EarningsByMonth, PostEarning, Query } from "../../types"
-import api from "../api"
+import { Earning, EarningResponseType, EarningsByMonth, PostEarning, Query } from "../types"
+import api from "./api"
 
 
 export const getEarningsApi = async (query?: Query): Promise<EarningResponseType> => {

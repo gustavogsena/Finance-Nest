@@ -9,9 +9,9 @@ import AssetInfoContainer from '../components/AssetInfoContainer'
 import EarningsContainer from '../components/EarningsContainer'
 import { getEarnings } from '../store/reducers/earnings.slice'
 import ApexChart from '../components/ApexChart'
-import { buscaAtivo } from '../api/services/bolsa.api'
-import { LineChartData, createLineChartData } from '../services'
+import { buscaAtivo } from '../api/bolsa.api'
 import { useParams } from 'react-router-dom'
+import { LineChartData, createLineChartData } from '../services/chart.service'
 
 
 function SingleAsset() {

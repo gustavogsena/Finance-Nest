@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import { updateQuery } from '../store/reducers/query.slice'
 import { updateSingleAsset } from '../store/reducers/singleAsset.slice'
-import { formatCurrency } from '../services'
+import { formatCurrency } from '../services/general.service'
 
 type AssetItem = {
     asset: BasicAsset,

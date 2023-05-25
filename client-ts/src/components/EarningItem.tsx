@@ -5,9 +5,9 @@ import { CiTrash } from 'react-icons/ci'
 import { useDispatch } from 'react-redux'
 import { deleteEarning } from '../store/reducers/earnings.slice'
 import { useNavigate } from 'react-router-dom'
-import { formatCurrency, formatDate } from '../services'
 import { updateEarningForm } from '../store/reducers/earningForm.slice'
 import { updateFormEdit, updateFormType } from '../store/reducers/form.slice'
+import { formatCurrency, formatDate } from '../services/general.service'
 
 
 type EarningItemType = {

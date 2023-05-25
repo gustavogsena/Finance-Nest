@@ -1,7 +1,7 @@
 import { createListenerMiddleware } from "@reduxjs/toolkit";
 import { getConsolidatedAsset, updateConsolidatedAssets } from "../reducers/consolidated.slice";
 
-import { getConsolidatedAssetsApi } from "../../api/services/assets.api";
+import { getConsolidatedAssetsApi } from "../../api/assets.api";
 
 export const consolidatedListener = createListenerMiddleware();
 

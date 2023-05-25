@@ -3,6 +3,7 @@ import { Contains, IsNumber, IsOptional, IsString, Matches, MaxLength } from "cl
 
 
 const typeRegex = new RegExp(/^(realestate|stockshare)$/)
+const orderByRegex = new RegExp(/^(created_at|operation_date)$/)
 
 export class OperationQueryDto {
     @IsOptional()

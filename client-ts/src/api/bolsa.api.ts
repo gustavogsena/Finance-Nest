@@ -1,6 +1,6 @@
 
-import { FullStockQuery, FullStockRequestType } from "../../types"
-import api from "../api"
+import { FullStockQuery, FullStockRequestType } from "../types"
+import api from "./api"
 
 
 

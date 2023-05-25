@@ -1,7 +1,7 @@
 import { createListenerMiddleware } from "@reduxjs/toolkit";
 import { getConsolidatedAsset } from "../reducers/consolidated.slice";
 import { deleteEarning, getEarnings, postEarning, putEarning, updateEarnings } from "../reducers/earnings.slice";
-import { deleteEarningApi, getEarningsApi, postEarningsApi, putEarningsApi } from "../../api/services/earnings.api";
+import { deleteEarningApi, getEarningsApi, postEarningsApi, putEarningsApi } from "../../api/earnings.api";
 import { Query } from "../../types";
 import { getQuery } from "..";
 import { getAssets } from "../reducers/assets.slice";

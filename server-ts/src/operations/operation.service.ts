@@ -29,6 +29,7 @@ export class OperationService {
             type = '',
             assetId = 0
         }: OperationQueryDto, userId: number) {
+        const orderByFilter = orderBy !== 'operation_date' || 'created_at' ? 'operation_date': orderBy
         const qb = this.operationRepository.createQueryBuilder('o')
         const typeQuery = type ? { 'a.asset_type': type } : {}
         const assetIdQuery = assetId ? { 'o.asset': assetId } : {}
@@ -67,7 +68,7 @@ export class OperationService {
                     }
                 ]
             })
-            .orderBy({ [orderBy]: direction })
+            .orderBy({ [orderByFilter]: direction })
 
 
 

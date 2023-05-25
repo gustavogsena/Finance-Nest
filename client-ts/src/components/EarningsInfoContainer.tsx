@@ -3,7 +3,7 @@ import InfoContainerItem from './InfoContainerItem'
 import { RootState } from '../store'
 import { useSelector } from 'react-redux'
 import { ConsolidatedAsset } from '../types'
-import { formatCurrency } from '../services'
+import { formatCurrency } from '../services/general.service'
 
 function EarningsInfoContainer() {
     const consolidado = useSelector<RootState, ConsolidatedAsset>(state => state.consolidatedAssets)

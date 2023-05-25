@@ -1,7 +1,7 @@
 import React from 'react'
 import { ConsolidatedAssetItem } from '../types'
 import InfoContainerItem from './InfoContainerItem'
-import { formatCurrency } from '../services'
+import { formatCurrency } from '../services/general.service'
 
 type InfoContainerType = {
     data: ConsolidatedAssetItem,

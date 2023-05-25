@@ -1,6 +1,6 @@
 
-import { BasicAsset, ConsolidatedAsset } from "../../types"
-import api from "../api"
+import { BasicAsset, ConsolidatedAsset } from "../types"
+import api from "./api"
 
 
 export const getAssetsApi = async (): Promise<BasicAsset[]> => {

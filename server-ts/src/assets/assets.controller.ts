@@ -3,6 +3,7 @@ import { AssetsService } from "./assets.service";
 import { Asset } from "./assets.entity";
 import { CreateAssetDto } from "./dto/asset.dto";
 import { AssetQueryDto } from "./dto/assetQuery.dto";
+import { Public } from "src/auth/auth.guard";
 
 @Controller('/assets')
 export class AssetsController {
@@ -20,6 +21,15 @@ export class AssetsController {
         const userId: number = req['user'].id
         const assets = await this.assetsService.findAssets(query, userId);
         const response = await this.assetsService.consolidateAssets(assets)
+        return response
+        /* const response = await this.assetsService.findAssetDevelopmentData()
+        return response */
+    }
+
+    @Get('/development')
+    async getDevelopmentData(@Query() query: AssetQueryDto, @Req() req: Request) {
+        const userId: number = req['user'].id
+        const response = await this.assetsService.findAssetDevelopmentData(userId)
         return response
     }
 

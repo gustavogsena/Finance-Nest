@@ -7,8 +7,8 @@ import { resetQuery } from '../store/reducers/query.slice'
 import Grafico from '../components/Grafico'
 import StandardContainer from '../components/StandardContainer'
 import AssetContainer from '../components/AssetContainer'
-import { BarChartData, createBarChartData, createPorcentageTable } from '../services'
 import ApexChart from '../components/ApexChart'
+import { BarChartData, createPorcentageChartData } from '../services/chart.service'
 
 export default function Acoes() {
     const dispatch = useDispatch()
@@ -21,7 +21,7 @@ export default function Acoes() {
     }, [])
 
     useEffect(() => {
-        setChartData(createBarChartData(assets, consolidado.stockshare))
+        setChartData(createPorcentageChartData(assets, consolidado.stockshare))
     }, [consolidado])
 
     return (

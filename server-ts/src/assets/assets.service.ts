@@ -60,7 +60,7 @@ export class AssetsService {
         /* Execute both querys */
         const totalResult: AssetConsolidated[] = await operationsQuery.execute()
         const earningsResult: AssetWithEarnings[] = await earningsQuery.execute()
-        
+
 
         /* Get the array result from 1st query and map it to add the 'sum(earnings_received)' from 2nd query in only one array*/
         const resultWithEarnings = totalResult.map((item) => {
@@ -93,7 +93,7 @@ export class AssetsService {
 
             /* Make a request to api to get the current price of the asset */
             const [currentStock] = await this.bolsaService.retornaAtivoProcurado(asset.asset_code)
-            
+
             const current_price = currentStock.regularMarketPrice
             const current_total = currentStock.regularMarketPrice * asset.total_quantity
             const balance = Number((current_total - asset.total_price).toFixed(2))
@@ -186,4 +186,36 @@ export class AssetsService {
         return asset
     }
 
+    async findAssetDevelopmentData(userId: number) {
+        const qb = this.assetRepository.createQueryBuilder('a')
+        const operationsQuery = qb
+            .select([
+                '*',
+                "SUM(case when o.operation_type = 'bought' then o.operation_price * o.quantity ELSE o.operation_price * -o.quantity END) as total_price",
+                "SUM(case when o.operation_type = 'bought' then o.quantity ELSE -o.quantity END) AS total_quantity",
+                "year(o.operation_date) as year",
+                "month(o.operation_date) as month",
+                'count(o.operation_id) as count'
+            ], true)
+            .join('a.operations', 'o')
+            .where({ user: userId })
+            .groupBy(['asset_id', 'year(o.operation_date)', 'month(o.operation_date)'])
+
+        const result: any[] = await operationsQuery.execute()
+
+  /*       const today = new Date()
+        const firstDate = result.reduce((acc, asset) => {
+            if (acc.year > asset.year) {
+                return { year: asset.year, month: asset.month }
+            }
+            if (acc.year === asset.year && acc.month > asset.month) {
+                return { year: asset.year, month: asset.month }
+            }
+            return acc
+
+        }, { year: today.getFullYear(), month: today.getMonth() }) */
+
+
+        return result
+    }
 }

@@ -53,7 +53,6 @@ function Home() {
                     className='w-full md:w-[35%] mb-8'
                     series={pieChartData}
                     options={{
-
                         labels: ['Fundos Imobiliarios', 'Acoes'],
                         legend: { show: true, position: 'bottom' },
                         responsive: [{

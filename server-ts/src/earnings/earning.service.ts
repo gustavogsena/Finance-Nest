@@ -25,6 +25,7 @@ export class EarningService {
         type = '',
         assetId = 0
     }, userId: number) {
+        const orderByFilter = orderBy !== 'earning_date' || 'created_at' ? 'earning_date': orderBy
         const typeQuery = type ? { asset_type: type } : {}
         const assetIdQuery = assetId ? { user: userId, asset_id: assetId } : { user: userId }
 
@@ -58,7 +59,7 @@ export class EarningService {
                     }
                 ]
             })
-            .orderBy({ [orderBy]: direction })
+            .orderBy({ [orderByFilter]: direction })
 
         const countQuery = query.clone()
         const [count] = await countQuery.count().execute()

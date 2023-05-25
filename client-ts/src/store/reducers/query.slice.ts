@@ -52,6 +52,7 @@ const querySlice = createSlice({
     },
 
     resetQuery: () => initialState
+
   }
 });
 

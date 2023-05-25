@@ -1,5 +1,5 @@
 import { createListenerMiddleware } from "@reduxjs/toolkit";
-import { getAssetsApi } from "../../api/services/assets.api";
+import { getAssetsApi } from "../../api/assets.api";
 import { getAssets, sortAssetsDesc, updateAssets } from "../reducers/assets.slice";
 
 export const assetsListener = createListenerMiddleware();

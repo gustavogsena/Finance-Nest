@@ -1,6 +1,6 @@
 import { createListenerMiddleware } from "@reduxjs/toolkit";
 import { authenticated, authenticatedUser, getUser, removeUser, updateUser, userCreate, userLogin, userLogout, userUploadPicture } from "../reducers/user.slice";
-import { createUserApi, getUserApi, login, uploadUserPictureApi } from "../../api/services/user.api";
+import { createUserApi, getUserApi, login, uploadUserPictureApi } from "../../api/user.api";
 import { getConsolidatedAsset, resetConsolidatedAssets } from "../reducers/consolidated.slice";
 import { resetQuery } from "../reducers/query.slice";
 import { resetOperationForm } from "../reducers/operationForm.slice";

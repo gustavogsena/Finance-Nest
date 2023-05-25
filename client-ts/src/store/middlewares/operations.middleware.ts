@@ -1,6 +1,6 @@
 import { createListenerMiddleware } from "@reduxjs/toolkit";
 import { deleteOperation, getOperations, postOperation, putOperation, updateOperations } from "../reducers/operations.slice";
-import { deleteOperationApi, getOperationsApi, postOperationApi, putOperationApi } from "../../api/services/operations.api";
+import { deleteOperationApi, getOperationsApi, postOperationApi, putOperationApi } from "../../api/operations.api";
 
 import { getConsolidatedAsset } from "../reducers/consolidated.slice";
 import { getQuery } from "..";

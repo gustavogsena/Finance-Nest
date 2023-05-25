@@ -1,6 +1,6 @@
 
-import { Query, OperationsResponse, PostOperation, EditOperation } from "../../types"
-import api from "../api"
+import { Query, OperationsResponse, PostOperation, EditOperation } from "../types"
+import api from "./api"
 
 
 export const getOperationsApi = async (query: Query): Promise<OperationsResponse> => {

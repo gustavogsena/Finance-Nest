@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useLayoutEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Query } from '../types'
 import { getOperations } from '../store/reducers/operations.slice'
@@ -13,7 +13,7 @@ export default function Operacoes() {
     const dispatch = useDispatch()
     const query = useSelector<RootState, Query>((state) => state.query)
 
-    useEffect(() => {
+    useLayoutEffect(() => {
         dispatch(resetQuery())
     }, [])
 
@@ -23,7 +23,7 @@ export default function Operacoes() {
 
     return (
         <StandardContainer>
-            <QueryOptions title='Operações' />
+            <QueryOptions title='Operações' orderBy='operation_date' />
             <OperationContainer />
         </StandardContainer>
 

@@ -7,8 +7,8 @@ import { resetQuery } from '../store/reducers/query.slice'
 import Grafico from '../components/Grafico'
 import StandardContainer from '../components/StandardContainer'
 import AssetContainer from '../components/AssetContainer'
-import { BarChartData, createBarChartData, createPorcentageTable } from '../services'
 import ApexChart from '../components/ApexChart'
+import { BarChartData, createPorcentageChartData } from '../services/chart.service'
 
 export default function FundosImobiliarios() {
   const dispatch = useDispatch()
@@ -19,7 +19,7 @@ export default function FundosImobiliarios() {
 
   useEffect(() => {
     dispatch(resetQuery())
-    setChartData(createBarChartData(realestate, consolidado.realestate))
+    setChartData(createPorcentageChartData(realestate, consolidado.realestate))
   }, [consolidado])
 
   return (

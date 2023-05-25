@@ -1,5 +1,5 @@
 import { createListenerMiddleware } from "@reduxjs/toolkit";
-import { buscaAtivo } from "../../api/services/bolsa.api";
+import { buscaAtivo } from "../../api/bolsa.api";
 import { searchMarketAsset, updateSearchAsset } from "../reducers/bolsa/searchAsset.slice";
 import { updateOperationForm } from "../reducers/operationForm.slice";
 
