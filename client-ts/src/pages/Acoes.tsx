@@ -39,7 +39,7 @@ export default function Acoes() {
                         horizontal: true
                     }
                 }
-            }} type='bar' initialShow={true} height='300px' />
+            }} type='bar' height='300px' />
 
             <AssetContainer assets={assets} consolidado={consolidado.stockshare} />
         </StandardContainer >

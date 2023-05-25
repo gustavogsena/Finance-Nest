@@ -7,6 +7,8 @@ import { ConsolidatedAsset } from '../types';
 import InfoContainer from '../components/InfoContainer';
 import StandardContainer from '../components/StandardContainer';
 import ApexChart from '../components/ApexChart';
+import { getInvestedDevelopmentHistoricalData } from '../api/assets.api';
+import { LineChartData, createHistoricalDevelopmentChartData, createLineChartData } from '../services/chart.service';
 
 export const data2 = [
     { x: new Date("01/02/23"), y: 3000 },
@@ -26,13 +28,18 @@ export const options = {
 
 function Home() {
     const [pieChartData, setPieChartData] = useState<number[]>([])
-    const [lineChartData, setLineChartData] = useState<number[]>([])
+    const [lineChartData, setLineChartData] = useState<LineChartData[]>([])
 
     const consolidado = useSelector<RootState, ConsolidatedAsset>(state => state.consolidatedAssets)
 
     useEffect(() => {
         setPieChartData([consolidado.realestate.current, consolidado.stockshare.current])
-        setLineChartData([])
+
+        getInvestedDevelopmentHistoricalData()
+        .then((result) => {
+                const data = createHistoricalDevelopmentChartData(result)
+                setLineChartData(data)
+        })
     }, [consolidado])
 
     return (
@@ -43,8 +50,8 @@ function Home() {
 
                 <ApexChart
                     className='w-full md:w-[60%] mr-4 mb-8'
-                    series={[{ name: 'Evolução', data: data2 }]}
-                    title='Evolução patrimonial'
+                    series={[{ name: 'Evolução', data: lineChartData }]}
+                    title='Evolução Patrimônio Investido'
                     type='line'
                     initialShow={true}
                     height='300px' />

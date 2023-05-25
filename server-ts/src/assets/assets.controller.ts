@@ -29,7 +29,7 @@ export class AssetsController {
     @Get('/development')
     async getDevelopmentData(@Query() query: AssetQueryDto, @Req() req: Request) {
         const userId: number = req['user'].id
-        const response = await this.assetsService.findAssetDevelopmentData(userId)
+        const response = await this.assetsService.findInvestmentDevelopmentData(userId)
         return response
     }
 

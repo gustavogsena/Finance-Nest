@@ -48,7 +48,7 @@ function Proventos() {
                         horizontal: true
                     }
                 }
-            }} type='bar' initialShow={true} height='300px' />
+            }} type='bar' height='300px' />
 
             <EarningsContainer />
 

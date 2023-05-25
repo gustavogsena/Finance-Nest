@@ -37,7 +37,7 @@ export default function FundosImobiliarios() {
             horizontal: true
           }
         }
-      }} type='bar' initialShow={true} height='250px' />
+      }} type='bar' height='250px' />
       <AssetContainer assets={realestate} consolidado={consolidado.realestate} />
     </StandardContainer>
   )

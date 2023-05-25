@@ -1,16 +1,20 @@
 
-import { BasicAsset, ConsolidatedAsset } from "../types"
+import { BasicAsset, ConsolidatedAsset, HistoricalDevelopmentDataResponse } from "../types"
 import api from "./api"
 
-
 export const getAssetsApi = async (): Promise<BasicAsset[]> => {
-  const resposta = await api.get(`/assets`)
-  return resposta.data
+  const response = await api.get(`/assets`)
+  return response.data
 }
 
 export const getConsolidatedAssetsApi = async (): Promise<ConsolidatedAsset> => {
-  const resposta = await api.get(`/assets/consolidated`)
-  return resposta.data
+  const response = await api.get(`/assets/consolidated`)
+  return response.data
+}
+
+export const getInvestedDevelopmentHistoricalData = async (): Promise<HistoricalDevelopmentDataResponse[]> => {
+  const response = await api.get(`/assets/development`)
+  return response.data
 }
 
 

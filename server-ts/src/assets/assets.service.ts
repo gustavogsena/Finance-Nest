@@ -186,7 +186,7 @@ export class AssetsService {
         return asset
     }
 
-    async findAssetDevelopmentData(userId: number) {
+    async findInvestmentDevelopmentData(userId: number) {
         const qb = this.assetRepository.createQueryBuilder('a')
         const operationsQuery = qb
             .select([
@@ -203,19 +203,49 @@ export class AssetsService {
 
         const result: any[] = await operationsQuery.execute()
 
-  /*       const today = new Date()
-        const firstDate = result.reduce((acc, asset) => {
-            if (acc.year > asset.year) {
-                return { year: asset.year, month: asset.month }
-            }
-            if (acc.year === asset.year && acc.month > asset.month) {
-                return { year: asset.year, month: asset.month }
+        const consolidatedByMonthAndYear = result.reduce((acc, current, index, array) => {
+            const dataBasedOnMonth = array.filter((item) => item.month === current.month && item.year === current.year)
+            const newAcc = dataBasedOnMonth.reduce((a, i) => {
+                const value = i.total_price + a.value
+                const month = i.month
+                const year = i.year
+                const count = dataBasedOnMonth.length
+                return {
+                    value,
+                    month,
+                    year,
+                    count
+                }
+            }, { value: 0, month: 0, year: 0 })
+
+            acc = [...acc, newAcc]
+            return acc
+        }, [])
+
+        const consolidatedWithoutDuplicates = consolidatedByMonthAndYear.reduce((acc, current) => {
+            if (!acc.find(item => current.month === item.month && current.year === item.year)) {
+                acc.push(current)
             }
             return acc
+        }, [])
 
-        }, { year: today.getFullYear(), month: today.getMonth() }) */
+        const sortedConsolidatedData = consolidatedWithoutDuplicates.sort((a, b) => a.month - b.month).sort((a, b) => a.year - b.year)
+        const continuousConsolidatedData = sortedConsolidatedData.reduce((acc, current, idx) => {
+
+            const totalValue = acc.length > 0 ? acc[idx - 1].value + current.value : current.value
+        
+            const date = new Date(current.year, current.month - 1)
+            const newData = {
+                date,
+                value: totalValue
+            }
+
+            acc.push(newData)
+            return acc
+
+        }, [])
 
 
-        return result
+        return continuousConsolidatedData
     }
 }

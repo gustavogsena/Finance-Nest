@@ -298,13 +298,18 @@ export type StockDividends = {
 
 export type Subscriptions = {
     "assetIssued": string,
-     "percentage": number, 
-     "priceUnit": number, 
-     "tradingPeriod": string, 
-     "subscriptionDate": string, 
-     "approvedOn": string, 
-     "isinCode": string, 
-     "label": string, 
-     "lastDatePrior": string, 
-     "remarks": string
+    "percentage": number,
+    "priceUnit": number,
+    "tradingPeriod": string,
+    "subscriptionDate": string,
+    "approvedOn": string,
+    "isinCode": string,
+    "label": string,
+    "lastDatePrior": string,
+    "remarks": string
+}
+
+export type HistoricalDevelopmentDataResponse = {
+    date: Date,
+    value: number
 }

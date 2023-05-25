@@ -12,12 +12,12 @@ export class UserSeeder extends Seeder {
       .each(async (user) => {
         user.assets.set(new AssetFactory(em)
           .each(async (asset) => {
-            asset.operations.set(new OperationFactory(em).make(5))
+            asset.operations.set(new OperationFactory(em).make(10))
             asset.earnings.set(new EarningFactory(em).make(20))
           })
-          .make(3, { user }))
+          .make(20, { user }))
       })
-      .create(5)
+      .create(2)
   }
 }
 

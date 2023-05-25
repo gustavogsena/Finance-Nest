@@ -1,4 +1,4 @@
-import { BasicAsset, ChartDataType, ConsolidatedAssetItem, DataPriceType, } from "../types";
+import { BasicAsset, ChartDataType, ConsolidatedAssetItem, DataPriceType, HistoricalDevelopmentDataResponse, } from "../types";
 
 export class Candle {
     private x: Date;
@@ -14,9 +14,9 @@ export class LineChartData {
     x: Date;
     y: number
 
-    constructor(date: number, close: number) {
+    constructor(date: number | Date, close: number, unix: boolean = false) {
 
-        this.x = (new Date(date * 1000));
+        this.x = unix && typeof date === 'number' ? (new Date(date * 1000)) : new Date(date);
         this.y = Number(close.toFixed(2))
     }
 }
@@ -35,6 +35,11 @@ export function createLineChartData(data: DataPriceType[]): Array<LineChartData>
         .filter(item => item.close !== null)
         .map((item) => new LineChartData(item.date, item.close))
 
+    return result
+}
+
+export function createHistoricalDevelopmentChartData(data: HistoricalDevelopmentDataResponse[]): Array<LineChartData>  {
+    const result = data.map((item) => new LineChartData(item.date, item.value))
     return result
 }
 
