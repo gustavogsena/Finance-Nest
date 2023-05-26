@@ -15,9 +15,9 @@ function AssetInfoContainer() {
                 <InfoContainerItem title='Total Descontado' value={`R$ ${ativo.discounted_price.toFixed(2)}`} />
                 <InfoContainerItem title='Total Investido' value={`R$ ${ativo.total_price.toFixed(2)}`} />
                 <InfoContainerItem title='Total Atual' value={`R$ ${ativo.current_total.toFixed(2)}`} />
-                <InfoContainerItem title='Proventos (%)' value={` R$ ${Number(ativo.earnings_received).toFixed(2)} (${((ativo.earnings_received) * 100 / ativo.total_price).toFixed(2)}%)`} />
-                <InfoContainerItem title='Valorização (%)' value={`R$ ${(ativo.balance).toFixed(2)} (${((ativo.balance) * 100 / ativo.total_price).toFixed(2)}%)`} />
-                <InfoContainerItem title='Retorno (%)' value={`R$ ${(ativo.balance_with_earnings).toFixed(2)} (${((ativo.balance_with_earnings) * 100 / ativo.total_price).toFixed(2)}%)`} />
+                <InfoContainerItem title='Proventos (%)' value={` R$ ${Number(ativo.earnings_received).toFixed(2)}`} boldValue={`(${((ativo.earnings_received) * 100 / ativo.total_price).toFixed(2)}%)`} />
+                <InfoContainerItem title='Valorização (%)' value={`R$ ${(ativo.balance).toFixed(2)}`} boldValue={`(${((ativo.balance) * 100 / ativo.total_price).toFixed(2)}%)`} />
+                <InfoContainerItem title='Retorno (%)' value={`R$ ${(ativo.balance_with_earnings).toFixed(2)}`} boldValue={`(${((ativo.balance_with_earnings) * 100 / ativo.total_price).toFixed(2)}%)`} />
             </div>
         </div>
 

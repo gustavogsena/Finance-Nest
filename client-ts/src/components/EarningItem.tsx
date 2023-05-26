@@ -39,20 +39,20 @@ function EarningItem({ earning }: EarningItemType) {
     return (
         <div
 
-            className='bg-cinza-400 rounded-3xl py-4 px-6 mb-2 drop-shadow min-w-[100%] flex justify-between'
+            className='bg-cinza-400 rounded-3xl py-4 px-6 mb-2 w-fit drop-shadow min-w-[100%] flex justify-between'
         >
             <span className='w-1/5 min-w-[130px]'>{new Date(earning.earning_date).toLocaleDateString()}</span>
             <span className='w-1/5 min-w-[130px] text-center'>{earning.asset_code.toUpperCase()}</span>
             <span className='w-1/5 min-w-[130px] text-center'>{earning.earning_type === 'income' ? "Rendimentos" : earning.earning_type === 'dividends' ? "Dividendos" : "JSCP"}</span>
             <span className='w-1/5 min-w-[130px] text-center'>{formatCurrency(earning.earning_value)}</span>
             <span
-                className='w-[10%] self-center cursor-pointer flex justify-end text-black'
+                className='w-[10%] self-center cursor-pointer flex justify-end text-black min-w-[65px]'
                 onClick={() => editEarning()}
             >
                 <AiOutlineEdit />
             </span>
             <span
-                className='w-[10%] self-center cursor-pointer flex justify-end text-black'
+                className='w-[10%] self-center cursor-pointer flex justify-end text-black min-w-[65px]'
                 onClick={() => dispatch(deleteEarning(earning.earning_id))}
             >
                 <CiTrash />

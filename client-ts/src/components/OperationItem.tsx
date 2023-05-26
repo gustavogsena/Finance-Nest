@@ -48,21 +48,21 @@ function OperationItem({ data }: OperationItemType) {
 
     return (
         <div
-            className='bg-cinza-400 rounded-3xl py-4 mb-2 w-full h-full drop-shadow px-6 flex justify-between'>
-            <span className='w-[calc(100%/7)] border-r-2 border-cinza-600'>{new Date(data.operation_date).toLocaleDateString()}</span>
-            <span className='w-[calc(100%/7)] text-center'>{data.asset_code.toUpperCase()}</span>
-            <span className='w-[calc(100%/7)] text-center'>{data.operation_type === 'bought' ? 'Compra' : 'Venda'}</span>
-            <span className='w-[calc(100%/7)] text-center'>{data.quantity}</span>
-            <span className='w-[calc(100%/7)] text-center'>{formatCurrency(data.operation_price)}</span>
-            <span className='w-[calc(100%/7)] text-center'>{formatCurrency(data.volume)}</span>
+            className='bg-cinza-400 rounded-3xl py-4 mb-2 w-fit min-w-full h-full drop-shadow px-6 flex justify-between'>
+            <span className='w-[calc(100%/7)] min-w-[130px] first-letter:border-r-2 border-cinza-600'>{new Date(data.operation_date).toLocaleDateString()}</span>
+            <span className='w-[calc(100%/7)] min-w-[130px] text-center'>{data.asset_code.toUpperCase()}</span>
+            <span className='w-[calc(100%/7)] min-w-[130px] text-center'>{data.operation_type === 'bought' ? 'Compra' : 'Venda'}</span>
+            <span className='w-[calc(100%/7)] min-w-[130px] text-center'>{data.quantity}</span>
+            <span className='w-[calc(100%/7)] min-w-[130px] text-center'>{formatCurrency(data.operation_price)}</span>
+            <span className='w-[calc(100%/7)] min-w-[130px] text-center'>{formatCurrency(data.volume)}</span>
             <span
-                className='w-[calc(100%/14)] self-center cursor-pointer flex justify-end text-black'
+                className='w-[calc(100%/14)] self-center cursor-pointer flex justify-end text-black min-w-[65px]'
                 onClick={() => editOperation()}
             >
                 <AiOutlineEdit />
             </span>
             <span
-                className='w-[calc(100%/14)] self-center cursor-pointer flex justify-end text-black'
+                className='w-[calc(100%/14)] self-center cursor-pointer flex justify-end text-black min-w-[65px]'
                 onClick={() => dispatch(deleteOperation(data.operation_id))}
             >
                 <CiTrash />

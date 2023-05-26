@@ -26,7 +26,7 @@ function Proventos() {
 
     useEffect(() => {
         setChartData(createEarningsChartData(assets))
-    }, [earnings])
+    }, [assets])
 
     useEffect(() => {
         dispatch(getEarnings(query))
