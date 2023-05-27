@@ -11,6 +11,7 @@ import QueryOptions from '../components/QueryOptions'
 import EarningsInfoContainer from '../components/EarningsInfoContainer'
 import ApexChart from '../components/ApexChart'
 import { BarChartData, createEarningsChartData } from '../services/chart.service'
+import CollapseTitle from '../components/CollapseTitle'
 
 function Proventos() {
     const dispatch = useDispatch()
@@ -36,19 +37,22 @@ function Proventos() {
         <StandardContainer>
             <EarningsInfoContainer />
             <QueryOptions title='' orderBy='earning_date' />
-            <ApexChart className='mr-4 mb-8' series={[{ data: chartData, name: 'Provento(R$)' }]} title='Composição' options={{
-                chart: {
-                    type: 'bar'
-                },
-                xaxis: {
-                    type: 'category'
-                },
-                plotOptions: {
-                    bar: {
-                        horizontal: true
+            <CollapseTitle className='mb-8' title='Proventos Recebidos' initialShow={false} >
+                <ApexChart series={[{ data: chartData, name: 'Provento(R$)' }]} options={{
+                    chart: {
+                        type: 'bar'
+                    },
+                    xaxis: {
+                        type: 'category'
+                    },
+                    plotOptions: {
+                        bar: {
+                            horizontal: true
+                        }
                     }
-                }
-            }} type='bar' height='300px' />
+                }} type='bar' height='300px' />
+            </CollapseTitle>
+
 
             <EarningsContainer />
 

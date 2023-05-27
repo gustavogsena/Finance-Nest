@@ -1,7 +1,7 @@
 import { Body, Controller, Delete, Get, Param, Post, Put, Query, Req } from "@nestjs/common";
 import { EarningService } from "./earning.service";
 import { CreateEarningDto } from "./dto/createEarning.dto";
-import { IsNumber, ValidateNested } from "class-validator";
+import { IsNumber, Min, NotEquals, ValidateNested } from "class-validator";
 import { Type } from "class-transformer";
 import { EarningQueryDto } from "./dto/earningQuery.dto";
 import { UpdateEarningDto } from "./dto/updateEarning.dto";
@@ -15,6 +15,7 @@ export class CreateEarningBodyDto {
     earning: CreateEarningDto
 
     @IsNumber()
+    @Min(1, {message: "Você deve escolher um ativo da lista"})
     asset_id: number
 }
 

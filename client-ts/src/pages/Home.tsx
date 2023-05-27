@@ -36,10 +36,10 @@ function Home() {
         setPieChartData([consolidado.realestate.current, consolidado.stockshare.current])
 
         getInvestedDevelopmentHistoricalData()
-        .then((result) => {
+            .then((result) => {
                 const data = createHistoricalDevelopmentChartData(result)
                 setLineChartData(data)
-        })
+            })
     }, [consolidado])
 
     return (
@@ -47,33 +47,33 @@ function Home() {
             <InfoContainer title='Meus Investimentos' data={consolidado.total} />
 
             <div className='flex justify-between flex-wrap'>
+                <div className='w-full lg:w-[62%] bg-cinza-400 rounded-3xl px-6 mb-8 flex flex-col'>
+                    <h3 className='text-center text-2xl text-verde-300 p-4'>Evolução Patrimônio Investido</h3>
 
-                <ApexChart
-                    className='w-full md:w-[60%] mr-4 mb-8'
-                    series={[{ name: 'Evolução', data: lineChartData }]}
-                    title='Evolução Patrimônio Investido'
-                    type='line'
-                    initialShow={true}
-                    height='300px' />
+                    <ApexChart
+                        series={[{ name: 'Evolução', data: lineChartData }]}
+                        type='line'
+                        height='300px' />
+                </div>
 
-                <ApexChart
-                    className='w-full md:w-[35%] mb-8'
-                    series={pieChartData}
-                    options={{
-                        labels: ['Fundos Imobiliarios', 'Acoes'],
-                        legend: { show: true, position: 'bottom' },
-                        responsive: [{
-                            breakpoint: 768,
-                            options: {
-                                legend: { position: 'right' }
-                            }
-                        }]
-                    }}
-                    title='Composição'
-                    type='pie'
-                    initialShow={true}
+                <div className='w-full lg:w-[35%] bg-cinza-400 rounded-3xl px-6 mb-8 flex flex-col'>
+                    <h3 className='text-center text-2xl text-verde-300 p-4'>Composição da carteira</h3>
+                    <ApexChart
+                        series={pieChartData}
+                        options={{
+                            labels: ['Fundos Imobiliarios', 'Acoes'],
+                            legend: { show: true, position: 'bottom' },
+                            responsive: [{
+                                breakpoint: 768,
+                                options: {
+                                    legend: { position: 'right' }
+                                }
+                            }]
+                        }}
+                        type='pie'
+                        height='300px' />
+                </div>
 
-                    height='300px' />
 
             </div>
 

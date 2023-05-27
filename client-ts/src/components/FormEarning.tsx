@@ -48,6 +48,7 @@ function FormEarning() {
 
     useEffect(() => {
         changeForm({ asset_id: 0 })
+        console.log(earningForm)
     }, [])
     return (
         <>

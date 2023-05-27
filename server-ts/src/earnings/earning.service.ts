@@ -1,5 +1,5 @@
 import { InjectRepository } from '@mikro-orm/nestjs';
-import { Injectable } from '@nestjs/common';;
+import { Injectable, UnauthorizedException } from '@nestjs/common';;
 import { EntityRepository } from '@mikro-orm/mysql';
 import { Earning } from './earning.entity';
 import { CreateEarningDto } from './dto/createEarning.dto';
@@ -25,7 +25,7 @@ export class EarningService {
         type = '',
         assetId = 0
     }, userId: number) {
-        const orderByFilter = orderBy !== 'earning_date' || 'created_at' ? 'earning_date': orderBy
+        const orderByFilter = orderBy !== 'earning_date' || 'created_at' ? 'earning_date' : orderBy
         const typeQuery = type ? { asset_type: type } : {}
         const assetIdQuery = assetId ? { user: userId, asset_id: assetId } : { user: userId }
 
@@ -108,8 +108,7 @@ export class EarningService {
     }
 
     async create(body: CreateEarningBodyDto) {
-
-        let asset = await this.assetRepository.findOneOrFail({ asset_id: body.asset_id })
+        const asset = await this.assetRepository.findOneOrFail({ asset_id: body.asset_id })
         const date = new Date(body.earning.earning_date)
         const day = date.getDay()
         const month = date.getMonth()

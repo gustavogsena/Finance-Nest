@@ -24,7 +24,7 @@ function SingleAsset() {
     useEffect(() => {
 
     }, [])
-    
+
     useEffect(() => {
         dispatch(getEarnings(query))
     }, [query])
@@ -44,7 +44,9 @@ function SingleAsset() {
     return (
         <StandardContainer>
             <AssetInfoContainer />
-            <ApexChart series={[{ name: 'Fechamento', data: chartData }]} title='Cotação' type='line' />
+            <CollapseTitle className='w-2/3' title='Cotação' initialShow={false} >
+                <ApexChart series={[{ name: 'Fechamento', data: chartData }]} type='line' />
+            </CollapseTitle>
             <CollapseTitle title='Operações'>
                 <OperationContainer />
             </CollapseTitle>

@@ -21,7 +21,7 @@ function Grafico({ dados, options, className, diffData, initialShow = false, cha
 
 
     return (
-        <CollapseTitle title={title} className={className} initialShow={initialShow}>
+        
             <Chart
                 diffdata={diffData}
                 className={chartClassName}
@@ -31,7 +31,6 @@ function Grafico({ dados, options, className, diffData, initialShow = false, cha
                 data={dados}
                 options={options}
             />
-        </CollapseTitle>
     )
 }
 

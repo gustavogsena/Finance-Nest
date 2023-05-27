@@ -1,5 +1,5 @@
 import { DecimalType } from "@mikro-orm/core";
-import { IsDecimal, IsNumber, IsString, Matches, MaxLength, MinLength, ValidateNested } from "class-validator";
+import { IsDecimal, IsNumber, IsString, Matches, MaxLength, MinLength, NotEquals, ValidateNested } from "class-validator";
 
 
 const typeRegex = new RegExp(/^(dividends|interest|income)$/)
@@ -9,9 +9,10 @@ export class CreateEarningDto {
     @Matches(typeRegex)
     earning_type: 'dividends' | 'interest' | 'income';
 
-    @IsString()
+    @IsString({message: 'Data inválida'})
     earning_date: Date;
 
-    @IsDecimal()
+    @IsDecimal({locale: 'pt-BR'})
+    @NotEquals('0')
     earning_value: DecimalType;
 }

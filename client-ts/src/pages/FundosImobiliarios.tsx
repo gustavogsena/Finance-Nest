@@ -9,6 +9,7 @@ import StandardContainer from '../components/StandardContainer'
 import AssetContainer from '../components/AssetContainer'
 import ApexChart from '../components/ApexChart'
 import { BarChartData, createPorcentageChartData } from '../services/chart.service'
+import CollapseTitle from '../components/CollapseTitle'
 
 export default function FundosImobiliarios() {
   const dispatch = useDispatch()
@@ -25,19 +26,22 @@ export default function FundosImobiliarios() {
   return (
     <StandardContainer>
       <InfoContainer title='Fundos Imobiliarios' data={consolidado.realestate} />
-      <ApexChart className='mr-4 mb-8' series={[{ data: chartData }]} title='Composição' options={{
-        chart: {
-          type: 'bar'
-        },
-        xaxis: {
-          type: 'category'
-        },
-        plotOptions: {
-          bar: {
-            horizontal: true
+      <CollapseTitle className='mb-8' title='Composição' initialShow={false} >
+        <ApexChart series={[{ data: chartData }]} options={{
+          chart: {
+            type: 'bar'
+          },
+          xaxis: {
+            type: 'category'
+          },
+          plotOptions: {
+            bar: {
+              horizontal: true
+            }
           }
-        }
-      }} type='bar' height='250px' />
+        }} type='bar' height='250px' />
+      </CollapseTitle>
+
       <AssetContainer assets={realestate} consolidado={consolidado.realestate} />
     </StandardContainer>
   )

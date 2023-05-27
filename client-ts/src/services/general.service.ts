@@ -11,7 +11,10 @@ export const formatDate = (date: string) => {
 }
 
 
-export const formatCurrency = (value: number) => {
+export const formatCurrency = (value: number | string) => {
+    if (typeof value === 'string') {
+        value = parseFloat(value.replace(',','.').replace(' ',''))
+    }
     const currency = Intl.NumberFormat('pt-BR', {
         style: 'currency',
         currency: 'BRL',

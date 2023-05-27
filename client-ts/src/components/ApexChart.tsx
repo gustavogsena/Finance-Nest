@@ -5,17 +5,14 @@ import { ApexOptions } from 'apexcharts'
 import { ChartType } from '../types'
 
 type ApexChartType = {
-    title: string,
     series: ApexOptions['series'],
     options?: ApexOptions,
     type?: ChartType
-    className?: string,
-    initialShow?: boolean,
     height?: string
 }
 
 
-function ApexChart({ title, className, series, options, initialShow = false, type = 'bar', height=`400px` }: ApexChartType) {
+function ApexChart({ series, options, type = 'bar', height = `400px` }: ApexChartType) {
     const defaultOptions = {
         chart: {
             type: type,
@@ -32,9 +29,7 @@ function ApexChart({ title, className, series, options, initialShow = false, typ
     } as ApexOptions
 
     return (
-        <CollapseTitle title={title} className={className} initialShow={initialShow} >
-            <ReactApexChart series={series} type={type} options={{...defaultOptions, ...options}} height={height} />
-        </CollapseTitle >
+        <ReactApexChart series={series} type={type} options={{ ...defaultOptions, ...options }} height={height} />
     )
 }
 

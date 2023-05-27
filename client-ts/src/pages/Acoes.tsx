@@ -9,6 +9,7 @@ import StandardContainer from '../components/StandardContainer'
 import AssetContainer from '../components/AssetContainer'
 import ApexChart from '../components/ApexChart'
 import { BarChartData, createPorcentageChartData } from '../services/chart.service'
+import CollapseTitle from '../components/CollapseTitle'
 
 export default function Acoes() {
     const dispatch = useDispatch()
@@ -27,19 +28,22 @@ export default function Acoes() {
     return (
         <StandardContainer>
             <InfoContainer title='Ações' data={consolidado.stockshare} />
-            <ApexChart className='mr-4 mb-8' series={[{ data: chartData }]} title='Composição' options={{
-                chart: {
-                    type: 'bar'
-                },
-                xaxis: {
-                    type: 'category'
-                },
-                plotOptions: {
-                    bar: {
-                        horizontal: true
+            <CollapseTitle className='mb-8' title='Composição' initialShow={false} >
+                <ApexChart series={[{ data: chartData }]}  options={{
+                    chart: {
+                        type: 'bar'
+                    },
+                    xaxis: {
+                        type: 'category'
+                    },
+                    plotOptions: {
+                        bar: {
+                            horizontal: true
+                        }
                     }
-                }
-            }} type='bar' height='300px' />
+                }} type='bar' height='300px' />
+            </CollapseTitle>
+
 
             <AssetContainer assets={assets} consolidado={consolidado.stockshare} />
         </StandardContainer >
