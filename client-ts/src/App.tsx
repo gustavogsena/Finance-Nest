@@ -14,6 +14,7 @@ import LoadAuthUser from './LoadAuthUser';
 import SingleAsset from './pages/SingleAsset';
 import Proventos from './pages/Proventos';
 import Forms from './pages/Forms';
+import Register from './pages/Register';
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
       <LoadAuthUser />
       <Routes>
         <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
         <Route path="/" element={<PaginaPadrao />}>
           <Route index element={<Home />} />
           <Route path="/fiis" element={<FundosImobiliarios />} />

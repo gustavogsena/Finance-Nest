@@ -4,7 +4,6 @@ import { RootState } from '../store'
 import { BasicAsset, ChartDataType, ConsolidatedAsset } from '../types'
 import { useDispatch, useSelector } from 'react-redux'
 import { resetQuery } from '../store/reducers/query.slice'
-import Grafico from '../components/Grafico'
 import StandardContainer from '../components/StandardContainer'
 import AssetContainer from '../components/AssetContainer'
 import ApexChart from '../components/ApexChart'
@@ -29,7 +28,7 @@ export default function Acoes() {
         <StandardContainer>
             <InfoContainer title='Ações' data={consolidado.stockshare} />
             <CollapseTitle className='mb-8' title='Composição' initialShow={false} >
-                <ApexChart series={[{ data: chartData }]}  options={{
+                <ApexChart series={[{ data: chartData, name: '% Carteira'}]}  options={{
                     chart: {
                         type: 'bar'
                     },

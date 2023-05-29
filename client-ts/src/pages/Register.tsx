@@ -4,16 +4,16 @@ import FormLogin from '../components/FormLogin'
 import FormSignIn from '../components/FormSignIn'
 import LoginBanner from '../components/LoginBanner'
 
-function Login() {
+function Register() {
 
     return (
         <div className='flex'>
             <LoginBanner />
 
-            <FormLogin />
+            <FormSignIn />
         </div>
 
     )
 }
 
-export default Login
+export default Register

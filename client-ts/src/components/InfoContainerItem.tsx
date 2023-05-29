@@ -9,8 +9,8 @@ type InfoContainerItemType = {
 function InfoContainerItem({ title, value, boldValue = '' }: InfoContainerItemType) {
     return (
         <div className='p-3 w-full sm:w-1/2  md:w-1/3'>
-            <p className='text-xl font-bold'>{title}</p>
-            <p className='text-xl pt-2'>{value} <b>{boldValue}</b></p>
+            <p className='text-xl '>{title}</p>
+            <p className='text-xl pt-2 font-bold'>{value} <b>{boldValue}</b></p>
         </div>
     )
 }

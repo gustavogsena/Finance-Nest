@@ -28,10 +28,10 @@ function Header({ setCriarUsuario }: HeaderType) {
     }
 
     return (
-        <header className='flex justify-between xl:px-24 px-3'>
-            <div className='flex items-center' onClick={setCriarUsuario ? undefined : () => navigate('/')}>
+        <header className='flex justify-between xl:px-24 px-3 text-verde-600 bg-cinza-100'>
+            <div className='flex items-end cursor-pointer' onClick={setCriarUsuario ? undefined : () => navigate('/')}>
                 <img src={logo} alt="Logo" className='h-[90px] p-3' />
-                <h1 className='text-3xl hidden sm:block'>Controle de Investimentos</h1>
+                <h1 className='text-3xl hidden sm:block p-3'>Controle de Investimentos</h1>
             </div>
 
             <div className='flex items-center'>

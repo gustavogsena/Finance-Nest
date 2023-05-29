@@ -16,7 +16,7 @@ function CollapseTitle({ title, children, className, initialShow = false }: Coll
                 onClick={() => setShow(!show)}
                 className='flex relative items-center justify-center p-4'>
                 {show ? <IoIosArrowUp className='absolute right-5 text-verde-300' size={25} /> : <IoIosArrowDown className='absolute right-5 text-verde-300' size={25} />}
-                <h3 className='text-center text-2xl text-verde-300'>{title}</h3>
+                <h3 className='text-center text-2xl text-verde-300 uppercase'>{title}</h3>
             </div>
             {show && <div>
                 {children}

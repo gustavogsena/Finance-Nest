@@ -27,7 +27,7 @@ const Textfield = ({ id, label, labelStyle, type, funcaoOnChange, value, step, m
                     htmlFor={id}>{label}
                 </label>}
             <input
-                className={`bg-white shadow-xl w-full rounded-lg text-base p-3 box-border text-black ${classStyle}`}
+                className={`bg-cinza-600 shadow-sm w-full rounded-[10px] text-base p-3 box-border text-black ${classStyle}`}
                 id={id}
                 type={type}
                 required={required}

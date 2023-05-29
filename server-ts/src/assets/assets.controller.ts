@@ -22,8 +22,6 @@ export class AssetsController {
         const assets = await this.assetsService.findAssets(query, userId);
         const response = await this.assetsService.consolidateAssets(assets)
         return response
-        /* const response = await this.assetsService.findAssetDevelopmentData()
-        return response */
     }
 
     @Get('/development')

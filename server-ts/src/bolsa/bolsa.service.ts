@@ -14,6 +14,7 @@ export class BolsaService {
 
     async retornaAtivoProcurado(codigo: string, query?: SingleStockQuery): Promise<FullStockRequestType[]> {
         const ativoProcurado = await axios.get(`https://brapi.dev/api/quote/${codigo}`, { params: query ? query : { fundamental: true } })
+        console.log(ativoProcurado.data)
         return ativoProcurado.data.results
     }
 

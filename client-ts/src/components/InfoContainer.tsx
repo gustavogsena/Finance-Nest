@@ -13,7 +13,7 @@ type InfoContainerType = {
 function InfoContainer({ data, title, vendas = false }: InfoContainerType) {
     return (
         <div className='bg-cinza-400 rounded-3xl p-6 mb-8'>
-            <h2 className='text-center text-4xl text-verde-300 pb-4'>{title}</h2>
+            <h2 className='text-center text-4xl text-verde-300 pb-4 uppercase'>{title}</h2>
 
             <div className='flex w-full flex-wrap justify-between text-center text-verde-600'>
                 <InfoContainerItem title='Total Descontado' value={formatCurrency(data.discounted_price)} />

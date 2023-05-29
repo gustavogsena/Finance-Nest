@@ -8,6 +8,7 @@ import rendaFixa from '../images/rendaFixa.png';
 import proventos from '../images/proventos.png';
 import operacoes from '../images/operacoes.png'
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
+import { Tooltip } from 'react-tooltip';
 
 function Nav() {
     const [show, setShow] = useState(false)
@@ -17,7 +18,7 @@ function Nav() {
     }
 
     return (
-        <nav className={`flex flex-col w-[100px] mt-12 relative ${show ? ' min-w-full sm:min-w-[380px] pl-24' : ''}`}>
+        <nav className={`flex flex-col w-[100px] mt-12 relative bg-cinza-100 ${show ? ' min-w-full sm:min-w-[380px] pl-24' : ''}`}>
             <span className={`xl:block text-4xl text-verde-300 ${!show ? 'self-center' : 'pr-4'}`} onClick={() => setShow(!show)}>
                 {!show ?
                     <IoIosArrowForward className='cursor-pointer'/> :
@@ -32,6 +33,7 @@ function Nav() {
             <ItemNav to='/proventos' image={proventos} title='Proventos' show={show} onClick={showOff} />
             <ItemNav to='/consolidado' image={consolidado} title='Consolidado' show={show} onClick={showOff} />
             <ItemNav to='/adicionar' image={adicionar} title='Adicionar' show={show} onClick={showOff}/>
+            {!show && <Tooltip id='nav_toltip' place='right' className='z-50' />}
         </nav>
     )
 }

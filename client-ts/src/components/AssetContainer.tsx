@@ -6,6 +6,7 @@ import { BasicAsset, ConsolidatedAssetItem, Query } from '../types'
 import AssetItem from './AssetItem'
 import PaginationArrows from './PaginationArrows'
 import { updateQuery } from '../store/reducers/query.slice'
+import { Tooltip } from 'react-tooltip'
 
 type AssetContainerType = {
     assets: BasicAsset[],
@@ -35,6 +36,7 @@ function AssetContainer({ assets, consolidado }: AssetContainerType) {
                 }
 
             </div>
+            <Tooltip id='asset_toltip'/>
             <PaginationArrows changeQueryFunction={changeQuery} count={assets?.length} query={query} />
         </div >
     )

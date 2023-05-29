@@ -25,7 +25,9 @@ function ApexChart({ series, options, type = 'bar', height = `400px` }: ApexChar
             tooltip: {
                 enabled: true
             }
-        }
+        },
+        colors: ['#29BCBA', '#1C7585', '#525658']
+
     } as ApexOptions
 
     return (

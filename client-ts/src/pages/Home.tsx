@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import Grafico from '../components/Grafico';
 import Radar from '../components/Radar';
 import { useSelector } from 'react-redux';
 import { RootState } from '../store';
@@ -47,8 +46,8 @@ function Home() {
             <InfoContainer title='Meus Investimentos' data={consolidado.total} />
 
             <div className='flex justify-between flex-wrap'>
-                <div className='w-full lg:w-[62%] bg-cinza-400 rounded-3xl px-6 mb-8 flex flex-col'>
-                    <h3 className='text-center text-2xl text-verde-300 p-4'>Evolução Patrimônio Investido</h3>
+                <div className='w-full lg:w-[62%] bg-cinza-400 rounded-3xl px-6 py-4 mb-8 flex flex-col'>
+                    <h3 className='text-center text-2xl text-verde-300 p-4 uppercase'>Evolução Patrimônio Investido</h3>
 
                     <ApexChart
                         series={[{ name: 'Evolução', data: lineChartData }]}
@@ -56,8 +55,8 @@ function Home() {
                         height='300px' />
                 </div>
 
-                <div className='w-full lg:w-[35%] bg-cinza-400 rounded-3xl px-6 mb-8 flex flex-col'>
-                    <h3 className='text-center text-2xl text-verde-300 p-4'>Composição da carteira</h3>
+                <div className='w-full lg:w-[35%] bg-cinza-400 rounded-3xl px-6 py-4 mb-8 flex flex-col'>
+                    <h3 className='text-center text-2xl text-verde-300 p-4 uppercase'>Composição da carteira</h3>
                     <ApexChart
                         series={pieChartData}
                         options={{
