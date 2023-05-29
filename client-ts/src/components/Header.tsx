@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom'
-import coin from '../images/coins.png'
+import logo from '../images/logo.png'
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { RootState } from '../store'
@@ -30,7 +30,7 @@ function Header({ setCriarUsuario }: HeaderType) {
     return (
         <header className='flex justify-between xl:px-24 px-3'>
             <div className='flex items-center' onClick={setCriarUsuario ? undefined : () => navigate('/')}>
-                <img src={coin} alt="Logo" className='h-[90px] pr-3' />
+                <img src={logo} alt="Logo" className='h-[90px] p-3' />
                 <h1 className='text-3xl hidden sm:block'>Controle de Investimentos</h1>
             </div>
 

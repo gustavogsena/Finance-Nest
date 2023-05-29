@@ -3,7 +3,9 @@ import ItemNav from './ItemNav'
 import fiis from '../images/fiis.png'
 import acoes from '../images/acoes.png'
 import consolidado from '../images/consolidado.png';
+import adicionar from '../images/adicionar.png';
 import rendaFixa from '../images/rendaFixa.png';
+import proventos from '../images/proventos.png';
 import operacoes from '../images/operacoes.png'
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
 
@@ -26,10 +28,10 @@ function Nav() {
             </span>
             <ItemNav to='/fiis' image={fiis} title='Fundos Imobiliarios' show={show} onClick={showOff}/>
             <ItemNav to='/acoes' image={acoes} title='Ações' show={show} onClick={showOff}/>
-            <ItemNav to='/proventos' image={rendaFixa} title='Proventos' show={show} onClick={showOff} />
             <ItemNav to='/operacoes' image={operacoes} title='Operações' show={show} onClick={showOff}/>
+            <ItemNav to='/proventos' image={proventos} title='Proventos' show={show} onClick={showOff} />
             <ItemNav to='/consolidado' image={consolidado} title='Consolidado' show={show} onClick={showOff} />
-            <ItemNav to='/adicionar' image={consolidado} title='Adicionar' show={show} onClick={showOff}/>
+            <ItemNav to='/adicionar' image={adicionar} title='Adicionar' show={show} onClick={showOff}/>
         </nav>
     )
 }
