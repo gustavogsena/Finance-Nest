@@ -196,6 +196,18 @@ export type NewEarning = {
     "earning_value": number
 }
 
+/* Radar */
+
+export type RadarItem = {
+    "radar_id": number,
+    "current_value": number,
+    "previous_close_value": number,
+    "asset_code": string,
+    "logo_url": string,
+    "created_at": Date,
+    "user": number
+}
+
 /* ApexChart */
 export type ChartType =
     "line" | "area" | "bar" | "histogram" | "pie" | "donut" | "radialBar" | "scatter" | "bubble" | "heatmap" | "treemap" | "boxPlot" | "candlestick" | "radar" | "polarArea" | "rangeBar"

@@ -13,7 +13,7 @@ export const formatDate = (date: string) => {
 
 export const formatCurrency = (value: number | string) => {
     if (typeof value === 'string') {
-        value = parseFloat(value.replace(',','.').replace(' ',''))
+        value = parseFloat(value.replace(',', '.').replace(' ', ''))
     }
     const currency = Intl.NumberFormat('pt-BR', {
         style: 'currency',
@@ -21,4 +21,9 @@ export const formatCurrency = (value: number | string) => {
     }).format(value)
 
     return currency
+}
+
+export const calculateDiferencePercentage = (v1: number, v2: number) => {
+    const result = (v1 - v2) * 100 / v2
+    return Number(result.toFixed(2))
 }

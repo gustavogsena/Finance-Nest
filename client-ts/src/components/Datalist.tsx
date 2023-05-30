@@ -21,7 +21,7 @@ function Datalist({ watch, value, id, classStyle, dataAssetsOptions, dataOptions
     return (
         <div className='flex flex-col w-full'>
             <input
-                className={`shadow-lg w-full rounded-lg text-base p-3 box-border my-3 text-black ${classStyle}`}
+                className={`bg-cinza-600 shadow-sm w-full rounded-[10px] text-base p-3 box-border my-3 text-verde-600 placeholder-verde-600 placeholder-opacity-100 ${classStyle}`}
                 list={id}
                 onChange={event => funcaoOnChange(event.target.value)}
                 value={value}

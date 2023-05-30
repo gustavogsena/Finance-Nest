@@ -9,6 +9,7 @@ import {
 } from '@mikro-orm/core';
 import { Asset } from 'src/assets/assets.entity';
 import * as bcrypt from 'bcrypt';
+import { Radar } from 'src/radar/radar.entity';
 
 @Entity()
 export class User {
@@ -32,6 +33,9 @@ export class User {
 
   @OneToMany(() => Asset, (asset) => asset.user)
   assets = new Collection<Asset>(this);
+
+  @OneToMany(() => Radar, (radar) => radar.user)
+  radar = new Collection<Radar>(this);
 
   async comparePassword(password: string) {
     const passwordEquals = await bcrypt.compare(password, this.password);

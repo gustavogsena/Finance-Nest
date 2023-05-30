@@ -15,7 +15,7 @@ export class CreateEarningBodyDto {
     earning: CreateEarningDto
 
     @IsNumber()
-    @Min(1, {message: "Você deve escolher um ativo da lista"})
+    @Min(1, { message: "Você deve escolher um ativo da lista" })
     asset_id: number
 }
 
@@ -25,53 +25,54 @@ export class EarningsController {
 
     @Get()
     async getEarnings(@Query() query: EarningQueryDto, @Req() req: Request) {
-        
-        const userId : number = req['user'].id
-
+        const userId: number = req['user'].id
         const response = await this.earningService.findEarnings(query, userId);
         return response
     }
 
 
     @Get('/:earningId')
-    async getEarningById(@Param('earningId') earningId: string) {
+    async getEarningById(@Param('earningId') earningId: string, @Req() req: Request) {
+        const userId: number = req['user'].id
         const response = await this.earningService.findEarningById(+earningId);
         return response
     }
 
     @Post()
-    async createEarning(@Body() body: CreateEarningBodyDto ) {
+    async createEarning(@Body() body: CreateEarningBodyDto, @Req() req: Request) {
+        const userId: number = req['user'].id
         const newAsset = await this.earningService.create(body)
         return newAsset
     }
 
     @Put('/:earningId')
-    async updateEarning(@Body() body: UpdateEarningDto, @Param('earningId') earningId: number) {
+    async updateEarning(@Body() body: UpdateEarningDto, @Param('earningId') earningId: number, @Req() req: Request) {
+        const userId: number = req['user'].id
         const newAsset = await this.earningService.updateEarning(body, earningId)
         return newAsset
     }
 
     @Delete('/:earningId')
-    async deleteEarning(@Param('earningId') earningId: string) {
+    async deleteEarning(@Param('earningId') earningId: string, @Req() req: Request) {
+        const userId: number = req['user'].id
         const response = await this.earningService.deleteEarning(+earningId)
         return response
     }
 
 
-    /* 
-        @Get('/asset/:assetId')
-        async getEarningByAssetId(@Param('assetId') assetId: string) {
-            const response = await this.earningService.findEarningByAssetId(+assetId);
-            return response
-        } */
-
     @Get('/consolidated/')
     async getEarningPerMonth(@Query() query: EarningQueryDto, @Req() req: Request) {
-        const userId : number = req['user'].id
+        const userId: number = req['user'].id
         const response = await this.earningService.findEarningPerMonth(query, userId);
         return response
     }
 
+    /* 
+    @Get('/asset/:assetId')
+    async getEarningByAssetId(@Param('assetId') assetId: string) {
+        const response = await this.earningService.findEarningByAssetId(+assetId);
+        return response
+    } */
 
 
 }

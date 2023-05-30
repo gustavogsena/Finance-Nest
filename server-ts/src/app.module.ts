@@ -11,18 +11,24 @@ import { EarningModule } from './earnings/earning.module';
 import { ConfigModule } from '@nestjs/config'
 import { ServeStaticModule } from '@nestjs/serve-static';
 import * as path from 'path';
+import { RadarModule } from './radar/radar.module';
+import { EventEmitterModule } from '@nestjs/event-emitter';
+
 @Module({
   imports: [
     ServeStaticModule.forRoot({
       rootPath: path.join(__dirname, '..', 'public'),
     }),
+    EventEmitterModule.forRoot(),
     MikroOrmModule.forRoot(),
     ConfigModule.forRoot(),
-    BolsaModule, AssetsModule,
+    BolsaModule,
+    AssetsModule,
     OperationModule,
     UserModule,
     AuthModule,
-    EarningModule],
+    EarningModule,
+    RadarModule],
   controllers: [AppController],
   providers: [AppService],
 })

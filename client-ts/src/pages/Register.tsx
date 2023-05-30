@@ -9,7 +9,6 @@ function Register() {
     return (
         <div className='flex'>
             <LoginBanner />
-
             <FormSignIn />
         </div>
 

@@ -8,18 +8,8 @@ import StandardContainer from '../components/StandardContainer';
 import ApexChart from '../components/ApexChart';
 import { getInvestedDevelopmentHistoricalData } from '../api/assets.api';
 import { LineChartData, createHistoricalDevelopmentChartData, createLineChartData } from '../services/chart.service';
-
-export const data2 = [
-    { x: new Date("01/02/23"), y: 3000 },
-    { x: new Date("02/02/23"), y: 10000 },
-    { x: new Date("03/02/23"), y: 8000 },
-    { x: new Date("04/02/23"), y: 15000 },
-    { x: new Date("05/02/23"), y: 16000 },
-    { x: new Date("07/02/23"), y: 14850 },
-    { x: new Date("09/02/23"), y: 18000 },
-    { x: new Date("11/02/23"), y: 19563 },
-    { x: new Date("12/02/23"), y: 20000 }
-];
+import { listenRadarUpdates } from '../api/radar.api';
+import toast from 'react-simple-toasts';
 
 export const options = {
     title: "My Daily Activities",
@@ -28,6 +18,7 @@ export const options = {
 function Home() {
     const [pieChartData, setPieChartData] = useState<number[]>([])
     const [lineChartData, setLineChartData] = useState<LineChartData[]>([])
+
 
     const consolidado = useSelector<RootState, ConsolidatedAsset>(state => state.consolidatedAssets)
 
@@ -41,6 +32,7 @@ function Home() {
             })
     }, [consolidado])
 
+    
     return (
         <StandardContainer>
             <InfoContainer title='Meus Investimentos' data={consolidado.total} />

@@ -22,6 +22,8 @@ import { earningsListener } from './middlewares/earnings.middleware';
 import formSlice from './reducers/form.slice';
 import userFormSlice from './reducers/userForm.slice';
 import chartDataSlice from './reducers/chartData.slice';
+import radarSlice from './reducers/radar.slice';
+import { radarListener } from './middlewares/radar.middleware';
 
 const store = configureStore({
   reducer: {
@@ -39,7 +41,8 @@ const store = configureStore({
     searchAsset: searchAssetSlice,
     user: userSlice,
     userForm: userFormSlice,
-    chartData: chartDataSlice
+    chartData: chartDataSlice,
+    radar: radarSlice
   },
   middleware:
     getDefaultMiddleware =>
@@ -50,7 +53,8 @@ const store = configureStore({
         operationsListener.middleware,
         searchAssetListener.middleware,
         userListener.middleware,
-        earningsListener.middleware
+        earningsListener.middleware,
+        radarListener.middleware
       )
 });
 

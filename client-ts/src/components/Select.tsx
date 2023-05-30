@@ -16,7 +16,7 @@ const Select = ({ options, id, classStyle, value, disabled, funcaoOnChange, requ
     return (
         <div className='flex flex-col w-full'>
             <select
-                className={`shadow-lg w-full rounded-lg text-base p-3 box-border text-black ${classStyle}`}
+                className={`bg-cinza-600 shadow-sm w-full rounded-[10px] text-base p-3 box-border text-verde-600 disabled:bg-cinza-500 placeholder-verde-600 placeholder-opacity-100 ${classStyle}`}
                 id={id}
                 onChange={event => funcaoOnChange(event.target.value)}
                 value={value}

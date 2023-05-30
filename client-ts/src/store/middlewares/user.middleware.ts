@@ -8,6 +8,7 @@ import { getAssets } from "../reducers/assets.slice";
 import { getEarnings, getEarningsByMonth } from "../reducers/earnings.slice";
 import { browserHistory } from "../../browserHistory";
 import toast from 'react-simple-toasts';
+import { getRadarItems } from "../reducers/radar.slice";
 
 export const userListener = createListenerMiddleware();
 
@@ -27,6 +28,7 @@ userListener.startListening({
             dispatch(authenticated())
             dispatch(getConsolidatedAsset())
             dispatch(getAssets())
+            dispatch(getRadarItems())
             dispatch(dispatch(getEarnings({ offset: 0, limit: 15 })))
             dispatch(dispatch(getEarningsByMonth({ offset: 0, limit: 15 })))
         }
@@ -49,6 +51,7 @@ userListener.startListening({
             dispatch(authenticatedUser(response.value.accessToken))
             dispatch(getConsolidatedAsset())
             dispatch(getAssets())
+            dispatch(getRadarItems())
             dispatch(dispatch(getEarnings({ offset: 0, limit: 15 })))
             dispatch(dispatch(getEarningsByMonth({ offset: 0, limit: 15 })))
             browserHistory.push("/")

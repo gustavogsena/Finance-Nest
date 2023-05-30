@@ -35,7 +35,7 @@ function FormSignIn() {
                 }}>
                 <Textfield
                     placeholder='Nome'
-                    classStyle='mb-8 mx-auto w-full sm:w-4/5 max-w-[600px] text-verde-600'
+                    classStyle='mb-8 mx-auto w-full sm:w-4/5 max-w-[600px]'
                     id='name'
                     type='text'
                     value={newUserForm.name}
@@ -43,7 +43,7 @@ function FormSignIn() {
                 />
                 <Textfield
                     placeholder='Sobrenome'
-                    classStyle='mb-8 mx-auto w-full sm:w-4/5 max-w-[600px] text-verde-600'
+                    classStyle='mb-8 mx-auto w-full sm:w-4/5 max-w-[600px]'
                     id='surname'
                     type='text'
                     value={newUserForm.surname}
@@ -51,7 +51,7 @@ function FormSignIn() {
                 />
                 <Textfield
                     placeholder='E-mail'
-                    classStyle='mb-8 mx-auto w-full sm:w-4/5 max-w-[600px] text-verde-600'
+                    classStyle='mb-8 mx-auto w-full sm:w-4/5 max-w-[600px]'
                     id='email'
                     type='email'
                     value={newUserForm.email}
@@ -59,7 +59,7 @@ function FormSignIn() {
                 />
                 <Textfield
                     placeholder='Senha'
-                    classStyle='mb-8 mx-auto w-full sm:w-4/5 max-w-[600px] text-verde-600'
+                    classStyle='mb-8 mx-auto w-full sm:w-4/5 max-w-[600px]'
                     id='password'
                     type='password'
                     value={newUserForm.password}
@@ -67,7 +67,7 @@ function FormSignIn() {
                 />
                 <Textfield
                     placeholder='Confirmar Senha'
-                    classStyle='mb-8 mx-auto w-full sm:w-4/5 max-w-[600px] text-verde-600'
+                    classStyle='mb-8 mx-auto w-full sm:w-4/5 max-w-[600px]'
                     id='password'
                     type='password'
                     value={confirmPassword}

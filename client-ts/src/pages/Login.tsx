@@ -9,7 +9,6 @@ function Login() {
     return (
         <div className='flex'>
             <LoginBanner />
-
             <FormLogin />
         </div>
 
