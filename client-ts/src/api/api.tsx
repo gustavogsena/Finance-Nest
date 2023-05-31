@@ -4,6 +4,7 @@ import store from '../store';
 import { authenticatedUser, userLogout } from '../store/reducers/user.slice';
 import toast from 'react-simple-toasts';
 import { ErrorToast } from '../components/ErrorToast';
+import { controller } from './radar.api';
 
 const texts = {
     unauthenticatedError: 'Erro de autenticação'

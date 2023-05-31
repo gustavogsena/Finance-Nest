@@ -20,7 +20,6 @@ module.exports = {
           400: "#F9CC6D"
         },
         "vermelho": {
-
           300: "#ec9a9a",
           500: "#BD1919"
         },

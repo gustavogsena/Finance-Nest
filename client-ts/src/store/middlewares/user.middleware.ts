@@ -9,6 +9,7 @@ import { getEarnings, getEarningsByMonth } from "../reducers/earnings.slice";
 import { browserHistory } from "../../browserHistory";
 import toast from 'react-simple-toasts';
 import { getRadarItems } from "../reducers/radar.slice";
+import { controller } from "../../api/radar.api";
 
 export const userListener = createListenerMiddleware();
 
@@ -69,6 +70,7 @@ userListener.startListening({
         dispatch(resetConsolidatedAssets())
         dispatch(resetOperationForm())
         dispatch(removeUser())
+        controller.abort()
     }
 });
 

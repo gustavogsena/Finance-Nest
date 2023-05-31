@@ -3,6 +3,9 @@ import { BasicAsset, ConsolidatedAsset, HistoricalDevelopmentDataResponse, Radar
 import api from "./api"
 import { fetchEventSource } from "@microsoft/fetch-event-source";
 import { AuthToken } from "../authToken";
+import store from "../store";
+import { userLogout } from "../store/reducers/user.slice";
+const { AbortController, abortableFetch } = require('abortcontroller-polyfill/dist/cjs-ponyfill');
 
 export const getAllRadarItems = async (): Promise<RadarItem[]> => {
     const response = await api.get(`/radar`)
@@ -20,6 +23,7 @@ export const deleteRadarItem = async (radarId: number): Promise<HistoricalDevelo
 }
 
 
+export const controller = new AbortController
 
 export async function listenRadarUpdates(
     onMessage: (data: any) => void
@@ -36,11 +40,26 @@ export async function listenRadarUpdates(
                     onMessage(newRadarItens);
                 }
             },
+            signal: controller.signal as AbortSignal,
             headers: {
                 Authorization: `Bearer ${token}`,
             },
+            onerror(err) {
+                store.dispatch(userLogout())
+            },
+            onclose() {
+
+            }
         }
-    );
+    ).catch((err) => {
+        if (err.name == 'AbortError') {
+            return;
+        }
+    })
+
+
 }
+
+
 
 

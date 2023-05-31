@@ -38,7 +38,7 @@ export class RadarController {
         const radarListener = `radar.${userId}`;
         const updateRadaritems = await this.radarService.updateRadarItems(+userId)
             /* console.log(updateRadaritems) */
-        return interval(120000).pipe(map((_) => {
+        return interval(30000).pipe(map((_) => {
             return { data: updateRadaritems }
         }));
 

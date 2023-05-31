@@ -6,7 +6,7 @@ type StandartContainerType = {
 
 function StandardContainer({ children } : StandartContainerType) {
     return (
-        <div className='p-4 sm:p-6 md:p-11 h-full'>
+        <div className='p-4 sm:p-6 md:p-11 h-auto'>
             {children}
         </div>
     )

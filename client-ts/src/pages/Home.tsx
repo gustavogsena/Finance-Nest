@@ -29,10 +29,11 @@ function Home() {
             .then((result) => {
                 const data = createHistoricalDevelopmentChartData(result)
                 setLineChartData(data)
-            })
+            }).catch(e => { throw new Error('Falha ao carregar histórico de preços') })
+
     }, [consolidado])
 
-    
+
     return (
         <StandardContainer>
             <InfoContainer title='Meus Investimentos' data={consolidado.total} />
