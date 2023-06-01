@@ -7,9 +7,7 @@ import InfoContainer from '../components/InfoContainer';
 import StandardContainer from '../components/StandardContainer';
 import ApexChart from '../components/ApexChart';
 import { getInvestedDevelopmentHistoricalData } from '../api/assets.api';
-import { LineChartData, createHistoricalDevelopmentChartData, createLineChartData } from '../services/chart.service';
-import { listenRadarUpdates } from '../api/radar.api';
-import toast from 'react-simple-toasts';
+import { LineChartData, createHistoricalDevelopmentChartData } from '../services/chart.service';
 
 export const options = {
     title: "My Daily Activities",

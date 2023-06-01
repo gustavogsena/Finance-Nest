@@ -43,11 +43,6 @@ function FormOperacao() {
     }
 
     useEffect(() => {
-        dispatch(getMarketRealStates())
-        dispatch(getMarketStocks())
-    }, [dispatch])
-
-    useEffect(() => {
         if (!formStatus.edit) {
             dispatch(resetOperationForm())
             dispatch(resetFormStatus())

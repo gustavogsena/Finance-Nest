@@ -33,11 +33,10 @@ export class RadarController {
 
     @Sse('sse/notifications')
     async notifications(@Req() request: Request) {
+         const userId = request['user'].id;
         const subject = new Subject();
-        const userId = request['user'].id;
         const radarListener = `radar.${userId}`;
         const updateRadaritems = await this.radarService.updateRadarItems(+userId)
-            /* console.log(updateRadaritems) */
         return interval(30000).pipe(map((_) => {
             return { data: updateRadaritems }
         }));

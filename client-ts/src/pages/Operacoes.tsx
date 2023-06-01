@@ -13,7 +13,7 @@ export default function Operacoes() {
     const dispatch = useDispatch()
     const query = useSelector<RootState, Query>((state) => state.query)
 
-    useLayoutEffect(() => {
+    useEffect(() => {
         dispatch(resetQuery())
     }, [])
 

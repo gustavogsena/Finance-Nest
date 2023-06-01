@@ -12,16 +12,16 @@ type DatalistType = {
     dataOptions?: string[],
     watch?: string
     otherProps?: any
-    classStyle?: string,
+    className?: string,
     disabled?: boolean
 
 }
 
-function Datalist({ watch, value, id, classStyle, dataAssetsOptions, dataOptions, funcaoOnChange, disabled = false }: DatalistType) {
+function Datalist({ watch, value, id, className, dataAssetsOptions, dataOptions, funcaoOnChange, disabled = false }: DatalistType) {
     return (
         <div className='flex flex-col w-full'>
             <input
-                className={`bg-cinza-600 shadow-sm w-full rounded-[10px] text-base p-3 box-border my-3 text-verde-600 placeholder-verde-600 placeholder-opacity-100 ${classStyle}`}
+                className={`bg-cinza-600 shadow-sm w-full rounded-[10px] text-base p-3 box-border my-3 text-verde-600 placeholder-verde-600 placeholder-opacity-100 ${className}`}
                 list={id}
                 onChange={event => funcaoOnChange(event.target.value)}
                 value={value}

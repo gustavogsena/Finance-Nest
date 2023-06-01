@@ -2,6 +2,8 @@ import { PayloadAction, createAction, createSlice } from '@reduxjs/toolkit';
 import { Query, OperationsResponse, PostOperation, EditOperation, RadarItem } from '../../types';
 
 export const getRadarItems = createAction('getRadarItems')
+export const deleteRadarItem = createAction<number>('deleteRadarItem')
+export const addRadarItem = createAction<string>('addRadarItem')
 
 const initialState: RadarItem[] = []
 

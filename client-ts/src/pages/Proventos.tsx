@@ -15,9 +15,7 @@ import CollapseTitle from '../components/CollapseTitle'
 function Proventos() {
     const dispatch = useDispatch()
     const [chartData, setChartData] = useState<BarChartData[]>([])
-    const consolidado = useSelector<RootState, ConsolidatedAsset>(state => state.consolidatedAssets)
     const assets = useSelector<RootState, BasicAsset[]>(state => state.assets)
-    const earnings = useSelector<RootState, EarningResponseType>(state => state.earnings)
     const query = useSelector<RootState, Query>(state => state.query)
 
     useEffect(() => {
@@ -25,12 +23,12 @@ function Proventos() {
     }, [])
 
     useEffect(() => {
-        setChartData(createEarningsChartData(assets))
-    }, [assets])
-
-    useEffect(() => {
         dispatch(getEarnings(query))
     }, [query])
+
+    useEffect(() => {
+        setChartData(createEarningsChartData(assets))
+    }, [assets])
 
     return (
         <StandardContainer>
@@ -51,11 +49,7 @@ function Proventos() {
                     }
                 }} type='bar' height='300px' />
             </CollapseTitle>
-
-
             <EarningsContainer />
-
-
         </StandardContainer>
     )
 }

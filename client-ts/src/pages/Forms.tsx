@@ -21,8 +21,6 @@ function Forms() {
 
     return (
         <StandardContainer>
-
-
             <div className='bg-cinza-400 rounded-3xl py-6 mb-8 drop-shadow-lg'>
                 <div className='h-12'>
                     <span onClick={() => changeForms('operation')} className={`p-3 mx-3 bg-verde-300 text-white rounded-md w-[100px] ${formStatus !== 'operation' && 'opacity-30'}`}>Operações</span>

@@ -12,22 +12,11 @@ function OperationContainer() {
     const dispatch = useDispatch()
     const operations = useSelector<RootState, OperationsResponse>((state) => state.operations)
     const query = useSelector<RootState, Query>((state) => state.query)
-    const firstUpdate = useRef(true)
 
-    const changeQuery = (data: Partial<Query>) => {
-        dispatch(updateQuery(data))
+    const changeQuery = (newQuery: Partial<Query>) => {
+        dispatch(updateQuery(newQuery))
     }
 
-    useEffect(() => {
-        if (!firstUpdate) {
-            dispatch(resetQuery())
-        }
-        firstUpdate.current = false
-    }, [])
-
-    useEffect(() => {
-        dispatch(getOperations(query))
-    }, [query])
     return (
         <div>
             <div className=''>

@@ -325,3 +325,10 @@ export type HistoricalDevelopmentDataResponse = {
     date: Date,
     value: number
 }
+
+
+export type CommonResponse<type> = {
+    sucess: boolean,
+    data?: type,
+    error?: string | string[]
+}

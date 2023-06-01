@@ -10,6 +10,8 @@ import { browserHistory } from "../../browserHistory";
 import toast from 'react-simple-toasts';
 import { getRadarItems } from "../reducers/radar.slice";
 import { controller } from "../../api/radar.api";
+import { getMarketRealStates } from "../reducers/bolsa/bolsaRealState.slice";
+import { getMarketStocks } from "../reducers/bolsa/bolsaStocks.slice";
 
 export const userListener = createListenerMiddleware();
 
@@ -30,6 +32,8 @@ userListener.startListening({
             dispatch(getConsolidatedAsset())
             dispatch(getAssets())
             dispatch(getRadarItems())
+            dispatch(getMarketRealStates())
+            dispatch(getMarketStocks())
             dispatch(dispatch(getEarnings({ offset: 0, limit: 15 })))
             dispatch(dispatch(getEarningsByMonth({ offset: 0, limit: 15 })))
         }
@@ -53,6 +57,8 @@ userListener.startListening({
             dispatch(getConsolidatedAsset())
             dispatch(getAssets())
             dispatch(getRadarItems())
+            dispatch(getMarketRealStates())
+            dispatch(getMarketStocks())
             dispatch(dispatch(getEarnings({ offset: 0, limit: 15 })))
             dispatch(dispatch(getEarningsByMonth({ offset: 0, limit: 15 })))
             browserHistory.push("/")

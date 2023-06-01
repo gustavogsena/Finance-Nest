@@ -24,6 +24,7 @@ earningsListener.startListening({
         }
     }
 });
+
 earningsListener.startListening({
     actionCreator: deleteEarning,
     effect: async (action, { dispatch, fork, unsubscribe }) => {

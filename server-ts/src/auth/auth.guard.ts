@@ -5,7 +5,6 @@ import {
   UnauthorizedException,
 } from '@nestjs/common';
 import { JwtService } from '@nestjs/jwt';
-import { authConstants } from './auth.constants';
 import { SetMetadata } from '@nestjs/common';
 import { Reflector } from '@nestjs/core';
 

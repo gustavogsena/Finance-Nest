@@ -1,3 +1,5 @@
+import * as dotenv from 'dotenv'
+dotenv.config()
 import { User } from './user/user.entity';
 import { Asset } from './assets/assets.entity';
 import { Operation } from './operations/operation.entity';

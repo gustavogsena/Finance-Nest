@@ -16,13 +16,12 @@ export const operationsListener = createListenerMiddleware();
 operationsListener.startListening({
     actionCreator: getOperations,
     effect: async (action, { dispatch, fork, unsubscribe }) => {
-
         const operationQuery: Query = action.payload;
-        const assetsConsolidated = fork(async api => {
+        const operations = fork(async api => {
             return await getOperationsApi(operationQuery);
         });
 
-        const response = await assetsConsolidated.result
+        const response = await operations.result
         if (response.status === 'ok') {
             dispatch(updateOperations(response.value))
         }

@@ -25,7 +25,22 @@ export class RadarService {
     async create(code: string, userId: number) {
         const user = await this.userService.findById(userId)
         try {
+            await user.radar.init()
+            const itensRadar = user.radar.getItems()
+            if (itensRadar.length === 10) {
+                return {
+                    sucess: false,
+                    error: 'Você já atingiu o limite de itens adicionados no radar'
+                }
+            }
+            if (itensRadar.some((item) => item.asset_code === code)) {
+                return {
+                    sucess: false,
+                    error: 'Item já adicionado ao radar'
+                }
+            }
             const [currentRadarInfo] = await this.bolsaService.retornaAtivoProcurado(code)
+            
             const radar = new Radar
             radar.user = user
             radar.asset_code = code
@@ -35,9 +50,15 @@ export class RadarService {
             await this.radarRepository.persistAndFlush(radar)
 
             delete radar.user.password
-            return radar
+            return {
+                sucess: true,
+                data: radar
+            }
         } catch (error) {
-            throw new Error('Erro ao buscar ativo')
+            return {
+                sucess: false,
+                error: 'Erro ao buscar ativo'
+            }
         }
     }
 
@@ -46,7 +67,10 @@ export class RadarService {
             const radarItem = await this.radarRepository.findOneOrFail({ radar_id: radarId, user: userId })
             this.radarRepository.remove(radarItem)
             await this.radarRepository.flush()
-            return radarItem
+            return {
+                sucess: true,
+                data: radarItem
+            }
         } catch (e) {
             return {
                 sucess: false,
@@ -56,21 +80,36 @@ export class RadarService {
     }
 
     async update(radarId: number) {
-        const updatedRadarItem = await this.radarRepository.findOneOrFail({ radar_id: radarId })
-        const [updatedAssetValues] = await this.bolsaService.retornaAtivoProcurado(updatedRadarItem.asset_code)
-        const updatedValues = {
-            current_value: updatedAssetValues.regularMarketPrice as unknown as DecimalType,
-            previous_close_value: updatedAssetValues.regularMarketPreviousClose as unknown as DecimalType
+        const updatedRadarItem = await this.radarRepository.findOneOrFail({ radar_id: radarId }, {
+            failHandler: () => {
+                throw new Error('Item de Radar não encontrado')
+            }
+        })
+        try {
+            const [updatedAssetValues] = await this.bolsaService.retornaAtivoProcurado(updatedRadarItem.asset_code, { fundamental: false })
+            const updatedValues = {
+                current_value: updatedAssetValues.regularMarketPrice as unknown as DecimalType,
+                previous_close_value: updatedAssetValues.regularMarketPreviousClose as unknown as DecimalType
+            }
+            wrap(updatedRadarItem).assign(updatedValues)
+            this.radarRepository.flush()
+            return {
+                sucess: true,
+                data: updatedRadarItem
+            }
+        } catch {
+            return {
+                sucess: false,
+                error: 'Falha ao atualizar item do radar'
+            }
         }
-        wrap(updatedRadarItem).assign(updatedValues)
-        this.radarRepository.flush()
-        return updatedRadarItem
+        
     }
 
     async updateRadarItems(userId: number) {
         const allRadarItems = await this.findAll(userId)
         const newValues = await Promise.all(allRadarItems.map(async (item) => {
-            return await this.update(item.radar_id)
+            return (await this.update(item.radar_id)).data
         }))
         return newValues
     }
