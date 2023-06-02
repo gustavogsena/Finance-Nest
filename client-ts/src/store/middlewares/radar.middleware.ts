@@ -47,7 +47,6 @@ radarListener.startListening({
     actionCreator: addRadarItem,
     effect: async (action, { dispatch, fork, unsubscribe }) => {
         const code = action.payload
-        console.log(code)
         const radarItems = fork(async api => {
             if (code.length === 0 || code.length > 7) {
                 toast('Código do ativo inválido')

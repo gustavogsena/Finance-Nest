@@ -1,5 +1,5 @@
 
-import { CommonResponse, RadarItem } from "../types"
+import { CommonResponse, RadarType } from "../types"
 import api from "./api"
 import { fetchEventSource } from "@microsoft/fetch-event-source";
 import { AuthToken } from "../authToken";
@@ -7,18 +7,17 @@ import store from "../store";
 import { userLogout } from "../store/reducers/user.slice";
 const { AbortController, abortableFetch } = require('abortcontroller-polyfill/dist/cjs-ponyfill');
 
-export const getAllRadarItemsApi = async (): Promise<RadarItem[]> => {
+export const getAllRadarItemsApi = async (): Promise<RadarType[]> => {
     const response = await api.get(`/radar`)
     return response.data
 }
 
-export const createNewRadarItemApi = async (code: string): Promise<CommonResponse<RadarItem>> => {
+export const createNewRadarItemApi = async (code: string): Promise<CommonResponse<RadarType>> => {
     const response = await api.post(`/radar/${code}`)
-    console.log(response)
     return response.data
 }
 
-export const deleteRadarItemApi = async (radarId: number): Promise<CommonResponse<RadarItem>> => {
+export const deleteRadarItemApi = async (radarId: number): Promise<CommonResponse<RadarType>> => {
     const response = await api.delete(`/radar/${radarId}`)
     return response.data
 }
@@ -35,13 +34,11 @@ export async function listenRadarUpdates(
         {
             signal: controller.signal,
             onmessage(data) {
-
                 if (data && data.data) {
                     const newRadarItens = JSON.parse(data.data);
-                    console.log(newRadarItens)
                     onMessage(newRadarItens);
                 }
-            },
+            },  
             headers: {
                 Authorization: `Bearer ${token}`,
             },
@@ -53,13 +50,24 @@ export async function listenRadarUpdates(
 
             }
         }
-    ).catch((err) => {
-        if (err.name == 'AbortError') {
-            return;
+    )
+}
+
+export async function activeEventEmitter() {
+    const token = AuthToken.get();
+
+    await fetchEventSource(
+        `${process.env.REACT_APP_API_URL}/radar/sse/emitter`,
+        {
+            signal: controller.signal,  
+            headers: {
+                Authorization: `Bearer ${token}`,
+            },
+            onerror(err) {
+                controller.abort()
+            }
         }
-    })
-
-
+    )
 }
 
 

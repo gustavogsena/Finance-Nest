@@ -40,7 +40,7 @@ export class RadarService {
                 }
             }
             const [currentRadarInfo] = await this.bolsaService.retornaAtivoProcurado(code)
-            
+
             const radar = new Radar
             radar.user = user
             radar.asset_code = code
@@ -103,11 +103,12 @@ export class RadarService {
                 error: 'Falha ao atualizar item do radar'
             }
         }
-        
+
     }
 
-    async updateRadarItems(userId: number) {
-        const allRadarItems = await this.findAll(userId)
+    async updateRadarItems(userId: number): Promise<Radar[]> {
+        const allRadarItems = (await this.radarRepository.find({ user: userId })).slice(
+        )
         const newValues = await Promise.all(allRadarItems.map(async (item) => {
             return (await this.update(item.radar_id)).data
         }))

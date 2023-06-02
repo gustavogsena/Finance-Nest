@@ -33,18 +33,36 @@ export class RadarController {
 
     @Sse('sse/notifications')
     async notifications(@Req() request: Request) {
-         const userId = request['user'].id;
+        const userId = request['user'].id;
         const subject = new Subject();
         const radarListener = `radar.${userId}`;
-        const updateRadaritems = await this.radarService.updateRadarItems(+userId)
-        return interval(30000).pipe(map((_) => {
-            return { data: updateRadaritems }
+        let updatedRadaritems = await this.radarService.updateRadarItems(+userId)
+        this.eventEmitter.on(radarListener, async () => {
+            updatedRadaritems = await this.radarService.updateRadarItems(+userId)
+            subject.next(updatedRadaritems)
+        })
+
+        return subject.pipe(map((_) => {
+
+            return { data: updatedRadaritems }
         }));
 
-        /* this.eventEmitter.on(radarListener, (radarItem) => {
-            subject.next(radarItem);
-        });
-        return subject.pipe(map((radarItem) => ({ data: radarItem }))); */
+
+        /*  this.eventEmitter.on(radarListener, (radarItem) => {
+             subject.next(radarItem);
+         });
+         return subject.pipe(map((radarItem) => ({ data: radarItem }))); */
     }
 
+
+    @Sse('sse/emitter')
+    async eventEmitterForRadar(@Req() request: Request) {
+        const userId = request['user'].id;
+        const radarListener = `radar.${userId}`;
+
+        return interval(60000).pipe(map((_) => {
+            this.eventEmitter.emit(radarListener);
+        }));
+
+    }
 }

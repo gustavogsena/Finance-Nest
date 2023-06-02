@@ -1,14 +1,14 @@
 import React, { useState } from 'react'
 import fiis from '../images/fiis.png'
-import { RadarItem } from '../types'
+import { RadarType } from '../types'
 import { calculateDiferencePercentage, formatCurrency } from '../services/general.service'
 import { IoMdArrowUp, IoMdArrowDown } from 'react-icons/io';
 
 type RadarItemType = {
-    asset: RadarItem
+    asset: RadarType
 }
 
-function ItemRadar({ asset }: RadarItemType) {
+function RadarItem({ asset }: RadarItemType) {
     const [percentage, setPercentage] = useState(calculateDiferencePercentage(asset.current_value, asset.previous_close_value))
 
     return (
@@ -32,4 +32,4 @@ function ItemRadar({ asset }: RadarItemType) {
     )
 }
 
-export default ItemRadar
+export default RadarItem

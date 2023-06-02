@@ -5,7 +5,7 @@ import { RootState } from '../store';
 import Datalist from './Datalist';
 import { CiTrash } from 'react-icons/ci';
 import { GrFormClose } from 'react-icons/gr';
-import { RadarItem } from '../types';
+import { RadarType } from '../types';
 
 type RadarModalType = {
     toggle: () => void
@@ -13,7 +13,7 @@ type RadarModalType = {
 
 function RadarModal({ toggle }: RadarModalType) {
     const dispatch = useDispatch()
-    const radar = useSelector<RootState, RadarItem[]>(state => state.radar)
+    const radar = useSelector<RootState, RadarType[]>(state => state.radar)
     const dataOptions = useSelector<RootState, string[]>(state => {
         const stockShare = state.bolsaStock.map((item) => item.stock)
         const realEstate = state.bolsaRealState.map((item) => item.stock)

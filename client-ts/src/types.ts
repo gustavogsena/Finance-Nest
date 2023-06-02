@@ -198,7 +198,7 @@ export type NewEarning = {
 
 /* Radar */
 
-export type RadarItem = {
+export type RadarType = {
     "radar_id": number,
     "current_value": number,
     "previous_close_value": number,
