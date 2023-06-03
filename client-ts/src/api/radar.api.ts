@@ -7,6 +7,8 @@ import store from "../store";
 import { userLogout } from "../store/reducers/user.slice";
 const { AbortController, abortableFetch } = require('abortcontroller-polyfill/dist/cjs-ponyfill');
 
+(window as any).sse_on = false
+
 export const getAllRadarItemsApi = async (): Promise<RadarType[]> => {
     const response = await api.get(`/radar`)
     return response.data
@@ -34,16 +36,20 @@ export async function listenRadarUpdates(
         {
             signal: controller.signal,
             onmessage(data) {
+                if ((window as any).sse_on = false) {
+                    controller.abort()
+                    return
+                }
                 if (data && data.data) {
                     const newRadarItens = JSON.parse(data.data);
                     console.log(newRadarItens)
                     onMessage(newRadarItens);
                 }
-            },  
+            },
             headers: {
                 Authorization: `Bearer ${token}`,
                 "Cache-Control": 'no-cache, max-age=0'
-                
+
             },
             onerror(err) {
                 store.dispatch(userLogout())
@@ -62,7 +68,7 @@ export async function activeEventEmitter() {
     await fetchEventSource(
         `${process.env.REACT_APP_API_URL}/radar/sse/emitter`,
         {
-            signal: controller.signal,  
+            signal: controller.signal,
             headers: {
                 Authorization: `Bearer ${token}`,
             },

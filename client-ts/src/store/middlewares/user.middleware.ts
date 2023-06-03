@@ -27,6 +27,7 @@ userListener.startListening({
         const response = await confirmUser.result
 
         if (response.status === 'ok') {
+            (window as any).sse_on = true
             dispatch(updateUser(response.value))
             dispatch(authenticated())
             dispatch(getConsolidatedAsset())
@@ -51,6 +52,7 @@ userListener.startListening({
 
         const response = await loginUser.result
         if (response.status === 'ok') {
+            (window as any).sse_on = true
             toast('Login realizado com sucesso')
             dispatch(updateUser(response.value.user))
             dispatch(authenticatedUser(response.value.accessToken))

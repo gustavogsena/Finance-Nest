@@ -4,7 +4,7 @@ import { AiOutlinePlusCircle } from 'react-icons/ai';
 import { useDispatch, useSelector } from 'react-redux';
 import { addRadarItem, deleteRadarItem, updateRadar } from '../store/reducers/radar.slice';
 import { RootState } from '../store';
-import { RadarType, SingleStockRequestType } from '../types';
+import { RadarType, SingleStockRequestType, User } from '../types';
 import Select from './Select';
 import Datalist from './Datalist';
 import { CiTrash } from 'react-icons/ci';
@@ -16,17 +16,20 @@ import RadarItem from './RadarItem';
 function Radar() {
     const dispatch = useDispatch()
     const radar = useSelector<RootState, RadarType[]>(state => state.radar)
+    const user = useSelector<RootState, User>(state => state.user)
     const [showRadarModal, setShowRadarModal] = useState(false)
 
     const toggleRadarModal = () => {
         setShowRadarModal(!showRadarModal)
     }
     useEffect(() => {
-        listenRadarUpdates((radarItems) => {
-            dispatch(updateRadar(radarItems))
-        })
+        if (user.isAuthenticated) {
+            listenRadarUpdates((radarItems) => {
+                dispatch(updateRadar(radarItems))
+            })
 
-        activeEventEmitter()
+            activeEventEmitter()
+        }
     }, [])
 
     return (
