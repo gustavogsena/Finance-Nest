@@ -27,9 +27,9 @@ function QueryOptions({ title, orderBy = 'created_at' }: QueryOptionsType) {
         <div className='bg-cinza-400 rounded-3xl py-6 mb-8'>
             <h2 className='text-center text-4xl text-verde-300 pb-4'>{title}</h2>
 
-            <div className='flex justify-around gap-6 w-full px-4 text-verde-600 flex-wrap '>
+            <div className='flex justify-around gap-6 w-full px-4 text-verde-600 flex-wrap md:flex-nowrap '>
 
-                <div className='flex flex-col w-2/5'>
+                <div className='flex flex-col w-full sm:w-full'>
                     <Select
                         defaultOption='Ordenar'
                         options={directionOptions}
@@ -40,7 +40,7 @@ function QueryOptions({ title, orderBy = 'created_at' }: QueryOptionsType) {
 
                 </div>
 
-                <div className='flex flex-col w-2/5'>
+                <div className='flex flex-col w-full sm:w-full'>
                     <Select
                         defaultOption='Classe de ativo'
                         options={tiposDeAtivoOptions}
@@ -48,7 +48,7 @@ function QueryOptions({ title, orderBy = 'created_at' }: QueryOptionsType) {
                         funcaoOnChange={value => setQuery({ type: value })}
                     />
                 </div>
-                <div className='flex flex-col w-1/2'>
+                <div className='flex flex-col w-full sm:w-full'>
                     <Textfield
                         id='search'
                         type='text'

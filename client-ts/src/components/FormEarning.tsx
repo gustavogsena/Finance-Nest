@@ -19,7 +19,7 @@ function FormEarning() {
     const formStatus = useSelector<RootState, FormStatus>(state => state.form)
     const earningForm = useSelector<RootState, PostEarning>(state => state.earningForm)
     const assetsCode = useSelector<RootState, (string | number)[][]>(state => {
-        let assetsCodeMap = [['', 0]]
+        let assetsCodeMap = [['Ativos', 0]]
         if (assetType !== '') {
             assetsCodeMap = assetsCodeMap.concat(state.assets.filter((item) => item.asset_type === assetType).map((asset) => [asset.asset_code.toUpperCase(), asset.asset_id]))
             return assetsCodeMap
@@ -70,9 +70,8 @@ function FormEarning() {
                         }}
                     />
                 </div>
-                <div className='flex items-end gap-3'>
+                <div className='flex items-end gap-3 flex-wrap sm:flex-nowrap'>
                     <Select
-                        defaultOption='Ativo'
                         options={assetsCode}
                         value={earningForm.asset_id}
                         disabled={formStatus.edit}
@@ -86,7 +85,7 @@ function FormEarning() {
                         label='Data do provento'
                     />
                 </div>
-                <div className='flex items-end gap-3'>
+                <div className='flex items-end gap-3 flex-wrap sm:flex-nowrap'>
                     <Select
                         defaultOption='Selecione o tipo de provento'
                         options={earningTypes}
@@ -102,7 +101,7 @@ function FormEarning() {
                     />
                 </div>
                 <button
-                    className='py-3 px-7 shadow-lg self-center rounded-lg bg-cinza-600 text-black hover:text-white'
+                    className='py-3 px-7 shadow-lg self-center rounded-lg bg-verde-300 text-white hover:text-cinza-600'
                     type='submit'>
                     {!formStatus.edit ? 'Adicionar provento' : "Editar provento"}
                 </button>

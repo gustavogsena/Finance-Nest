@@ -86,14 +86,14 @@ function FormOperacao() {
                         <div className='flex justify-center flex-col items-center'>
 
                             <img src={`${searchAsset.logourl}`} className='w-9 aspect-[32/27] pr-2' />
-                            <span className='font-bold'>
+                            <span className='font-bold text-center'>
                                 {searchAsset.longName}
                             </span>
                             <span >
                                 Preço de mercado: R${searchAsset.regularMarketPrice}
                             </span>
                         </div>
-                        <div className='flex items-end gap-3'>
+                        <div className='flex items-end gap-3 flex-wrap sm:flex-nowrap'>
                             <Textfield
                                 id='data_operacao'
                                 type='date'
@@ -109,7 +109,7 @@ function FormOperacao() {
                                 funcaoOnChange={data => changeForm({ operation: { operation_type: data } })}
                             />
                         </div>
-                        <div className='flex items-end gap-3'>
+                        <div className='flex items-end gap-3 flex-wrap sm:flex-nowrap'>
                             <Textfield
                                 id='quantidade_operada'
                                 type='number'
@@ -132,7 +132,7 @@ function FormOperacao() {
                             />
                         </div>
                         <button
-                            className='py-3 px-7 shadow-lg self-center rounded-lg bg-cinza-600 text-black hover:text-white'
+                            className='py-3 px-7 shadow-lg self-center rounded-lg bg-verde-300 text-white hover:text-cinza-600'
                             type='submit'>
                             {!formStatus.edit ? 'Adicionar operação' : "Editar Operação"}
                         </button>

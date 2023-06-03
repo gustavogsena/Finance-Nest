@@ -20,7 +20,7 @@ function OperationContainer() {
     return (
         <div>
             <div className=''>
-                <div className='flex justify-between flex-col  overflow-y-auto'>
+                <div className='flex justify-between flex-col overflow-y-auto scrollbar'>
                     <OperationBar />
                     {
                         operations.operations.map((operation) => {

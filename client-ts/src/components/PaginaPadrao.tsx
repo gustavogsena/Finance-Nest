@@ -6,7 +6,7 @@ function PaginaPadrao() {
     return (
         <div className=''>
             <Header />
-            <div className='flex  h-[calc(100vh-90px)] '>
+            <div className='flex h-[calc(100vh-75px)] sm:h-[calc(100vh-90px)] '>
                 <Nav />
                 <div className='flex flex-col bg-cinza-600 w-full rounded-tl-[30px] h-full overflow-x-auto'>
                     <Outlet />

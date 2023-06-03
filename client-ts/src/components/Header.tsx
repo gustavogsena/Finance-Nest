@@ -28,9 +28,9 @@ function Header({ setCriarUsuario }: HeaderType) {
     }
 
     return (
-        <header className='flex justify-between xl:px-24 px-3 text-verde-600 bg-cinza-100'>
+        <header className='flex justify-between xl:px-24 px-3 text-verde-600  bg-cinza-100'>
             <div className='flex items-end cursor-pointer' onClick={setCriarUsuario ? undefined : () => navigate('/')}>
-                <img src={logo} alt="Logo" className='h-[90px] p-3' />
+                <img src={logo} alt="Logo" className='h-[75px] sm:h-[90px] p-3' />
                 <h1 className='text-3xl hidden sm:block p-3'>Controle de Investimentos</h1>
             </div>
 
@@ -53,8 +53,8 @@ function Header({ setCriarUsuario }: HeaderType) {
                 />
                 <label htmlFor="select-picture" className={`cursor-pointer ${!user.isAuthenticated ? 'hidden' : ''}`} >
                     <img src={user.userPicture
-                        ? `http://localhost:8080/${user.userPicture}`
-                        : "/default-avatar.png"} alt="Logo" className='h-[80px] max-w-[80px] rounded-full' />
+                        ? `${process.env.REACT_APP_API_URL}/${user.userPicture}`
+                        : "/default-avatar.png"} alt="Logo" className='p-3 h-[75px] sm:h-[90px] max-w-[90px] rounded-full' />
                 </label>
 
             </div>

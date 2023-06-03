@@ -37,7 +37,7 @@ function Home() {
             <InfoContainer title='Meus Investimentos' data={consolidado.total} />
 
             <div className='flex justify-between flex-wrap'>
-                <div className='w-full lg:w-[62%] bg-cinza-400 rounded-3xl px-6 py-4 mb-8 flex flex-col'>
+                <div className='w-full lg:w-[62%] bg-cinza-400 rounded-3xl px-2 sm:px-6 py-4 mb-8 flex flex-col'>
                     <h3 className='text-center text-2xl text-verde-300 p-4 uppercase'>Evolução Patrimônio Investido</h3>
 
                     <ApexChart
@@ -46,17 +46,19 @@ function Home() {
                         height='300px' />
                 </div>
 
-                <div className='w-full lg:w-[35%] bg-cinza-400 rounded-3xl px-6 py-4 mb-8 flex flex-col'>
+                <div className='w-full lg:w-[35%] bg-cinza-400 rounded-3xl px-2 sm:px-6 py-4 mb-8 flex flex-col'>
                     <h3 className='text-center text-2xl text-verde-300 p-4 uppercase'>Composição da carteira</h3>
                     <ApexChart
                         series={pieChartData}
                         options={{
+                            chart: {width: '80%'},
                             labels: ['Fundos Imobiliarios', 'Acoes'],
-                            legend: { show: true, position: 'bottom' },
+                            legend: { show: true, position: 'bottom'},
                             responsive: [{
                                 breakpoint: 768,
                                 options: {
-                                    legend: { position: 'right' }
+
+                                    legend: { show: false  }
                                 }
                             }]
                         }}

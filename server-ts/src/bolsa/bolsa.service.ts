@@ -14,7 +14,13 @@ export class BolsaService {
 
     async retornaAtivoProcurado(codigo: string, query: SingleStockQuery = {}): Promise<FullStockRequestType[]> {
         const baseQuery = Object.keys(query).length > 0 ? query : { fundamental: true }
-        const ativoProcurado = await axios.get(`https://brapi.dev/api/quote/${codigo}`, { params: baseQuery })
+        const ativoProcurado = await axios.get(`https://brapi.dev/api/quote/${codigo}`, {
+            params: baseQuery,
+            headers: {
+                "Cache-Control": 'no-cache, max-age=0',
+                
+            }
+        })
         return ativoProcurado.data.results
     }
 

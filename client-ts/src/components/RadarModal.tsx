@@ -39,27 +39,29 @@ function RadarModal({ toggle }: RadarModalType) {
             </div>
             <div className='max-w-[400px] w-full bg-cinza-400 rounded-2xl p-4 border-gray-600 border-opacity-90 border-4 z-10'>
                 <div className='flex w-full justify-center items-center'>
-                    <h4 className='text-center text-xl text-verde-300' >Adicionar ao Radar</h4>
-                    <GrFormClose size={16} className='mb-3 ml-auto text-verde-300 cursor-pointer hover:text-verde-200' onClick={toggle}/>
+                    <h4 className='text-center text-xl text-verde-300 w-full uppercase' >Adicionar ao Radar</h4>
+                    <GrFormClose size={20} className='mb-3 ml-auto text-verde-300 cursor-pointer hover:text-verde-200' onClick={toggle} />
                 </div>
 
                 <form className='flex flex-col' onSubmit={(event) => submitForm(event, radarCode)}>
                     <Datalist
                         id='asset_list'
-                        className='w-4/5 mx-auto'
+                        className='mx-auto'
                         dataOptions={dataOptions}
                         value={radarCode}
                         funcaoOnChange={value => setRadarCode(value)}
                     />
-                    <button className='w-4/5 mx-auto p-2 mb-3 rounded-lg bg-verde-300 text-cinza-400'>
+                    <button className='w-full mx-auto p-2 mb-3 rounded-lg bg-verde-300 text-cinza-400'>
                         Adicionar
                     </button>
                 </form>
-
+                <h5 className='text-center text-xl text-verde-300 w-full'>
+                    Meu Radar
+                </h5>
                 {
                     radar.map((item) => {
                         return (
-                            <div className='flex justify-between px-[10%] mb-2' key={`item_modal_${item.asset_code}`}>
+                            <div className='flex justify-between px-[10%] mb-2  border-b-2' key={`item_modal_${item.asset_code}`}>
                                 <span>
                                     {item.asset_code.toUpperCase()}
                                 </span>

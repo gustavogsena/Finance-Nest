@@ -36,11 +36,14 @@ export async function listenRadarUpdates(
             onmessage(data) {
                 if (data && data.data) {
                     const newRadarItens = JSON.parse(data.data);
+                    console.log(newRadarItens)
                     onMessage(newRadarItens);
                 }
             },  
             headers: {
                 Authorization: `Bearer ${token}`,
+                "Cache-Control": 'no-cache, max-age=0'
+                
             },
             onerror(err) {
                 store.dispatch(userLogout())

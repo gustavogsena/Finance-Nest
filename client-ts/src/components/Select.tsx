@@ -8,10 +8,11 @@ type SelectType = {
     classStyle?: string,
     id?: string,
     disabled?: boolean,
-    required?: boolean
+    required?: boolean,
+    placeHolder?: string
 }
 
-const Select = ({ options, id, classStyle, value, disabled, funcaoOnChange, required = true, defaultOption = "Selecione" }: SelectType) => {
+const Select = ({ options, id, classStyle, value, disabled, funcaoOnChange, placeHolder, required = true, defaultOption = "Selecione" }: SelectType) => {
 
     return (
         <div className='flex flex-col w-full'>
@@ -22,6 +23,7 @@ const Select = ({ options, id, classStyle, value, disabled, funcaoOnChange, requ
                 value={value}
                 disabled={disabled}
                 required={required}
+                placeholder={placeHolder}
             >
                 <option value='' disabled >{defaultOption} </option>
                 {options.map(([itemName, itemValue]) => <option value={itemValue} key={itemName}>{itemName}</option>)}

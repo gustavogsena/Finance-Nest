@@ -18,13 +18,13 @@ function Nav() {
     }
 
     return (
-        <nav className={`flex flex-col w-[100px] mt-12 relative bg-cinza-100 ${show ? ' min-w-full sm:min-w-[380px] pl-24' : ''}`}>
+        <nav className={`flex flex-col w-[75px] sm:w-[100px] mt-12 relative bg-cinza-100 ${show ? ' min-w-full sm:min-w-[380px] pl-24' : ''}`}>
             <span className={`xl:block text-4xl text-verde-300 ${!show ? 'self-center' : 'pr-4'}`} onClick={() => setShow(!show)}>
                 {!show ?
-                    <IoIosArrowForward className='cursor-pointer'/> :
+                    <IoIosArrowForward className='cursor-pointer text-2xl sm:text-4xl'/> :
                     <div className='flex justify-center'>
                         <span className='text-2xl ml-auto underline'>MENU</span>
-                        <IoIosArrowBack className='ml-auto cursor-pointer' />
+                        <IoIosArrowBack className='ml-auto cursor-pointer text-2xl sm:text-4xl' />
                     </div>}
             </span>
             <ItemNav to='/fiis' image={fiis} title='Fundos Imobiliarios' show={show} onClick={showOff}/>

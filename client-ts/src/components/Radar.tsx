@@ -32,7 +32,7 @@ function Radar() {
     return (
         <>
 
-            <div className='bg-cinza-400 rounded-3xl py-6 w-full h-auto drop-shadow-lg px-6'>
+            <div className='bg-cinza-400 rounded-3xl py-6 w-full h-auto drop-shadow-lg px-2 md:px-6'>
                 <div className='flex w-full justify-center items-center'>
                     <h3 className='text-center text-2xl text-verde-300 pb-4 ml-auto'>RADAR</h3>
                     <AiOutlinePlusCircle size={20} className='mb-3 ml-auto text-verde-300 cursor-pointer hover:text-verde-200' onClick={toggleRadarModal} />

@@ -23,7 +23,7 @@ function AssetContainer({ assets, consolidado }: AssetContainerType) {
     
     return (
         <div className=''>
-            <div className='flex justify-between flex-col overflow-y-auto overflow-x-auto'>
+            <div className='flex justify-between flex-col overflow-y-auto overflow-x-auto scrollbar'>
                 <AssetBar />
                 {
                     assets.map((asset, index) => {
