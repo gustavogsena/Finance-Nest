@@ -24,6 +24,7 @@ function Radar() {
     }
     useEffect(() => {
         if (user.isAuthenticated) {
+          
             listenRadarUpdates((radarItems) => {
                 dispatch(updateRadar(radarItems))
             })

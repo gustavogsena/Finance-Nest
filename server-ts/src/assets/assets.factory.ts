@@ -23,7 +23,7 @@ export class AssetFactory extends Factory<Asset> {
     }
 }
 
-const getRandomCode = (type: string): CodeAndName => {
+export const getRandomCode = (type: string): CodeAndName => {
 
     if (type === 'realestate') {
         const fiis = JSON.parse(fs.readFileSync('src/bolsa/fiis.json').toString())

@@ -12,6 +12,7 @@ import ApexChart from '../components/ApexChart'
 import { buscaAtivo } from '../api/bolsa.api'
 import { useParams } from 'react-router-dom'
 import { LineChartData, createLineChartData } from '../services/chart.service'
+import { getOperations } from '../store/reducers/operations.slice'
 
 
 function SingleAsset() {
@@ -21,12 +22,10 @@ function SingleAsset() {
     const singleAsset = useSelector<RootState, BasicAsset>(state => state.singleAsset)
     const [chartData, setChartData] = useState<LineChartData[]>([])
 
-    useEffect(() => {
-
-    }, [])
 
     useEffect(() => {
         dispatch(getEarnings(query))
+        dispatch(getOperations(query))
     }, [query])
 
     useEffect(() => {

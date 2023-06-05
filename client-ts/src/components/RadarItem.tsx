@@ -15,7 +15,7 @@ function RadarItem({ asset }: RadarItemType) {
         <div className='w-full drop-shadow-sm flex p-5 min-w-[225px] lg:w-1/4 bg-cinza-500 rounded-xl lg:mx-6 lg:first:ml-2 lg:last:mr-2 flex-wrap'>
             <div className='flex w-full justify-between'>
                 <div className='flex justify-start items-center'>
-                    <img src={asset.logo_url} alt="Fundos Imobliarios" className='h-[30px] pr-3' />
+                    <img src={asset.logo_url} alt='Ativo' className='h-[30px] pr-3' />
                     <p><b>{asset.asset_code.toUpperCase()}</b></p>
                 </div>
 

@@ -86,10 +86,11 @@ export class RadarService {
             }
         })
         try {
-            const [updatedAssetValues] = await this.bolsaService.retornaAtivoProcurado(updatedRadarItem.asset_code, { fundamental: false })
+            const [updatedAssetValues] = await this.bolsaService.retornaAtivoProcurado(updatedRadarItem.asset_code, { fundamental: true })
             const updatedValues = {
                 current_value: updatedAssetValues.regularMarketPrice as unknown as DecimalType,
-                previous_close_value: updatedAssetValues.regularMarketPreviousClose as unknown as DecimalType
+                previous_close_value: updatedAssetValues.regularMarketPreviousClose as unknown as DecimalType,
+                logo_url: updatedAssetValues.logourl
             }
             wrap(updatedRadarItem).assign(updatedValues)
             this.radarRepository.flush()

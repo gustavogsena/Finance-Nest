@@ -5,11 +5,13 @@ import { AssetFactory } from '../assets/assets.factory';
 import { OperationFactory } from '../operations/operation.factory';
 import { EarningFactory } from 'src/earnings/earning.factory';
 import { BolsaService } from 'src/bolsa/bolsa.service';
+import { RadarFactory } from 'src/radar/radar.factory';
 
 export class UserSeeder extends Seeder {
   async run(em: EntityManager): Promise<void> {
     const Users = await new UserFactory(em)
       .each(async (user) => {
+        user.radar.set(new RadarFactory(em).make(5, { user }))
         user.assets.set(new AssetFactory(em)
           .each(async (asset) => {
             asset.operations.set(new OperationFactory(em).make(10))
@@ -17,7 +19,7 @@ export class UserSeeder extends Seeder {
           })
           .make(20, { user }))
       })
-      .create(2)
+      .create(1)
   }
 }
 

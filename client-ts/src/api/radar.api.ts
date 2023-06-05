@@ -7,7 +7,7 @@ import store from "../store";
 import { userLogout } from "../store/reducers/user.slice";
 const { AbortController, abortableFetch } = require('abortcontroller-polyfill/dist/cjs-ponyfill');
 
-(window as any).sse_on = false
+(window as any).sse_on = true
 
 export const getAllRadarItemsApi = async (): Promise<RadarType[]> => {
     const response = await api.get(`/radar`)
@@ -37,7 +37,9 @@ export async function listenRadarUpdates(
             signal: controller.signal,
             onmessage(data) {
                 if ((window as any).sse_on = false) {
+                    console.log((window as any).sse_on)
                     controller.abort()
+                    (window as any).sse_on = true
                     return
                 }
                 if (data && data.data) {
