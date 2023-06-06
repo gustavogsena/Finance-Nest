@@ -25,21 +25,26 @@ export default function FundosImobiliarios() {
   return (
     <StandardContainer>
       <InfoContainer title='Fundos Imobiliarios' data={consolidado.realestate} />
-      <CollapseTitle className='mb-8' title='Composição' initialShow={false} >
-        <ApexChart series={[{ data: chartData }]} options={{
-          chart: {
-            type: 'bar'
-          },
-          xaxis: {
-            type: 'category'
-          },
-          plotOptions: {
-            bar: {
-              horizontal: true
-            }
-          }
-        }} type='bar' height='250px' />
-      </CollapseTitle>
+      {
+        realestate.length > 0 ?
+          <>
+            <CollapseTitle className='mb-8' title='Composição' initialShow={false} >
+              <ApexChart series={[{ data: chartData }]} options={{
+                chart: {
+                  type: 'bar'
+                },
+                xaxis: {
+                  type: 'category'
+                },
+                plotOptions: {
+                  bar: {
+                    horizontal: true
+                  }
+                }
+              }} type='bar' height='250px' />
+            </CollapseTitle>
+          </> : <></>
+      }
 
       <AssetContainer assets={realestate} consolidado={consolidado.realestate} />
     </StandardContainer>

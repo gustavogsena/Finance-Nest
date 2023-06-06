@@ -23,8 +23,12 @@ function EarningsContainer() {
     return (
         <div className=''>
             <div className='flex justify-between flex-col overflow-y-auto overflow-x-auto scrollbar'>
-                <EarningBar />
                 {
+                    earnings.earnings.length > 0 &&
+                    <EarningBar />
+                }
+                {
+                    earnings.earnings.length > 0 &&
                     earnings.earnings.map((earning, index) => {
                         return (
                             <EarningItem earning={earning} key={earning.created_at.toLocaleString()} />
@@ -32,9 +36,18 @@ function EarningsContainer() {
 
                     })
                 }
+                {
+                    earnings.earnings.length === 0 &&
+                    <div className='text-center uppercase text-verde-600 font-bold'>
+                        Lista de proventos está vazia
+                    </div>
+                }
 
             </div>
-            <PaginationArrows changeQueryFunction={changeQuery} count={earnings.count} query={query} />
+            {
+                earnings.earnings.length > 0 &&
+                <PaginationArrows changeQueryFunction={changeQuery} count={earnings.count} query={query} />
+            }
         </div >
     )
 }

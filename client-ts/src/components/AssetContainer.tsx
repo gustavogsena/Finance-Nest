@@ -20,12 +20,16 @@ function AssetContainer({ assets, consolidado }: AssetContainerType) {
     const changeQuery = (newQuery: Partial<Query>) => {
         dispatch(updateQuery(newQuery))
     }
-    
+
     return (
         <div className=''>
             <div className='flex justify-between flex-col overflow-y-auto overflow-x-auto scrollbar'>
-                <AssetBar />
                 {
+                    assets.length > 0 &&
+                    <AssetBar />
+                }
+                {
+                    assets.length > 0 &&
                     assets.map((asset, index) => {
                         if (index >= query.offset && index < query.limit + query.offset) {
                             return (
@@ -34,10 +38,20 @@ function AssetContainer({ assets, consolidado }: AssetContainerType) {
                         }
                     })
                 }
+                {
+                    assets.length === 0 &&
+                    <div className='text-center uppercase text-verde-600 font-bold'>
+                        Lista de ativos da categoria está vazia
+                    </div>
+                }
 
             </div>
-            <Tooltip id='asset_toltip'/>
-            <PaginationArrows changeQueryFunction={changeQuery} count={assets?.length} query={query} />
+            <Tooltip id='asset_toltip' />
+            {
+                assets.length > 0 &&
+                <PaginationArrows changeQueryFunction={changeQuery} count={assets?.length} query={query} />
+            }
+
         </div >
     )
 }

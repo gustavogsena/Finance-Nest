@@ -37,7 +37,7 @@ export async function listenRadarUpdates(
             signal: controller.signal,
             onmessage(data) {
                 if ((window as any).sse_on = false) {
-                    console.log((window as any).sse_on)
+
                     controller.abort()
                     (window as any).sse_on = true
                     return
@@ -54,6 +54,7 @@ export async function listenRadarUpdates(
 
             },
             onerror(err) {
+                console.log((window as any).sse_on)
                 store.dispatch(userLogout())
                 controller.abort()
             },

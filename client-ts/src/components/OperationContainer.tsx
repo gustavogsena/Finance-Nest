@@ -21,16 +21,29 @@ function OperationContainer() {
         <div>
             <div className=''>
                 <div className='flex justify-between flex-col overflow-y-auto scrollbar'>
-                    <OperationBar />
                     {
+                        operations.operations.length > 0 &&
+                        <OperationBar />
+                    }
+                    {
+                        operations.operations.length > 0 &&
                         operations.operations.map((operation) => {
                             return (
                                 <OperationItem data={operation} key={operation.created_at.toLocaleString()} />
                             )
                         })
                     }
+                    {
+                        operations.operations.length === 0 &&
+                        <div className='text-center uppercase text-verde-600 font-bold'>
+                            Lista de operações está vazia
+                        </div>
+                    }
                 </div>
-                <PaginationArrows changeQueryFunction={changeQuery} count={operations.count} query={query} />
+                {
+                    operations.operations.length > 0 &&
+                    <PaginationArrows changeQueryFunction={changeQuery} count={operations.count} query={query} />
+                }
             </div>
         </div >
     )
